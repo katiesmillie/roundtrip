@@ -10,6 +10,8 @@
 		2D4D1EEC1B61245D0016A51D /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */; };
 		2D5592811B626DB300AC9659 /* CounterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */; };
 		2D5592831B62AE3300AC9659 /* TripCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5592821B62AE3300AC9659 /* TripCounter.swift */; };
+		2D87BE711B66CB7E009235F9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D87BE6F1B66CB7E009235F9 /* Fabric.framework */; };
+		2D87BE721B66CB7E009235F9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D87BE701B66CB7E009235F9 /* Crashlytics.framework */; };
 		2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4381B5275A100D50B0C /* AppDelegate.swift */; };
 		2DE8F43B1B5275A100D50B0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F43A1B5275A100D50B0C /* ViewController.swift */; };
 		2DE8F43E1B5275A100D50B0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43C1B5275A100D50B0C /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		2D5592801B626DB300AC9659 /* CounterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterModel.xcdatamodel; sourceTree = "<group>"; };
 		2D5592821B62AE3300AC9659 /* TripCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCounter.swift; sourceTree = "<group>"; };
+		2D87BE6F1B66CB7E009235F9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		2D87BE701B66CB7E009235F9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		2DE8F4331B5275A100D50B0C /* SubwayCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8F4371B5275A100D50B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8F4381B5275A100D50B0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D87BE721B66CB7E009235F9 /* Crashlytics.framework in Frameworks */,
+				2D87BE711B66CB7E009235F9 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +81,8 @@
 				2DE8F4351B5275A100D50B0C /* SubwayCalc */,
 				2DE8F44B1B5275A100D50B0C /* SubwayCalcTests */,
 				2DE8F4341B5275A100D50B0C /* Products */,
+				2D87BE6F1B66CB7E009235F9 /* Fabric.framework */,
+				2D87BE701B66CB7E009235F9 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +148,7 @@
 				2DE8F42F1B5275A100D50B0C /* Sources */,
 				2DE8F4301B5275A100D50B0C /* Frameworks */,
 				2DE8F4311B5275A100D50B0C /* Resources */,
+				2D87BE6E1B66CB62009235F9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -225,6 +234,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D87BE6E1B66CB62009235F9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 8d5354cc07a1c219186c5f4117bfbf44f107c5b4 a92a5d19d6d1292584743f026e37d1cd296b4be9e5a312178f1ce880ee3e38e6";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DE8F42F1B5275A100D50B0C /* Sources */ = {
@@ -369,10 +394,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SubwayCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -382,10 +412,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SubwayCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

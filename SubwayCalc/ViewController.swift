@@ -23,7 +23,7 @@ class ViewController: UIViewController{
     }
     
     func cardValueAlert() {
-        let title = "Whoops"
+        let title = "Ack!"
         let message = "I can only process amounts between $0 and $100"
         let alert = UIAlertController(title: title, message: message,  preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default, handler: {

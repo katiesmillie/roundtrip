@@ -17,7 +17,6 @@ class CounterViewController: UIViewController {
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var averageLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchNumberTrips()
@@ -37,10 +36,9 @@ class CounterViewController: UIViewController {
     
     @IBAction func resetAlert(sender: UIButton) {
         let title = "Hold up"
-        let message = "You sure you want to reset your trips?"
+        let message = "Are you sure you want to reset your trips?"
         
         let alert = UIAlertController(title: title, message: message,  preferredStyle: .Alert)
-        
         let action = UIAlertAction(title: "OK", style: .Default, handler: {
             action in
             self.stepper.value = 0
@@ -55,12 +53,10 @@ class CounterViewController: UIViewController {
         
         alert.addAction(action)
         alert.addAction(cancel)
-        
         presentViewController(alert, animated: true, completion: nil)
        
     }
     
-
     func setAverage() {
         var averageValue: Double!
        
@@ -84,9 +80,6 @@ class CounterViewController: UIViewController {
         } else {
             createEntity ()
         }
-       
-        println(fetchedResults)
-
     }
     
     func saveNumberTrips (numberTripsPassed: Int){
@@ -96,10 +89,7 @@ class CounterViewController: UIViewController {
         let fetchedResults = self.managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [TripCounter]
         
         fetchedResults.first!.numberTrips = numberTripsPassed
-        
         managedObjectContext.save(nil)
-        
-        println(fetchedResults)
 
     }
     

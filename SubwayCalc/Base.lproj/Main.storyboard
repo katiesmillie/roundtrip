@@ -141,7 +141,7 @@ Track how many rides you take in a 30-day period and see your average cost per r
 
 
 Please send feedback to katie@katiesmillie.com</string>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
