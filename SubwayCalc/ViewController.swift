@@ -8,35 +8,52 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     
-
     @IBOutlet weak var inputtedCardValue: UITextField!
     
+    var cardValue = 0.0
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "roundtrip"
     }
 
-    override func didReceiveMemoryWarning() {
+        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func cardValueAlert() {
+        let title = "Whoops"
+        let message = "I can only process amounts between $0 and $100"
+        let alert = UIAlertController(title: title, message: message,  preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: {
+            action in
+        })
+        
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "Results View" {
-            var cardValue: Double
-            
-            if inputtedCardValue != nil {
+           
+            if NSNumberFormatter().numberFromString(inputtedCardValue.text) != nil {
                 cardValue = Double(NSNumberFormatter().numberFromString(inputtedCardValue.text)!)
-            }
-            else {
-                cardValue = 0.00
-            }
-            
+                
+                if cardValue > 99.99 || cardValue < 0.0 {
+                    cardValueAlert()
+                }
+                
+            } else {
+                cardValue = 0.0
+        }
+        
         var rvc = segue.destinationViewController as! ResultsViewController
         rvc.cardValue = cardValue
+            
         }
     }
+    
 }
 

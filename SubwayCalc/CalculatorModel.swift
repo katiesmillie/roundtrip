@@ -59,7 +59,7 @@ class CalculatorModel {
         for var rides = 4.0; rides <= 99; ++rides {
             var amountToAdd = Double(calcAmountToAdd(rides))
                 
-        // ------- need to investigate what rounding rules MTA uses
+        // ------- need to double check what rounding rules MTA uses
             let numberOfPlaces = 2.0
             let multiplier = pow(10.0, numberOfPlaces)
             amountToAdd = round(amountToAdd * multiplier)/multiplier

@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D4D1EEA1B6124020016A51D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D1EE91B6124020016A51D /* MenuViewController.swift */; };
 		2D4D1EEC1B61245D0016A51D /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */; };
+		2D5592811B626DB300AC9659 /* CounterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */; };
+		2D5592831B62AE3300AC9659 /* TripCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5592821B62AE3300AC9659 /* TripCounter.swift */; };
 		2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4381B5275A100D50B0C /* AppDelegate.swift */; };
 		2DE8F43B1B5275A100D50B0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F43A1B5275A100D50B0C /* ViewController.swift */; };
 		2DE8F43E1B5275A100D50B0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43C1B5275A100D50B0C /* Main.storyboard */; };
@@ -18,7 +19,6 @@
 		2DE8F4591B52794A00D50B0C /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */; };
 		2DE8F45B1B528E0D00D50B0C /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */; };
 		2DFEDCC51B553BCB00EAB43C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */; };
-		2DFEDCC91B5546F600EAB43C /* aboutRoundTrip.html in Resources */ = {isa = PBXBuildFile; fileRef = 2DFEDCC81B5546F600EAB43C /* aboutRoundTrip.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D4D1EE91B6124020016A51D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		2D5592801B626DB300AC9659 /* CounterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterModel.xcdatamodel; sourceTree = "<group>"; };
+		2D5592821B62AE3300AC9659 /* TripCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCounter.swift; sourceTree = "<group>"; };
 		2DE8F4331B5275A100D50B0C /* SubwayCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8F4371B5275A100D50B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8F4381B5275A100D50B0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		2DFEDCC81B5546F600EAB43C /* aboutRoundTrip.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = aboutRoundTrip.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +71,7 @@
 		2DE8F42A1B5275A000D50B0C = {
 			isa = PBXGroup;
 			children = (
+				2D5592821B62AE3300AC9659 /* TripCounter.swift */,
 				2DE8F4351B5275A100D50B0C /* SubwayCalc */,
 				2DE8F44B1B5275A100D50B0C /* SubwayCalcTests */,
 				2DE8F4341B5275A100D50B0C /* Products */,
@@ -89,10 +90,9 @@
 		2DE8F4351B5275A100D50B0C /* SubwayCalc */ = {
 			isa = PBXGroup;
 			children = (
-				2DFEDCC81B5546F600EAB43C /* aboutRoundTrip.html */,
 				2DE8F4381B5275A100D50B0C /* AppDelegate.swift */,
+				2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */,
 				2DE8F43A1B5275A100D50B0C /* ViewController.swift */,
-				2D4D1EE91B6124020016A51D /* MenuViewController.swift */,
 				2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */,
 				2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */,
 				2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */,
@@ -179,6 +179,7 @@
 				TargetAttributes = {
 					2DE8F4321B5275A100D50B0C = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = BA5KZE6545;
 					};
 					2DE8F4471B5275A100D50B0C = {
 						CreatedOnToolsVersion = 6.4;
@@ -210,7 +211,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DFEDCC91B5546F600EAB43C /* aboutRoundTrip.html in Resources */,
 				2DE8F43E1B5275A100D50B0C /* Main.storyboard in Resources */,
 				2DE8F4431B5275A100D50B0C /* LaunchScreen.xib in Resources */,
 				2DE8F4401B5275A100D50B0C /* Images.xcassets in Resources */,
@@ -232,8 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DE8F4591B52794A00D50B0C /* CalculatorModel.swift in Sources */,
-				2D4D1EEA1B6124020016A51D /* MenuViewController.swift in Sources */,
+				2D5592811B626DB300AC9659 /* CounterModel.xcdatamodeld in Sources */,
 				2D4D1EEC1B61245D0016A51D /* CounterViewController.swift in Sources */,
+				2D5592831B62AE3300AC9659 /* TripCounter.swift in Sources */,
 				2DE8F43B1B5275A100D50B0C /* ViewController.swift in Sources */,
 				2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */,
 				2DFEDCC51B553BCB00EAB43C /* AboutViewController.swift in Sources */,
@@ -366,9 +367,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SubwayCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -376,9 +380,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SubwayCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -447,6 +454,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2D5592801B626DB300AC9659 /* CounterModel.xcdatamodel */,
+			);
+			currentVersion = 2D5592801B626DB300AC9659 /* CounterModel.xcdatamodel */;
+			path = CounterModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2DE8F42B1B5275A000D50B0C /* Project object */;
 }
