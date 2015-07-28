@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController {
     
     @IBOutlet weak var inputtedCardValue: UITextField!
     
@@ -22,6 +22,12 @@ class ViewController: UIViewController{
         super.didReceiveMemoryWarning()
     }
     
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent){
+        self.view.endEditing(true)
+    }
+
+
     func cardValueAlert() {
         let title = "Ack!"
         let message = "I can only process amounts between $0 and $100"
@@ -36,6 +42,8 @@ class ViewController: UIViewController{
     
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        
+
         if segue.identifier == "Results View" {
            
             if NSNumberFormatter().numberFromString(inputtedCardValue.text) != nil {

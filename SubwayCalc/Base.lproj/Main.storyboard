@@ -139,8 +139,9 @@ Trip Counter
 Track how many rides you take in a 30-day period and see your average cost per ride based on an unlimited ride card ($116.50).
 
 
+Please send feedback to katie@katiesmillie.com
 
-Please send feedback to katie@katiesmillie.com</string>
+Icons by https://icons8.com</string>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
