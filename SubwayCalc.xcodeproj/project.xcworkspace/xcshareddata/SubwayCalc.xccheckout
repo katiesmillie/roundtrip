@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>60BF164B-D26E-412F-A6AB-460C42F4776D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>SubwayCalc</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>632196BD2A7A32B9CB18C2955E2C4AFC5FA48925</key>
 		<string>https://github.com/katiesmillie/roundtrip.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SubwayCalc.xcodeproj/project.xcworkspace</string>
+	<string>SubwayCalc.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>632196BD2A7A32B9CB18C2955E2C4AFC5FA48925</key>

@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  test
 //
@@ -21,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics()])
+        
+//        let rootViewControlller = self.window!.rootViewController as! TripLogTableViewController
+//        
+//        rootViewControlller.managedObjectContext = self.managedObjectContext
+        
         return true
     }
     
