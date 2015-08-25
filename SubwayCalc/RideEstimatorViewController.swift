@@ -45,8 +45,17 @@ class RideEstimatorViewController: UIViewController {
     var estimatedRides: Int!
     var monthlyPassString: String!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var estimatorView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        scrollView.contentSize = estimatorView.bounds.size
+        scrollView.addSubview(estimatorView)
+        view.addSubview(scrollView)
+        self.automaticallyAdjustsScrollViewInsets = true
+
         setRides()
     }
     
@@ -54,16 +63,19 @@ class RideEstimatorViewController: UIViewController {
         let estimatedRidesDouble = (Double(perDay*perWeek)*4.2)+(Double(perMonth))
         estimatedRides = Int(estimatedRidesDouble)
         estimatedRidesLabel.text = String(stringInterpolationSegment: estimatedRides)
+        
         setMonthlyPass()
     }
     
         func setMonthlyPass() {
-        let monthlyPassDifference = Double(estimatedRides)*2.75 - 116.50
+        let monthlyPassDifference = Double(estimatedRides)*2.48 - 116.50
         
         if monthlyPassDifference > 0 {
             monthlyPassString = "saved with a monthly pass"
+            monthlyPassDiffLabel.textColor = UIColor.greenColor()
         } else {
             monthlyPassString = "wasted with a monthly pass"
+            monthlyPassDiffLabel.textColor = UIColor.redColor()
         }
         monthlyPassStringLabel.text = monthlyPassString
         monthlyPassDiffLabel.text = String(format: "$ %.2f", monthlyPassDifference)

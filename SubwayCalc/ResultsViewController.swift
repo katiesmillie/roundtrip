@@ -46,7 +46,7 @@ class ResultsViewController: UIViewController {
         scrollView.contentSize = resultsView.bounds.size
         scrollView.addSubview(resultsView)
         view.addSubview(scrollView)
-
+        scrollView.alwaysBounceHorizontal = false
     }
     
     func displayAmounts() {

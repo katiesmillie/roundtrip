@@ -22,9 +22,10 @@ class EditDateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         myDatePicker.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
-         myDatePicker.date = tripDate
-         myDatePicker.maximumDate = NSDate()
+        myDatePicker.datePickerMode = UIDatePickerMode.Date
+        myDatePicker.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        myDatePicker.date = tripDate
+        myDatePicker.maximumDate = NSDate()
     }
     
     func datePickerChanged(myDatePicker: UIDatePicker) {

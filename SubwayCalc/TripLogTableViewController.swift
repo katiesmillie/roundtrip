@@ -33,13 +33,18 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var error: NSError? = nil
         
+        var error: NSError? = nil
         if(fetchedResultsController.performFetch(&error) == false) {
             print("An error: \(error?.localizedDescription)")
         }
-        self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+   
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -58,7 +63,7 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
         let trip = fetchedResultsController.objectAtIndexPath(indexPath) as! TripLog
-        let dateString = NSDateFormatter.localizedStringFromDate(trip.dateTime, dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        let dateString = NSDateFormatter.localizedStringFromDate(trip.dateTime, dateStyle: .LongStyle, timeStyle: .NoStyle)
         cell.textLabel?.text = dateString
 
         return cell
@@ -95,7 +100,7 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
                 }
             case .Update:
                 if let updateIndexPath = indexPath {
-                   
+
                 }
             case .Move:
                 if let deleteIndexPath = indexPath {
@@ -105,7 +110,7 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
 
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         self.tableView.endUpdates()
-         updateStats()
+        updateStats()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -130,14 +135,15 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
             let dateString = NSDateFormatter.localizedStringFromDate(selectedTripDate!, dateStyle: .MediumStyle, timeStyle: .ShortStyle)
             cell!.textLabel?.text = dateString
         
-            let calendar = NSCalendar.currentCalendar()
-            let components = calendar.components(.CalendarUnitDay | .CalendarUnitMonth | .CalendarUnitYear, fromDate: myDatePicker.date)
+//            let calendar = NSCalendar.currentCalendar()
+//            let components = calendar.components(.CalendarUnitDay | .CalendarUnitMonth | .CalendarUnitYear, fromDate: myDatePicker.date)
             
             if let trip = fetchedResultsController.objectAtIndexPath(updateIndexPath) as? TripLog {
                 trip.dateTime = selectedTripDate!
-                trip.day = components.day
-                trip.month = components.month
-                trip.year = components.year
+                
+//                trip.day = components.day
+//                trip.month = components.month
+//                trip.year = components.year
                 
                 self.managedObjectContext.save(nil)
             }

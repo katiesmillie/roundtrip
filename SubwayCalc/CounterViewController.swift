@@ -50,7 +50,6 @@ import CoreData
         let fetchRequest = NSFetchRequest(entityName:"TripLog")
         let fetchedResults = self.managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [TripLog]
         totalTrips = Int(fetchedResults.count)
-        println(totalTrips)
         counterLabel.text = "\(Int(totalTrips))"
     }
     
@@ -60,11 +59,14 @@ import CoreData
         newEntity.dateTime = date
         newEntity.name = "Log"
         
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.CalendarUnitDay | .CalendarUnitMonth | .CalendarUnitYear, fromDate: date)
-        newEntity.year = components.year
-        newEntity.month = components.month
-        newEntity.day = components.day
+        
+// ------ code below is crashing when data store is empty on first log / set year ------------ //
+        
+//        let calendar = NSCalendar.currentCalendar()
+//        let components = calendar.components(.CalendarUnitDay | .CalendarUnitMonth | .CalendarUnitYear, fromDate: date)
+//        newEntity.year = components.year
+//        newEntity.month = components.month
+//        newEntity.day = components.day
         
         self.managedObjectContext.save(nil)
     }
