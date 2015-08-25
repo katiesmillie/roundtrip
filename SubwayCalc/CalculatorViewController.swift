@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var inputtedCardValue: UITextField!
     
@@ -18,50 +18,35 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-        override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent){
         self.view.endEditing(true)
     }
 
-
     func cardValueAlert() {
-        let title = "Ack!"
-        let message = "I can only process amounts between $0 and $100"
+        let title = "Ouch."
+        let message = "My brain only computes amounts between $0 and $40"
         let alert = UIAlertController(title: title, message: message,  preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default, handler: {
             action in
         })
-        
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
     }
     
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
-
         if segue.identifier == "Results View" {
-           
             if NSNumberFormatter().numberFromString(inputtedCardValue.text) != nil {
                 cardValue = Double(NSNumberFormatter().numberFromString(inputtedCardValue.text)!)
                 
-                if cardValue > 99.99 || cardValue < 0.0 {
+                if cardValue > 40.0 || cardValue < 0.0 {
                     cardValueAlert()
                 }
-                
             } else {
                 cardValue = 0.0
         }
-        
-        var rvc = segue.destinationViewController as! ResultsViewController
-        rvc.cardValue = cardValue
-            
+            var rvc = segue.destinationViewController as! ResultsViewController
+            rvc.cardValue = cardValue
         }
     }
-    
 }
 

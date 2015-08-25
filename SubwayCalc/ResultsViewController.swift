@@ -11,7 +11,7 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
-    
+    @IBOutlet weak var cardAmountLabel: UILabel!
     @IBOutlet weak var displayAmountToAdd1: UILabel!
     @IBOutlet weak var displayBonusPct1: UILabel!
     @IBOutlet weak var displayCardValue1: UILabel!
@@ -27,35 +27,35 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var displayCardValue3: UILabel!
     @IBOutlet weak var displayRides3: UILabel!
     
-    
     var cardValue: Double!
-    var amountsToAdd: Array<Double>!
-    var amountsNeeded: Array<Double>!
-    var bonusPcts: Array<Double>!
-    var rides: Array<Double>!
+    var amountsToAdd: [Double]!
+    var amountsNeeded: [Double]!
+    var bonusPcts: [Double]!
+    var rides: [Double]!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var resultsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Suggested Amounts"
+        cardAmountLabel.text = String(format: "$ %.2f MetroCard", cardValue)
+       
         displayAmounts()
-        title = String(format: "$ %.2f MetroCard", cardValue)
-    }
-    
+       
+        scrollView.contentSize = resultsView.bounds.size
+        scrollView.addSubview(resultsView)
+        view.addSubview(scrollView)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
-    
     
     func displayAmounts() {
-        
         var calc = CalculatorModel(cardValue: cardValue)
       
         amountsToAdd = calc.calcAmountsArray()
         amountsNeeded = calc.calcAmountNeededFromAmountToAdd(amountsToAdd)
         bonusPcts = calc.calcBonus(amountsToAdd)
         rides = calc.calcNumberRides(amountsToAdd)
-        
         
         displayAmountToAdd1.text = String(format: "$ %.2f", amountsToAdd[0])
         displayBonusPct1.text = String(format: "$ %.2f", bonusPcts [0])
@@ -71,11 +71,5 @@ class ResultsViewController: UIViewController {
         displayBonusPct3.text = String(format: "$ %.2f", bonusPcts [2])
         displayCardValue3.text = String(format: "$ %.2f", amountsNeeded[2])
         displayRides3.text = String(format: "%.0f", rides[2])
-        
-    
     }
-    
-    
-    
-
 }

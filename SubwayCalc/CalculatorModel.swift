@@ -17,25 +17,21 @@ class CalculatorModel {
         self.cardValue = cardValue
     }
 
-    
     func calcAmountToAdd(rides: Double) -> Double {
         var valueNeeded = rides * subwayFare
         return (valueNeeded - cardValue) / 1.11
     }
     
-    
-    func calcAmountNeededFromAmountToAdd(amountsToAdd: Array<Double>) -> Array<Double> {
+    func calcAmountNeededFromAmountToAdd(amountsToAdd: [Double]) -> [Double] {
         var amountsNeeded = [Double]()
         for amountToAdd in amountsToAdd {
-            let numberOfPlaces = 2.0
-            let multiplier = pow(10.0, numberOfPlaces)
-            var amountNeeded = round(((amountToAdd * 1.11) * multiplier) / multiplier + cardValue)
+            var amountNeeded = (amountToAdd * 1.11) + cardValue
             amountsNeeded.append(amountNeeded)
         }
         return amountsNeeded
     }
     
-    func calcBonus(amountsToAdd: Array<Double>) -> Array<Double> {
+    func calcBonus(amountsToAdd: [Double]) -> [Double] {
         var bonusPcts = [Double]()
         for amountToAdd in amountsToAdd {
             var bonusPct =  amountToAdd * 0.11
@@ -44,31 +40,27 @@ class CalculatorModel {
         return bonusPcts
     }
     
-    func calcNumberRides (amountsToAdd: Array<Double>) -> Array<Double> {
+    func calcNumberRides (amountsToAdd: [Double]) -> [Double]{
         var numberRides = [Double]()
         for amountToAdd in amountsToAdd {
-            var ride =  (amountToAdd * 1.11) + cardValue / subwayFare
+            var ride = round(((amountToAdd * 1.11) + cardValue) / subwayFare)
+            
             numberRides.append(ride)
         }
+         println(numberRides)
         return numberRides
-}
-
+    }
 
     func calcAmountsArray() -> [Double]{
         var amountsToAdd = [Double]()
         for var rides = 4.0; rides <= 99; ++rides {
             var amountToAdd = Double(calcAmountToAdd(rides))
-                
-        // ------- need to double check what rounding rules MTA uses
-            let numberOfPlaces = 2.0
-            let multiplier = pow(10.0, numberOfPlaces)
-            amountToAdd = round(amountToAdd * multiplier)/multiplier
+            amountToAdd = (round(amountToAdd * 100))/100
             amountsToAdd.append(amountToAdd)
         }
         var suggestedAmts = findSuggestedAmounts(amountsToAdd)
         return suggestedAmts
     }
-    
     
     func findSuggestedAmounts(amounts: [Double]) -> [Double] {
         var suggestedAmts = [Double]()
@@ -80,5 +72,4 @@ class CalculatorModel {
         }
         return suggestedAmts
     }
-    
 }

@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="DateRange" representedClassName="SubwayCalc.DateRange" syncable="YES">
-        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
-    </entity>
-    <entity name="TripCounter" representedClassName="SubwayCalc.TripCounter" syncable="YES">
-        <attribute name="numberTrips" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-    </entity>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="TripLog" representedClassName="SubwayCalc.TripLog" syncable="YES">
         <attribute name="dateTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="day" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -15,8 +9,6 @@
         <attribute name="year" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DateRange" positionX="-54" positionY="18" width="128" height="60"/>
-        <element name="TripCounter" positionX="-63" positionY="-18" width="128" height="60"/>
         <element name="TripLog" positionX="-63" positionY="-9" width="128" height="135"/>
     </elements>
 </model>

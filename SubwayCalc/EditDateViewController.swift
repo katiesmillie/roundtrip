@@ -14,37 +14,30 @@ protocol EditDateViewControllerDelegate {
 }
 
 class EditDateViewController: UIViewController {
-    
+
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+
     var delegate: EditDateViewControllerDelegate?
     var tripDate: NSDate!
     
-    @IBOutlet weak var myDatePicker: UIDatePicker!
-
     override func viewDidLoad() {
         super.viewDidLoad()
          myDatePicker.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
          myDatePicker.date = tripDate
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+         myDatePicker.maximumDate = NSDate()
     }
     
     func datePickerChanged(myDatePicker: UIDatePicker) {
         tripDate = myDatePicker.date
     }
     
-    
     @IBAction func didSelectNewDate(sender: UIButton) {
-        
         datePickerChanged(myDatePicker)
         
         if let delegate = self.delegate {
             delegate.didSelectNewDate(self, myDatePicker: myDatePicker)
         }
         self.dismissViewControllerAnimated(true, completion: nil)
-
     }
     
 }

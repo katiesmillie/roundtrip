@@ -9,16 +9,15 @@
 /* Begin PBXBuildFile section */
 		2D4D1EEC1B61245D0016A51D /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */; };
 		2D5592811B626DB300AC9659 /* CounterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */; };
-		2D5592831B62AE3300AC9659 /* TripCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5592821B62AE3300AC9659 /* TripCounter.swift */; };
 		2D6707661B6D3C0A004CB7E4 /* TripLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6707651B6D3C0A004CB7E4 /* TripLog.swift */; };
 		2D6707681B6D403A004CB7E4 /* TripLogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6707671B6D403A004CB7E4 /* TripLogTableViewController.swift */; };
-		2D67076C1B6F8FBC004CB7E4 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67076B1B6F8FBC004CB7E4 /* DatePickerViewController.swift */; };
-		2D67076E1B6F9E0C004CB7E4 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67076D1B6F9E0C004CB7E4 /* DateRange.swift */; };
 		2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */; };
 		2D87BE711B66CB7E009235F9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D87BE6F1B66CB7E009235F9 /* Fabric.framework */; };
 		2D87BE721B66CB7E009235F9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D87BE701B66CB7E009235F9 /* Crashlytics.framework */; };
+		2DA358491B84EC1C00BED823 /* RideEstimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */; };
+		2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */; };
 		2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4381B5275A100D50B0C /* AppDelegate.swift */; };
-		2DE8F43B1B5275A100D50B0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F43A1B5275A100D50B0C /* ViewController.swift */; };
+		2DE8F43B1B5275A100D50B0C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */; };
 		2DE8F43E1B5275A100D50B0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43C1B5275A100D50B0C /* Main.storyboard */; };
 		2DE8F4401B5275A100D50B0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43F1B5275A100D50B0C /* Images.xcassets */; };
 		2DE8F4431B5275A100D50B0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F4411B5275A100D50B0C /* LaunchScreen.xib */; };
@@ -39,20 +38,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CounterViewController.swift; path = SubwayCalc/CounterViewController.swift; sourceTree = SOURCE_ROOT; };
 		2D5592801B626DB300AC9659 /* CounterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterModel.xcdatamodel; sourceTree = "<group>"; };
-		2D5592821B62AE3300AC9659 /* TripCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripCounter.swift; path = ../TripCounter.swift; sourceTree = "<group>"; };
 		2D6707651B6D3C0A004CB7E4 /* TripLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripLog.swift; sourceTree = "<group>"; };
 		2D6707671B6D403A004CB7E4 /* TripLogTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripLogTableViewController.swift; sourceTree = "<group>"; };
-		2D67076B1B6F8FBC004CB7E4 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerViewController.swift; path = ../DatePickerViewController.swift; sourceTree = "<group>"; };
-		2D67076D1B6F9E0C004CB7E4 /* DateRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
 		2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDateViewController.swift; sourceTree = "<group>"; };
 		2D87BE6F1B66CB7E009235F9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		2D87BE701B66CB7E009235F9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideEstimatorViewController.swift; sourceTree = "<group>"; };
+		2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideEstimatorModel.swift; sourceTree = "<group>"; };
 		2DE8F4331B5275A100D50B0C /* SubwayCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8F4371B5275A100D50B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8F4381B5275A100D50B0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DE8F43A1B5275A100D50B0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		2DE8F43D1B5275A100D50B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DE8F43F1B5275A100D50B0C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2DE8F4421B5275A100D50B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -107,18 +105,17 @@
 		2DE8F4351B5275A100D50B0C /* SubwayCalc */ = {
 			isa = PBXGroup;
 			children = (
-				2DE8F4381B5275A100D50B0C /* AppDelegate.swift */,
 				2DE8F43C1B5275A100D50B0C /* Main.storyboard */,
 				2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */,
-				2D5592821B62AE3300AC9659 /* TripCounter.swift */,
+				2DE8F4381B5275A100D50B0C /* AppDelegate.swift */,
+				2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */,
 				2D6707651B6D3C0A004CB7E4 /* TripLog.swift */,
-				2D67076D1B6F9E0C004CB7E4 /* DateRange.swift */,
 				2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */,
+				2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */,
 				2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */,
-				2D67076B1B6F8FBC004CB7E4 /* DatePickerViewController.swift */,
 				2D6707671B6D403A004CB7E4 /* TripLogTableViewController.swift */,
 				2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */,
-				2DE8F43A1B5275A100D50B0C /* ViewController.swift */,
+				2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */,
 				2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */,
 				2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */,
 				2DE8F43F1B5275A100D50B0C /* Images.xcassets */,
@@ -271,16 +268,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */,
 				2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */,
 				2D6707681B6D403A004CB7E4 /* TripLogTableViewController.swift in Sources */,
 				2DE8F4591B52794A00D50B0C /* CalculatorModel.swift in Sources */,
 				2D6707661B6D3C0A004CB7E4 /* TripLog.swift in Sources */,
 				2D5592811B626DB300AC9659 /* CounterModel.xcdatamodeld in Sources */,
-				2D67076C1B6F8FBC004CB7E4 /* DatePickerViewController.swift in Sources */,
-				2D67076E1B6F9E0C004CB7E4 /* DateRange.swift in Sources */,
 				2D4D1EEC1B61245D0016A51D /* CounterViewController.swift in Sources */,
-				2D5592831B62AE3300AC9659 /* TripCounter.swift in Sources */,
-				2DE8F43B1B5275A100D50B0C /* ViewController.swift in Sources */,
+				2DA358491B84EC1C00BED823 /* RideEstimatorViewController.swift in Sources */,
+				2DE8F43B1B5275A100D50B0C /* CalculatorViewController.swift in Sources */,
 				2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */,
 				2DFEDCC51B553BCB00EAB43C /* AboutViewController.swift in Sources */,
 				2DE8F45B1B528E0D00D50B0C /* ResultsViewController.swift in Sources */,

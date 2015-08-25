@@ -9,10 +9,12 @@
 import UIKit
 import CoreData
 
+
+
 class TripLogTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, EditDateViewControllerDelegate {
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
-    
+
     var selectedTripDate: NSDate?
     
     lazy var fetchedResultsController: NSFetchedResultsController = {
@@ -29,7 +31,6 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
         
     }()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         var error: NSError? = nil
@@ -40,18 +41,16 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchedResultsController.sections {
-            let currentSection = sections[section] as! NSFetchedResultsSectionInfo
-            return currentSection.numberOfObjects
+            if sections.isEmpty == false {  // if this is zero view crashes if there is no data
+                let currentSection = sections[section] as! NSFetchedResultsSectionInfo
+                return currentSection.numberOfObjects
+            }
         }
         return 0
     }
@@ -64,7 +63,6 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
 
         return cell
     }
-
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
@@ -72,7 +70,6 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            
             if let item = self.fetchedResultsController.objectAtIndexPath(indexPath) as? NSManagedObject {
                 self.managedObjectContext.deleteObject(item)
                 self.managedObjectContext.save(nil)
@@ -90,6 +87,7 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
             switch type {
             case .Insert:
                 if let insertIndexPath = newIndexPath {
+                    self.tableView.insertRowsAtIndexPaths([insertIndexPath], withRowAnimation: UITableViewRowAnimation.Fade)
                 }
             case .Delete:
                 if let deleteIndexPath = indexPath {
@@ -107,6 +105,7 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
 
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         self.tableView.endUpdates()
+         updateStats()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -121,7 +120,6 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
                 editDateVC.tripDate = self.selectedTripDate
         }
     }
-
     
     func didSelectNewDate(controller: EditDateViewController, myDatePicker: UIDatePicker) {
         selectedTripDate = myDatePicker.date
@@ -146,5 +144,13 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
         }
     }
     
+    func updateStats(){
+        self.performSegueWithIdentifier("Unwind Segue", sender: self)
+    }
     
 }
+
+
+
+
+
