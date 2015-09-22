@@ -8,19 +8,26 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var inputtedCardValue: UITextField!
     
     var cardValue = 0.0
+    var currentString = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputtedCardValue.delegate = self
     }
+    
+//    override func viewWillAppear(animated: Bool) {
+//        inputtedCardValue.becomeFirstResponder()
+//    }
 
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent){
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         self.view.endEditing(true)
     }
+    
 
     func cardValueAlert() {
         let title = "Ouch."
@@ -35,8 +42,8 @@ class CalculatorViewController: UIViewController {
     
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Results View" {
-            if NSNumberFormatter().numberFromString(inputtedCardValue.text) != nil {
-                cardValue = Double(NSNumberFormatter().numberFromString(inputtedCardValue.text)!)
+            if NSNumberFormatter().numberFromString(inputtedCardValue.text!) != nil {
+                cardValue = Double(NSNumberFormatter().numberFromString(inputtedCardValue.text!)!)
                 
                 if cardValue > 40.0 || cardValue < 0.0 {
                     cardValueAlert()
@@ -44,7 +51,7 @@ class CalculatorViewController: UIViewController {
             } else {
                 cardValue = 0.0
         }
-            var rvc = segue.destinationViewController as! ResultsViewController
+            let rvc = segue.destinationViewController as! ResultsViewController
             rvc.cardValue = cardValue
         }
     }

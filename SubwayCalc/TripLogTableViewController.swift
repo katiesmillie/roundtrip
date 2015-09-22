@@ -11,7 +11,7 @@ import CoreData
 
 
 
-class TripLogTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, EditDateViewControllerDelegate {
+class TripLogTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, EditDateViewControllerDelegate {
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
 
@@ -31,13 +31,20 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
         
     }()
     
-    override func viewDidLoad() {
+    override func viewDidLoad() {2
         super.viewDidLoad()
         
-        var error: NSError? = nil
-        if(fetchedResultsController.performFetch(&error) == false) {
-            print("An error: \(error?.localizedDescription)")
+//        var error: NSError? = nil
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch let error as NSError {
+             print("An error: \(error.localizedDescription)")
         }
+        
+//        if(fetchedResultsController.performFetch(&error) is false) {
+//            print("An error: \(error?.localizedDescription)")
+//        }
     }
     
     
@@ -52,8 +59,8 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchedResultsController.sections {
-            if sections.isEmpty == false {  // if this is zero view crashes if there is no data
-                let currentSection = sections[section] as! NSFetchedResultsSectionInfo
+            if sections.isEmpty == false {
+                let currentSection = sections[section]
                 return currentSection.numberOfObjects
             }
         }
@@ -61,7 +68,7 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) 
         let trip = fetchedResultsController.objectAtIndexPath(indexPath) as! TripLog
         let dateString = NSDateFormatter.localizedStringFromDate(trip.dateTime, dateStyle: .LongStyle, timeStyle: .NoStyle)
         cell.textLabel?.text = dateString
@@ -77,7 +84,10 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
         if editingStyle == .Delete {
             if let item = self.fetchedResultsController.objectAtIndexPath(indexPath) as? NSManagedObject {
                 self.managedObjectContext.deleteObject(item)
-                self.managedObjectContext.save(nil)
+                do {
+                    try self.managedObjectContext.save()
+                } catch _ {
+                }
             }
         }
     }
@@ -99,11 +109,11 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
                     self.tableView.deleteRowsAtIndexPaths([deleteIndexPath], withRowAnimation: .Fade)
                 }
             case .Update:
-                if let updateIndexPath = indexPath {
+                if let _ = indexPath {
 
                 }
             case .Move:
-                if let deleteIndexPath = indexPath {
+                if let _ = indexPath {
                 }
             }
         }
@@ -115,12 +125,12 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Edit Date" {
-            if let indexPath = self.tableView.indexPathForSelectedRow(){
+            if let indexPath = self.tableView.indexPathForSelectedRow{
                 if let trip = fetchedResultsController.objectAtIndexPath(indexPath) as? TripLog {
                     selectedTripDate = trip.dateTime
                 }
             }
-            var editDateVC = segue.destinationViewController as! EditDateViewController
+            let editDateVC = segue.destinationViewController as! EditDateViewController
                 editDateVC.delegate = self
                 editDateVC.tripDate = self.selectedTripDate
         }
@@ -129,7 +139,7 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
     func didSelectNewDate(controller: EditDateViewController, myDatePicker: UIDatePicker) {
         selectedTripDate = myDatePicker.date
         
-        if let updateIndexPath = self.tableView.indexPathForSelectedRow() {
+        if let updateIndexPath = self.tableView.indexPathForSelectedRow {
             
             let cell = self.tableView.cellForRowAtIndexPath(updateIndexPath)
             let dateString = NSDateFormatter.localizedStringFromDate(selectedTripDate!, dateStyle: .MediumStyle, timeStyle: .ShortStyle)
@@ -145,7 +155,10 @@ class TripLogTableViewController: UITableViewController, UITableViewDataSource, 
 //                trip.month = components.month
 //                trip.year = components.year
                 
-                self.managedObjectContext.save(nil)
+                do {
+                    try self.managedObjectContext.save()
+                } catch _ {
+                }
             }
         }
     }

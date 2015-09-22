@@ -50,7 +50,7 @@ class ResultsViewController: UIViewController {
     }
     
     func displayAmounts() {
-        var calc = CalculatorModel(cardValue: cardValue)
+        let calc = CalculatorModel(cardValue: cardValue)
       
         amountsToAdd = calc.calcAmountsArray()
         amountsNeeded = calc.calcAmountNeededFromAmountToAdd(amountsToAdd)

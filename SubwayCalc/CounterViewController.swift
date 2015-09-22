@@ -48,7 +48,7 @@ import CoreData
     
     func fetchNumberTrips () {
         let fetchRequest = NSFetchRequest(entityName:"TripLog")
-        let fetchedResults = self.managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [TripLog]
+        let fetchedResults = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as! [TripLog]
         totalTrips = Int(fetchedResults.count)
         counterLabel.text = "\(Int(totalTrips))"
     }
@@ -60,20 +60,23 @@ import CoreData
         newEntity.name = "Log"
         
         
-// ------ code below is crashing when data store is empty on first log / set year ------------ //
+        do {
+            // ------ code below is crashing when data store is empty on first log / set year ------------ //
         
-//        let calendar = NSCalendar.currentCalendar()
-//        let components = calendar.components(.CalendarUnitDay | .CalendarUnitMonth | .CalendarUnitYear, fromDate: date)
-//        newEntity.year = components.year
-//        newEntity.month = components.month
-//        newEntity.day = components.day
+    //        let calendar = NSCalendar.currentCalendar()
+    //        let components = calendar.components(.CalendarUnitDay | .CalendarUnitMonth | .CalendarUnitYear, fromDate: date)
+    //        newEntity.year = components.year
+    //        newEntity.month = components.month
+    //        newEntity.day = components.day
         
-        self.managedObjectContext.save(nil)
+            try self.managedObjectContext.save()
+        } catch _ {
+        }
     }
     
     func fetchTripsInThirtyDayPeriod () {
         let fetchRequest = NSFetchRequest(entityName:"TripLog")
-        let fetchedResults = self.managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [TripLog]
+        let fetchedResults = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as! [TripLog]
         var filteredResults = Array<TripLog>()
         for result in fetchedResults {
             if result.dateTime.compare(startDate) == NSComparisonResult.OrderedDescending && result.dateTime.compare(endDate) == NSComparisonResult.OrderedAscending {

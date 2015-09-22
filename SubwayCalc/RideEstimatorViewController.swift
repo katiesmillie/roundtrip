@@ -19,7 +19,7 @@ class RideEstimatorViewController: UIViewController {
     
     var perDay: Int {
         get {
-            return Int(NSNumberFormatter().numberFromString(perDayLabel.text)!)
+            return Int(NSNumberFormatter().numberFromString(perDayLabel.text!)!)
         }
         set {
             perDayLabel.text = String(newValue)
@@ -27,7 +27,7 @@ class RideEstimatorViewController: UIViewController {
     }
     var perWeek: Int {
         get {
-            return Int(NSNumberFormatter().numberFromString(perWeekLabel.text)!)
+            return Int(NSNumberFormatter().numberFromString(perWeekLabel.text!)!)
         }
         set {
             perWeekLabel.text = String(newValue)
@@ -35,7 +35,7 @@ class RideEstimatorViewController: UIViewController {
     }
     var perMonth: Int {
         get {
-            return Int(NSNumberFormatter().numberFromString(perMonthLabel.text)!)
+            return Int(NSNumberFormatter().numberFromString(perMonthLabel.text!)!)
         }
         set {
             perMonthLabel.text = String(newValue)
@@ -67,7 +67,7 @@ class RideEstimatorViewController: UIViewController {
         setMonthlyPass()
     }
     
-        func setMonthlyPass() {
+    func setMonthlyPass() {
         let monthlyPassDifference = Double(estimatedRides)*2.48 - 116.50
         
         if monthlyPassDifference > 0 {

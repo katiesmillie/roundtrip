@@ -18,23 +18,27 @@ class CalculatorModel {
     }
 
     func calcAmountToAdd(rides: Double) -> Double {
-        var valueNeeded = rides * subwayFare
-        return (valueNeeded - cardValue) / 1.11
+        let valueNeeded = rides * subwayFare
+        var amountToAdd = (valueNeeded - cardValue) / 1.11
+        amountToAdd = round(amountToAdd * 100.0)
+        amountToAdd = amountToAdd / 100.0
+        return amountToAdd
     }
     
     func calcAmountNeededFromAmountToAdd(amountsToAdd: [Double]) -> [Double] {
         var amountsNeeded = [Double]()
         for amountToAdd in amountsToAdd {
-            var amountNeeded = (amountToAdd * 1.11) + cardValue
+            let amountNeeded = (round(amountToAdd * 1.11 * 100) / 100) + cardValue
             amountsNeeded.append(amountNeeded)
         }
+        print(amountsNeeded)
         return amountsNeeded
     }
     
     func calcBonus(amountsToAdd: [Double]) -> [Double] {
         var bonusPcts = [Double]()
         for amountToAdd in amountsToAdd {
-            var bonusPct =  amountToAdd * 0.11
+            let bonusPct =  amountToAdd * 0.11
             bonusPcts.append(bonusPct)
         }
         return bonusPcts
@@ -43,31 +47,31 @@ class CalculatorModel {
     func calcNumberRides (amountsToAdd: [Double]) -> [Double]{
         var numberRides = [Double]()
         for amountToAdd in amountsToAdd {
-            var ride = round(((amountToAdd * 1.11) + cardValue) / subwayFare)
-            
+            let ride = round(((amountToAdd * 1.11) + cardValue) / subwayFare)
             numberRides.append(ride)
         }
-         println(numberRides)
         return numberRides
     }
 
     func calcAmountsArray() -> [Double]{
         var amountsToAdd = [Double]()
         for var rides = 4.0; rides <= 99; ++rides {
-            var amountToAdd = Double(calcAmountToAdd(rides))
-            amountToAdd = (round(amountToAdd * 100))/100
+            let amountToAdd = calcAmountToAdd(rides)
             amountsToAdd.append(amountToAdd)
         }
-        var suggestedAmts = findSuggestedAmounts(amountsToAdd)
+        let suggestedAmts = findSuggestedAmounts(amountsToAdd)
         return suggestedAmts
     }
     
     func findSuggestedAmounts(amounts: [Double]) -> [Double] {
         var suggestedAmts = [Double]()
         for amountToAdd in amounts {
-            let multipliedAmount = amountToAdd * 100
-            if multipliedAmount % 5 == 0 && amountToAdd >= 5.50 {
-            suggestedAmts.append(amountToAdd)
+            let multipliedAmount = (amountToAdd  * 1000.0) / 10
+            print(multipliedAmount)
+            print(amountToAdd)
+            if multipliedAmount % 5 == 0 && amountToAdd >= 5.50 && round(multipliedAmount * 1.11) % 5 == 0 {
+                print(amountToAdd)
+                suggestedAmts.append(amountToAdd)
             }
         }
         return suggestedAmts
