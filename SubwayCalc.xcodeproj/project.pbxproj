@@ -23,6 +23,7 @@
 		2DE8F4591B52794A00D50B0C /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */; };
 		2DE8F45B1B528E0D00D50B0C /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */; };
 		2DFEDCC51B553BCB00EAB43C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */; };
+		73DDC3D13DB415461604A2FF /* Pods_SubwayCalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E018F5461FA7675A93A4B7 /* Pods_SubwayCalcTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,9 @@
 		2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		5C85DE116D792ACF8EC49597 /* Pods-SubwayCalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests.release.xcconfig"; sourceTree = "<group>"; };
+		83E018F5461FA7675A93A4B7 /* Pods_SubwayCalcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubwayCalcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A447F510326BBA1EB240967A /* Pods-SubwayCalcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,18 +74,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73DDC3D13DB415461604A2FF /* Pods_SubwayCalcTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2202159E1C6EA40EA6CB72DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A447F510326BBA1EB240967A /* Pods-SubwayCalcTests.debug.xcconfig */,
+				5C85DE116D792ACF8EC49597 /* Pods-SubwayCalcTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2DE8F42A1B5275A000D50B0C = {
 			isa = PBXGroup;
 			children = (
 				2DE8F4351B5275A100D50B0C /* SubwayCalc */,
 				2DE8F44B1B5275A100D50B0C /* SubwayCalcTests */,
 				2DE8F4341B5275A100D50B0C /* Products */,
+				2202159E1C6EA40EA6CB72DF /* Pods */,
+				930041E0419323AB6C38617C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +158,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		930041E0419323AB6C38617C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83E018F5461FA7675A93A4B7 /* Pods_SubwayCalcTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DE8F4551B5275A100D50B0C /* Build configuration list for PBXNativeTarget "SubwayCalcTests" */;
 			buildPhases = (
+				D0CBFA66A6E380CAE0E717C8 /* Check Pods Manifest.lock */,
 				2DE8F4441B5275A100D50B0C /* Sources */,
 				2DE8F4451B5275A100D50B0C /* Frameworks */,
 				2DE8F4461B5275A100D50B0C /* Resources */,
+				2F13ADE5B1ECCA16AFE265D5 /* Embed Pods Frameworks */,
+				44C8AB6357F41FE604A66A6B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +265,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F13ADE5B1ECCA16AFE265D5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44C8AB6357F41FE604A66A6B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0CBFA66A6E380CAE0E717C8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DE8F42F1B5275A100D50B0C /* Sources */ = {
@@ -427,6 +502,7 @@
 		};
 		2DE8F4561B5275A100D50B0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A447F510326BBA1EB240967A /* Pods-SubwayCalcTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -447,6 +523,7 @@
 		};
 		2DE8F4571B5275A100D50B0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C85DE116D792ACF8EC49597 /* Pods-SubwayCalcTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
