@@ -51,7 +51,6 @@ class ResultsViewController: UIViewController {
     
     func displayAmounts() {
         let calc = CalculatorModel(cardValue: cardValue)
-      
         amountsToAdd = calc.calcAmountsArray()
         amountsNeeded = calc.calcAmountNeededFromAmountToAdd(amountsToAdd)
         bonusPcts = calc.calcBonus(amountsToAdd)
