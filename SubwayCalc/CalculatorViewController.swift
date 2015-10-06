@@ -20,9 +20,6 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         inputtedCardValue.delegate = self
     }
     
-//    override func viewWillAppear(animated: Bool) {
-//        inputtedCardValue.becomeFirstResponder()
-//    }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         self.view.endEditing(true)
@@ -52,7 +49,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
                 cardValue = 0.0
         }
             let rvc = segue.destinationViewController as! ResultsViewController
-            rvc.cardValue = cardValue
+            rvc.amountOnCard = cardValue
         }
     }
 }

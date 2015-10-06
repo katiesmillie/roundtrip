@@ -16,6 +16,7 @@
 		2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */; };
 		2DA358491B84EC1C00BED823 /* RideEstimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */; };
 		2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */; };
+		2DBCBA7C1BB8598500C3E71A /* SuggestedRefillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */; settings = {ASSET_TAGS = (); }; };
 		2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4381B5275A100D50B0C /* AppDelegate.swift */; };
 		2DE8F43B1B5275A100D50B0C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */; };
 		2DE8F43E1B5275A100D50B0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43C1B5275A100D50B0C /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDateViewController.swift; sourceTree = "<group>"; };
 		2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideEstimatorViewController.swift; sourceTree = "<group>"; };
 		2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideEstimatorModel.swift; sourceTree = "<group>"; };
+		2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestedRefillView.swift; sourceTree = "<group>"; };
 		2DE8F4331B5275A100D50B0C /* SubwayCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8F4371B5275A100D50B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8F4381B5275A100D50B0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		2DBCBA7D1BB8599300C3E71A /* Custom VIews */ = {
+			isa = PBXGroup;
+			children = (
+				2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */,
+			);
+			name = "Custom VIews";
+			sourceTree = "<group>";
+		};
 		2DE8F42A1B5275A000D50B0C = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +156,7 @@
 				2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */,
 				2DE8F4381B5275A100D50B0C /* AppDelegate.swift */,
 				2D2259441BB21C64009792D8 /* Controllers */,
+				2DBCBA7D1BB8599300C3E71A /* Custom VIews */,
 				2D2259431BB21C44009792D8 /* Models */,
 				2DE8F4361B5275A100D50B0C /* Supporting Files */,
 			);
@@ -343,6 +354,7 @@
 			files = (
 				2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */,
 				2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */,
+				2DBCBA7C1BB8598500C3E71A /* SuggestedRefillView.swift in Sources */,
 				2D2259421BB21C34009792D8 /* CardRefillModel.swift in Sources */,
 				2D6707681B6D403A004CB7E4 /* TripLogTableViewController.swift in Sources */,
 				2DE8F4591B52794A00D50B0C /* CalculatorModel.swift in Sources */,
@@ -466,6 +478,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -512,6 +525,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -576,7 +590,7 @@
 				2DE8F4511B5275A100D50B0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2DE8F4521B5275A100D50B0C /* Build configuration list for PBXNativeTarget "SubwayCalc" */ = {
 			isa = XCConfigurationList;
@@ -585,7 +599,7 @@
 				2DE8F4541B5275A100D50B0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2DE8F4551B5275A100D50B0C /* Build configuration list for PBXNativeTarget "SubwayCalcTests" */ = {
 			isa = XCConfigurationList;
@@ -594,7 +608,7 @@
 				2DE8F4571B5275A100D50B0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

@@ -9,30 +9,30 @@
 import Foundation
 
 public class CardRefillModel {
-    let initialAmountOnCard: Float
+    let initialAmountOnCard: Double
     let numberOfRides: Int
-    let subwayFare: Float = 2.75
+    let subwayFare: Double = 2.75
     
     
-    init (initialAmountOnCard: Float, numberOfRides: Int){
+    init (initialAmountOnCard: Double, numberOfRides: Int){
         self.initialAmountOnCard = initialAmountOnCard
         self.numberOfRides = numberOfRides
     }
     
-    func finalCardValue() -> Float {
-        return Float(numberOfRides) * subwayFare
+    func finalCardValue() -> Double {
+        return Double(numberOfRides) * subwayFare
     }
     
-    func totalAmountNeeded() -> Float {
+    func totalAmountNeeded() -> Double {
         return self.finalCardValue() - initialAmountOnCard
     }
     
     /** This is the amount needed divided 1.11 to account for the MTA bonus of 11% */
-   func amountToPutInMachine() -> Float {
+   func amountToPutInMachine() -> Double {
         return self.roundTo100s(self.totalAmountNeeded() / 1.11)
     }
     
-    func bonus() -> Float {
+    func bonus() -> Double {
         return self.roundTo100s(self.amountToPutInMachine() * 0.11)
     }
     
@@ -51,7 +51,7 @@ public class CardRefillModel {
         return (self.amountToPutInMachine() * 100) % 5 == 0
     }
     
-    private func roundTo100s(number: Float) -> Float {
+    private func roundTo100s(number: Double) -> Double {
         return round(100 * number) / 100
     }
     
