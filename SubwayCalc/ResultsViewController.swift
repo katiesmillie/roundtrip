@@ -52,9 +52,8 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         view.amountToAddLabel.text = String(format: "$ %.2f", refill.amountToPutInMachine())
         view.bonusPercentLabel.text = String(format: "$ %.2f", refill.bonus())
         view.finalCardValueLabel.text = String(format: "$ %.2f", refill.finalCardValue())
-        view.numberOfRidesLabel.text = String(format: "$ %.0f", refill.numberOfRides)
-
-        
+        view.numberOfRidesLabel.text = String(refill.numberOfRides)
+    
         return cell
     }
 
