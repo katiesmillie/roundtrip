@@ -12,6 +12,7 @@ import Nimble
 @testable import SubwayCalc
 
 class CardRefillSpec: QuickSpec {
+    
     override func spec() {
         describe("finalCardValue()") {
             it("should be number of rides * the subway fare") {
@@ -45,26 +46,37 @@ class CardRefillSpec: QuickSpec {
             
             context("the amountToPutInMachine() is divisible by $0.05") {
                 context("the amountToPutInMachine() is greater than $5.50") {
-                    it("should return true") {
+                    context("the finalCardValue is less than or equal to $100.00") {
+                        it("should return true") {
                         let cardRefill = CardRefillModel(initialAmountOnCard: 1.85, numberOfRides: 6)
                         expect(cardRefill.isValid()).to(equal(true))
-                    }
-                }
-                
-                context("the amountToPutInMachine() is less than $5.50") {
-                    it("should return false") {
-                        let cardRefill = CardRefillModel(initialAmountOnCard: 1.86, numberOfRides: 1)
-                        expect(cardRefill.isValid()).to(equal(false))
+                        }
                     }
                 }
             }
+                
+            context("the amountToPutInMachine() is less than $5.50") {
+                it("should return false") {
+                    let cardRefill = CardRefillModel(initialAmountOnCard: 1.86, numberOfRides: 1)
+                    expect(cardRefill.isValid()).to(equal(false))
+                }
+            }
             
-            context("the amountToPutInMachine() is divisible by .05") {
+            
+            context("the amountToPutInMachine() is not divisible by .05") {
+                it("should return false") {
+                    let cardRefill = CardRefillModel(initialAmountOnCard: 1.85, numberOfRides: 4)
+                    expect(cardRefill.isValid()).to(equal(false))
+                }
+            }
+                
+            context("the amountToPutInMachine() is greater than 100") {
                 it("should return false") {
                     let cardRefill = CardRefillModel(initialAmountOnCard: 1.85, numberOfRides: 4)
                     expect(cardRefill.isValid()).to(equal(false))
                 }
             }
         }
+
     }
 }

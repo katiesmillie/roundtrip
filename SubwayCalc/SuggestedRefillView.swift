@@ -10,14 +10,10 @@ import UIKit
 
 class SuggestedRefillView: UIView {
     
-    
     @IBOutlet weak var amountToAddLabel: UILabel!
     @IBOutlet weak var bonusPercentLabel: UILabel!
     @IBOutlet weak var finalCardValueLabel: UILabel!
     @IBOutlet weak var numberOfRidesLabel: UILabel!
+
     
-    
-
-
-
 }

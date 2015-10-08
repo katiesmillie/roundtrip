@@ -34,17 +34,12 @@ class TripLogTableViewController: UITableViewController, NSFetchedResultsControl
     override func viewDidLoad() {2
         super.viewDidLoad()
         
-//        var error: NSError? = nil
-        
         do {
             try fetchedResultsController.performFetch()
         } catch let error as NSError {
              print("An error: \(error.localizedDescription)")
         }
         
-//        if(fetchedResultsController.performFetch(&error) is false) {
-//            print("An error: \(error?.localizedDescription)")
-//        }
     }
     
     
@@ -110,7 +105,6 @@ class TripLogTableViewController: UITableViewController, NSFetchedResultsControl
                 }
             case .Update:
                 if let _ = indexPath {
-
                 }
             case .Move:
                 if let _ = indexPath {

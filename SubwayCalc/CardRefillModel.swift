@@ -8,7 +8,8 @@
 
 import Foundation
 
-public class CardRefillModel {
+class CardRefillModel {
+    
     let initialAmountOnCard: Double
     let numberOfRides: Int
     let subwayFare: Double = 2.75
@@ -37,7 +38,7 @@ public class CardRefillModel {
     }
     
     func isValid() -> Bool {
-        if self.needsEnoughMoney() && self.isDivisibleBy5Cents() {
+        if self.needsEnoughMoney() && self.isDivisibleBy5Cents() && self.isNotGreaterThanOneHundred() {
             return true
         }
         return false
@@ -49,6 +50,10 @@ public class CardRefillModel {
     
     private func isDivisibleBy5Cents() -> Bool {
         return (self.amountToPutInMachine() * 100) % 5 == 0
+    }
+    
+    private func isNotGreaterThanOneHundred() -> Bool {
+        return (self.finalCardValue() <= 100.0)
     }
     
     private func roundTo100s(number: Double) -> Double {

@@ -27,7 +27,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func findValidRefills() {
-        for rides in 1...36 {
+        for rides in 1...37 {
             let refill = CardRefillModel(initialAmountOnCard: amountOnCard, numberOfRides: rides)
             if refill.isValid() == true {
                 validRefills.append(refill)
