@@ -314,7 +314,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">Estimate your monthly rides to see if you would save money with a 30-day unlimited card (compared to rides at $2.48, the effective cost if you get the 11% bonus).</string>
+                                        <string key="content">Estimate your monthly rides to see if you would save money with a 30-day unlimited card (compared to rides at $2.48, the effective cost with 11% bonus).</string>
                                         <attributes>
                                             <color key="NSColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Avenir-Light"/>
