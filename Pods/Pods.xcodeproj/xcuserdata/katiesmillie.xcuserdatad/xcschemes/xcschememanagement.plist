@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SubwayCalc.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SubwayCalcTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2AA5FBDE15C80DE1479C402F3BAFD47C</key>
+		<key>65D86550C5573496C1EEB4D236FA624E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D75ED47E5B80FF267BC9EF42D85BCFA</key>
+		<key>847ACC59A951DF45617990A29E029BB0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F6FF70346394235B14F51521883EBFAB</key>
+		<key>8D8235958A976CCB57E6F7C86BCB001E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB8A4B89431CF542BA2188F70788EC24</key>
 		<dict>
 			<key>primary</key>
 			<true/>

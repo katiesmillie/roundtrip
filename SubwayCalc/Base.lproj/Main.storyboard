@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5mh-4o-xK4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5mh-4o-xK4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -241,6 +241,29 @@
             </objects>
             <point key="canvasLocation" x="101" y="2189"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Nt8-As-CFV">
+            <objects>
+                <viewController id="OpU-Jt-Ws8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s7C-Fs-DJk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pgl-6w-U0Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="naU-N5-IIv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eh1-gP-PsZ" appends="YES" id="gJO-vO-Vas"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDE-pk-oVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="eh1-gP-PsZ"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="2081"/>
+        </scene>
         <!--About-->
         <scene sceneID="iAT-bv-jNW">
             <objects>
@@ -475,7 +498,7 @@ Icons by icons8.com</string>
                                                     </connections>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-1N-Akp">
-                                                    <rect key="frame" x="158" y="16" width="244" height="112"/>
+                                                    <rect key="frame" x="146" y="16" width="268" height="112"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1oY-9Z-eyG">
                                                             <rect key="frame" x="0.0" y="0.0" width="148" height="112"/>
@@ -512,28 +535,28 @@ Icons by icons8.com</string>
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mtu-sY-1GH">
-                                                            <rect key="frame" x="160" y="0.0" width="84" height="112"/>
+                                                            <rect key="frame" x="160" y="0.0" width="108" height="112"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 00.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQh-26-AUP">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="28"/>
+                                                                    <rect key="frame" x="16" y="8" width="84" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
                                                                     <color key="textColor" red="0.19574652779999999" green="0.19574652779999999" blue="0.19574652779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 00.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvE-Zn-XMh">
-                                                                    <rect key="frame" x="0.0" y="28" width="84" height="28"/>
+                                                                    <rect key="frame" x="16" y="32" width="84" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                                                     <color key="textColor" red="0.19574652779999999" green="0.19574652779999999" blue="0.19574652779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 000.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcB-hD-v8I">
-                                                                    <rect key="frame" x="0.0" y="56" width="84" height="28"/>
+                                                                    <rect key="frame" x="16" y="56" width="84" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                                                     <color key="textColor" red="0.19574652779999999" green="0.19574652779999999" blue="0.19574652779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H21-Fi-l0x">
-                                                                    <rect key="frame" x="0.0" y="84" width="84" height="28"/>
+                                                                    <rect key="frame" x="16" y="80" width="84" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                                                     <color key="textColor" red="0.19574652779999999" green="0.19574652779999999" blue="0.19574652779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -710,7 +733,7 @@ Icons by icons8.com</string>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="51"/>
                                                 <state key="normal" title="－">
                                                     <color key="titleColor" red="0.19574652779999999" green="0.19574652779999999" blue="0.19574652779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="decrememntDay:" destination="ffe-N7-Yyt" eventType="touchUpInside" id="rmb-9G-kqZ"/>
@@ -899,6 +922,7 @@ Icons by icons8.com</string>
                                         </variation>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="6d6-9p-9CY" firstAttribute="leading" secondItem="MqU-uj-W6V" secondAttribute="leading" id="CG8-qu-zyd"/>
                                     <constraint firstItem="6d6-9p-9CY" firstAttribute="top" secondItem="MqU-uj-W6V" secondAttribute="top" id="Lbx-qt-o5l"/>

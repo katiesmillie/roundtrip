@@ -3,12 +3,13 @@
 use_frameworks!
 
 target 'SubwayCalc' do
+    pod 'Button', '4.3.0-beta1'
 
 end
 
 target 'SubwayCalcTests' do
-  pod 'Quick', '~> 0.6.0'
-  pod 'Nimble', '2.0.0-rc.3'
+  pod 'Quick'
+  pod 'Nimble'
 
 end
 
