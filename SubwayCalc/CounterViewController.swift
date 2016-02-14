@@ -12,18 +12,18 @@ import CoreData
 
  class CounterViewController: UIViewController {
     
-    @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var thirtyDayLabel: UILabel!
+    @IBOutlet weak var counterLabel: UILabel?
+    @IBOutlet weak var thirtyDayLabel: UILabel?
     
     var managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
   
     var totalTrips = 0
     
-    var startDate: NSDate! {
-        return endDate.dateByAddingTimeInterval(-60*60*24*30)
+    var startDate: NSDate {
+        return NSDate().dateByAddingTimeInterval(-60*60*24*30)
     }
     
-    var endDate: NSDate! {
+    var endDate: NSDate {
         return NSDate()
     }
         
@@ -48,9 +48,10 @@ import CoreData
     
     func fetchNumberTrips () {
         let fetchRequest = NSFetchRequest(entityName:"TripLog")
-        let fetchedResults = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as! [TripLog]
+        guard let fetchedResults = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as? [TripLog] else { return }
+        
         totalTrips = Int(fetchedResults.count)
-        counterLabel.text = "\(Int(totalTrips))"
+        counterLabel?.text = "\(Int(totalTrips))"
     }
     
     func logNewTrip () {
@@ -58,20 +59,6 @@ import CoreData
         let date = NSDate()
         newEntity.dateTime = date
         newEntity.name = "Log"
-        
-        
-        do {
-            // ------ code below is crashing when data store is empty on first log / set year ------------ //
-        
-    //        let calendar = NSCalendar.currentCalendar()
-    //        let components = calendar.components(.CalendarUnitDay | .CalendarUnitMonth | .CalendarUnitYear, fromDate: date)
-    //        newEntity.year = components.year
-    //        newEntity.month = components.month
-    //        newEntity.day = components.day
-        
-            try self.managedObjectContext.save()
-        } catch _ {
-        }
     }
     
     func fetchTripsInThirtyDayPeriod () {
@@ -84,7 +71,7 @@ import CoreData
             }
         }
         let tripsInThirtyDays = filteredResults.count
-        thirtyDayLabel.text = String(tripsInThirtyDays)
+        thirtyDayLabel?.text = String(tripsInThirtyDays)
     }
     
     @IBAction func unwindToStats(sender: UIStoryboardSegue) {

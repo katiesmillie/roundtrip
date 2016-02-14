@@ -10,47 +10,55 @@ import UIKit
 
 class RideEstimatorViewController: UIViewController {
 
-    @IBOutlet weak var perDayLabel: UITextField!
-    @IBOutlet weak var perWeekLabel: UITextField!
-    @IBOutlet weak var perMonthLabel: UITextField!
-    @IBOutlet weak var estimatedRidesLabel: UILabel!
-    @IBOutlet weak var monthlyPassStringLabel: UILabel!
-    @IBOutlet weak var monthlyPassDiffLabel: UILabel!
+    @IBOutlet weak var perDayLabel: UITextField?
+    @IBOutlet weak var perWeekLabel: UITextField?
+    @IBOutlet weak var perMonthLabel: UITextField?
+    @IBOutlet weak var estimatedRidesLabel: UILabel?
+    @IBOutlet weak var monthlyPassStringLabel: UILabel?
+    @IBOutlet weak var monthlyPassDiffLabel: UILabel?
     
     var perDay: Int {
         get {
-            return Int(NSNumberFormatter().numberFromString(perDayLabel.text!)!)
+            guard let perDayLabelText = perDayLabel?.text else { return 0 }
+            guard let formattedLabel = NSNumberFormatter().numberFromString(perDayLabelText) else { return 0 }
+            return Int(formattedLabel)
         }
         set {
-            perDayLabel.text = String(newValue)
+            perDayLabel?.text = String(newValue)
         }
     }
     var perWeek: Int {
         get {
-            return Int(NSNumberFormatter().numberFromString(perWeekLabel.text!)!)
+            guard let perWeekLabelText = perWeekLabel?.text else { return 0 }
+            guard let formattedLabel = NSNumberFormatter().numberFromString(perWeekLabelText) else { return 0 }
+            return Int(formattedLabel)
         }
         set {
-            perWeekLabel.text = String(newValue)
+            perWeekLabel?.text = String(newValue)
         }
     }
     var perMonth: Int {
         get {
-            return Int(NSNumberFormatter().numberFromString(perMonthLabel.text!)!)
+            guard let perMonthLabelText = perMonthLabel?.text else { return 0 }
+            guard let formattedLabel = NSNumberFormatter().numberFromString(perMonthLabelText) else { return 0 }
+            return Int(formattedLabel)
         }
         set {
-            perMonthLabel.text = String(newValue)
+            perMonthLabel?.text = String(newValue)
         }
     }
     
-    var estimatedRides: Int!
-    var monthlyPassString: String!
+    var estimatedRides: Int?
+    var monthlyPassString: String?
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var estimatorView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView?
+    @IBOutlet weak var estimatorView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        guard let estimatorView = estimatorView else { return }
+        guard let scrollView = scrollView else { return }
         scrollView.contentSize = estimatorView.bounds.size
         scrollView.addSubview(estimatorView)
         view.addSubview(scrollView)
@@ -62,23 +70,25 @@ class RideEstimatorViewController: UIViewController {
     func setRides() {
         let estimatedRidesDouble = (Double(perDay*perWeek)*4.2)+(Double(perMonth))
         estimatedRides = Int(estimatedRidesDouble)
-        estimatedRidesLabel.text = String(stringInterpolationSegment: estimatedRides)
+        estimatedRidesLabel?.text = String(stringInterpolationSegment: estimatedRides)
         
         setMonthlyPass()
     }
     
     func setMonthlyPass() {
-        let monthlyPassDifference = Double(estimatedRides)*2.48 - 116.50
+        guard let estimatedRides = estimatedRides else { return }
+        var monthlyPassDifference = Double(estimatedRides)*2.48 - 116.50
         
         if monthlyPassDifference > 0 {
             monthlyPassString = "saved with a monthly pass"
-            monthlyPassDiffLabel.textColor = UIColor.greenColor()
+            monthlyPassDiffLabel?.textColor = UIColor.greenColor()
         } else {
+            monthlyPassDifference *= -1
             monthlyPassString = "wasted with a monthly pass"
-            monthlyPassDiffLabel.textColor = UIColor.redColor()
+            monthlyPassDiffLabel?.textColor = UIColor.redColor()
         }
-        monthlyPassStringLabel.text = monthlyPassString
-        monthlyPassDiffLabel.text = String(format: "$ %.2f", monthlyPassDifference)
+        monthlyPassStringLabel?.text = monthlyPassString
+        monthlyPassDiffLabel?.text = String(format: "$ %.2f", monthlyPassDifference)
     }
 
     @IBAction func incrementDay(sender: UIButton) {

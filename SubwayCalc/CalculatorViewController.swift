@@ -10,14 +10,14 @@ import UIKit
 
 class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var inputtedCardValue: UITextField!
+    @IBOutlet weak var inputtedCardValue: UITextField?
     
     var cardValue = 0.0
     var currentString = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        inputtedCardValue.delegate = self
+        inputtedCardValue?.delegate = self
     }
     
 
@@ -25,9 +25,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-
     func cardValueAlert() {
-        let title = "Ouch."
+        let title = "Doh."
         let message = "My brain only computes amounts between $0 and $40"
         let alert = UIAlertController(title: title, message: message,  preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default, handler: {
@@ -39,12 +38,12 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Results View" {
-            if NSNumberFormatter().numberFromString(inputtedCardValue.text!) != nil {
-                cardValue = Double(NSNumberFormatter().numberFromString(inputtedCardValue.text!)!)
+            guard let inputtedCardValue = inputtedCardValue?.text else { return }
+            guard let formatedCardValue = NSNumberFormatter().numberFromString(inputtedCardValue) else { return }
+            cardValue = Double(formatedCardValue)
                 
-                if cardValue > 40.0 || cardValue < 0.0 {
-                    cardValueAlert()
-                }
+            if cardValue > 40.0 || cardValue < 0.0 {
+                cardValueAlert()
             } else {
                 cardValue = 0.0
         }
@@ -52,5 +51,6 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
             rvc.amountOnCard = cardValue
         }
     }
+    
 }
 

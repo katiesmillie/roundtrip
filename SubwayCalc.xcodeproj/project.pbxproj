@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D2259401BB21B0A009792D8 /* CardRefillSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22593F1BB21B0A009792D8 /* CardRefillSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		2D2259421BB21C34009792D8 /* CardRefillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2259411BB21C34009792D8 /* CardRefillModel.swift */; settings = {ASSET_TAGS = (); }; };
+		2D2259401BB21B0A009792D8 /* CardRefillSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22593F1BB21B0A009792D8 /* CardRefillSpec.swift */; };
+		2D2259421BB21C34009792D8 /* CardRefillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2259411BB21C34009792D8 /* CardRefillModel.swift */; };
 		2D4D1EEC1B61245D0016A51D /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */; };
 		2D5592811B626DB300AC9659 /* CounterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */; };
 		2D6707661B6D3C0A004CB7E4 /* TripLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6707651B6D3C0A004CB7E4 /* TripLog.swift */; };
@@ -16,7 +16,7 @@
 		2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */; };
 		2DA358491B84EC1C00BED823 /* RideEstimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */; };
 		2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */; };
-		2DBCBA7C1BB8598500C3E71A /* SuggestedRefillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */; settings = {ASSET_TAGS = (); }; };
+		2DBCBA7C1BB8598500C3E71A /* SuggestedRefillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */; };
 		2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4381B5275A100D50B0C /* AppDelegate.swift */; };
 		2DE8F43B1B5275A100D50B0C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */; };
 		2DE8F43E1B5275A100D50B0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43C1B5275A100D50B0C /* Main.storyboard */; };
@@ -26,7 +26,8 @@
 		2DE8F4591B52794A00D50B0C /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */; };
 		2DE8F45B1B528E0D00D50B0C /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */; };
 		2DFEDCC51B553BCB00EAB43C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */; };
-		73DDC3D13DB415461604A2FF /* Pods_SubwayCalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E018F5461FA7675A93A4B7 /* Pods_SubwayCalcTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		73DDC3D13DB415461604A2FF /* Pods_SubwayCalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E018F5461FA7675A93A4B7 /* Pods_SubwayCalcTests.framework */; };
+		EB50B9C719143226A52CD1D2 /* Pods_SubwayCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F07BB93FA2E24EF433F060 /* Pods_SubwayCalc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02830DEBD82CE79B31CEE796 /* Pods-SubwayCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalc/Pods-SubwayCalc.debug.xcconfig"; sourceTree = "<group>"; };
 		2D22593F1BB21B0A009792D8 /* CardRefillSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRefillSpec.swift; sourceTree = "<group>"; };
 		2D2259411BB21C34009792D8 /* CardRefillModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRefillModel.swift; sourceTree = "<group>"; };
+		2D4583D91C5BDAAC00EE787A /* SubwayCalc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SubwayCalc.entitlements; sourceTree = "<group>"; };
 		2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CounterViewController.swift; path = SubwayCalc/CounterViewController.swift; sourceTree = SOURCE_ROOT; };
 		2D5592801B626DB300AC9659 /* CounterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterModel.xcdatamodel; sourceTree = "<group>"; };
 		2D6707651B6D3C0A004CB7E4 /* TripLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripLog.swift; sourceTree = "<group>"; };
@@ -63,8 +66,10 @@
 		2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		4E6DCBBFE4D183C61E897E80 /* Pods-SubwayCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalc/Pods-SubwayCalc.release.xcconfig"; sourceTree = "<group>"; };
 		5C85DE116D792ACF8EC49597 /* Pods-SubwayCalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests.release.xcconfig"; sourceTree = "<group>"; };
 		83E018F5461FA7675A93A4B7 /* Pods_SubwayCalcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubwayCalcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F07BB93FA2E24EF433F060 /* Pods_SubwayCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubwayCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A447F510326BBA1EB240967A /* Pods-SubwayCalcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB50B9C719143226A52CD1D2 /* Pods_SubwayCalc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +98,8 @@
 			children = (
 				A447F510326BBA1EB240967A /* Pods-SubwayCalcTests.debug.xcconfig */,
 				5C85DE116D792ACF8EC49597 /* Pods-SubwayCalcTests.release.xcconfig */,
+				02830DEBD82CE79B31CEE796 /* Pods-SubwayCalc.debug.xcconfig */,
+				4E6DCBBFE4D183C61E897E80 /* Pods-SubwayCalc.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 		2DE8F4351B5275A100D50B0C /* SubwayCalc */ = {
 			isa = PBXGroup;
 			children = (
+				2D4583D91C5BDAAC00EE787A /* SubwayCalc.entitlements */,
 				2DE8F43C1B5275A100D50B0C /* Main.storyboard */,
 				2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */,
 				2DE8F4381B5275A100D50B0C /* AppDelegate.swift */,
@@ -195,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				83E018F5461FA7675A93A4B7 /* Pods_SubwayCalcTests.framework */,
+				A0F07BB93FA2E24EF433F060 /* Pods_SubwayCalc.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DE8F4521B5275A100D50B0C /* Build configuration list for PBXNativeTarget "SubwayCalc" */;
 			buildPhases = (
+				AE8EE9EBE6C2BBFFF676ACBE /* Check Pods Manifest.lock */,
 				2DE8F42F1B5275A100D50B0C /* Sources */,
 				2DE8F4301B5275A100D50B0C /* Frameworks */,
 				2DE8F4311B5275A100D50B0C /* Resources */,
+				E4AD9B4777AE550007055359 /* Embed Pods Frameworks */,
+				846331436685CDC63D6F2691 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +266,12 @@
 				TargetAttributes = {
 					2DE8F4321B5275A100D50B0C = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = BA5KZE6545;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					2DE8F4471B5275A100D50B0C = {
 						CreatedOnToolsVersion = 6.4;
@@ -330,6 +349,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		846331436685CDC63D6F2691 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SubwayCalc/Pods-SubwayCalc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE8EE9EBE6C2BBFFF676ACBE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		D0CBFA66A6E380CAE0E717C8 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +392,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4AD9B4777AE550007055359 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SubwayCalc/Pods-SubwayCalc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -497,8 +561,10 @@
 		};
 		2DE8F4531B5275A100D50B0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02830DEBD82CE79B31CEE796 /* Pods-SubwayCalc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SubwayCalc/SubwayCalc.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
@@ -519,8 +585,10 @@
 		};
 		2DE8F4541B5275A100D50B0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E6DCBBFE4D183C61E897E80 /* Pods-SubwayCalc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SubwayCalc/SubwayCalc.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
@@ -545,11 +613,8 @@
 			baseConfigurationReference = A447F510326BBA1EB240967A /* Pods-SubwayCalcTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEFINES_MODULE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -567,11 +632,8 @@
 			baseConfigurationReference = 5C85DE116D792ACF8EC49597 /* Pods-SubwayCalcTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEFINES_MODULE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SubwayCalcTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.katiesmillie.$(PRODUCT_NAME:rfc1034identifier)";

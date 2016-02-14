@@ -31,7 +31,7 @@ class TripLogTableViewController: UITableViewController, NSFetchedResultsControl
         
     }()
     
-    override func viewDidLoad() {2
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         do {
@@ -132,29 +132,21 @@ class TripLogTableViewController: UITableViewController, NSFetchedResultsControl
     
     func didSelectNewDate(controller: EditDateViewController, myDatePicker: UIDatePicker) {
         selectedTripDate = myDatePicker.date
+        guard let selectedTripDate = selectedTripDate else { return }
+
+        guard let updateIndexPath = self.tableView.indexPathForSelectedRow else { return }
+        let cell = self.tableView.cellForRowAtIndexPath(updateIndexPath)
+        let dateString = NSDateFormatter.localizedStringFromDate(selectedTripDate, dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        cell!.textLabel?.text = dateString
         
-        if let updateIndexPath = self.tableView.indexPathForSelectedRow {
-            
-            let cell = self.tableView.cellForRowAtIndexPath(updateIndexPath)
-            let dateString = NSDateFormatter.localizedStringFromDate(selectedTripDate!, dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-            cell!.textLabel?.text = dateString
-        
-//            let calendar = NSCalendar.currentCalendar()
-//            let components = calendar.components(.CalendarUnitDay | .CalendarUnitMonth | .CalendarUnitYear, fromDate: myDatePicker.date)
-            
-            if let trip = fetchedResultsController.objectAtIndexPath(updateIndexPath) as? TripLog {
-                trip.dateTime = selectedTripDate!
-                
-//                trip.day = components.day
-//                trip.month = components.month
-//                trip.year = components.year
-                
-                do {
-                    try self.managedObjectContext.save()
-                } catch _ {
-                }
-            }
+        guard let trip = fetchedResultsController.objectAtIndexPath(updateIndexPath) as? TripLog else { return }
+        trip.dateTime = selectedTripDate
+
+        do {
+            try self.managedObjectContext.save()
+        } catch _ {
         }
+    
     }
     
     func updateStats(){
