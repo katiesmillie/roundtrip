@@ -14,6 +14,7 @@ import CoreData
     
     @IBOutlet weak var counterLabel: UILabel?
     @IBOutlet weak var thirtyDayLabel: UILabel?
+    @IBOutlet weak var counterButton: UIButton?
     
     var managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
   
@@ -26,17 +27,12 @@ import CoreData
     var endDate: NSDate {
         return NSDate()
     }
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fetchNumberTrips()
-        fetchTripsInThirtyDayPeriod()
-    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
         fetchNumberTrips()
         fetchTripsInThirtyDayPeriod()
+        counterButton?.backgroundColor = UIColor.raspberry()
     }
   
 

@@ -22,6 +22,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         title = "Suggested Amounts"
         guard let amountOnCard = amountOnCard else { return }
         cardAmountLabel?.text = String(format: "$ %.2f MetroCard", amountOnCard)
+        cardAmountLabel?.backgroundColor = UIColor.raspberry()
         findValidRefills()
     }
     

@@ -70,6 +70,7 @@ class RideEstimatorViewController: UIViewController {
     func setRides() {
         let estimatedRidesDouble = (Double(perDay*perWeek)*4.2)+(Double(perMonth))
         estimatedRides = Int(estimatedRidesDouble)
+        guard let estimatedRides = estimatedRides else { return }
         estimatedRidesLabel?.text = String(stringInterpolationSegment: estimatedRides)
         
         setMonthlyPass()
@@ -81,11 +82,11 @@ class RideEstimatorViewController: UIViewController {
         
         if monthlyPassDifference > 0 {
             monthlyPassString = "saved with a monthly pass"
-            monthlyPassDiffLabel?.textColor = UIColor.greenColor()
+            monthlyPassDiffLabel?.textColor = UIColor.bluegreen()
         } else {
             monthlyPassDifference *= -1
             monthlyPassString = "wasted with a monthly pass"
-            monthlyPassDiffLabel?.textColor = UIColor.redColor()
+            monthlyPassDiffLabel?.textColor = UIColor.raspberry()
         }
         monthlyPassStringLabel?.text = monthlyPassString
         monthlyPassDiffLabel?.text = String(format: "$ %.2f", monthlyPassDifference)

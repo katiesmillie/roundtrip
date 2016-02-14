@@ -36,7 +36,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         presentViewController(alert, animated: true, completion: nil)
     }
     
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Results View" {
             guard let inputtedCardValue = inputtedCardValue?.text else { return }
             guard let formatedCardValue = NSNumberFormatter().numberFromString(inputtedCardValue) else { return }
@@ -44,10 +44,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
                 
             if cardValue > 40.0 || cardValue < 0.0 {
                 cardValueAlert()
-            } else {
-                cardValue = 0.0
-        }
-            let rvc = segue.destinationViewController as! ResultsViewController
+            }
+            guard let rvc = segue.destinationViewController as? ResultsViewController else { return }
             rvc.amountOnCard = cardValue
         }
     }

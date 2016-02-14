@@ -131,6 +131,7 @@
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="counterButton" destination="b5q-Mn-tLo" id="Wbz-IP-Hsc"/>
                         <outlet property="counterLabel" destination="RF3-y0-Qnk" id="EiV-aY-UbI"/>
                         <outlet property="thirtyDayLabel" destination="nbW-ud-pkh" id="cEg-te-FbN"/>
                     </connections>
@@ -207,7 +208,7 @@
                                     <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW9-Lw-H5n">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW9-Lw-H5n" customClass="MoneyButton" customModule="SubwayCalc" customModuleProvider="target">
                                 <rect key="frame" x="200" y="321" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.19574652779999999" green="0.19574652779999999" blue="0.19574652779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -240,29 +241,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ce-x9-rwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101" y="2189"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Nt8-As-CFV">
-            <objects>
-                <viewController id="OpU-Jt-Ws8" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="s7C-Fs-DJk"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pgl-6w-U0Q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="naU-N5-IIv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="eh1-gP-PsZ" appends="YES" id="gJO-vO-Vas"/>
-                        </connections>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hDE-pk-oVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="eh1-gP-PsZ"/>
-            </objects>
-            <point key="canvasLocation" x="868" y="2081"/>
         </scene>
         <!--About-->
         <scene sceneID="iAT-bv-jNW">
@@ -404,7 +382,7 @@ Cgo
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">Say hello @helloroundtrip
+                                        <string key="content">Say hello @katiesmillie
 
 Icons by icons8.com</string>
                                         <attributes>
@@ -620,7 +598,6 @@ Icons by icons8.com</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cardAmountLabel" destination="gmY-h4-c1i" id="KqE-WN-s4R"/>
-                        <outlet property="tableView" destination="zWq-iM-b7F" id="77r-cG-i3K"/>
                         <outlet property="view" destination="yf7-SV-QiE" id="Ocd-oq-A4r"/>
                     </connections>
                 </viewController>
@@ -659,7 +636,7 @@ Icons by icons8.com</string>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzH-0q-xN4" userLabel="background">
                                 <rect key="frame" x="4" y="64" width="592" height="139"/>
-                                <color key="backgroundColor" red="0.19574652779999999" green="0.19574652779999999" blue="0.19574652779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPI-MM-HXb">
                                 <rect key="frame" x="233" y="79" width="21" height="50"/>
@@ -922,7 +899,7 @@ Icons by icons8.com</string>
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="6d6-9p-9CY" firstAttribute="leading" secondItem="MqU-uj-W6V" secondAttribute="leading" id="CG8-qu-zyd"/>
                                     <constraint firstItem="6d6-9p-9CY" firstAttribute="top" secondItem="MqU-uj-W6V" secondAttribute="top" id="Lbx-qt-o5l"/>
@@ -1027,7 +1004,7 @@ Icons by icons8.com</string>
                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTR-eP-ky7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTR-eP-ky7" customClass="MoneyButton" customModule="SubwayCalc" customModuleProvider="target">
                                 <rect key="frame" x="180" y="284" width="240" height="60"/>
                                 <color key="backgroundColor" red="0.19574652779999999" green="0.19574652779999999" blue="0.19574652779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
