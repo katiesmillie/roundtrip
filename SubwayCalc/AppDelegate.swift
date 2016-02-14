@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func parseURL(myURL: NSURL) {
-        
+        // TODO
     }
   
 

@@ -1,7 +1,7 @@
 PODS:
   - Button (4.3.0-beta1)
   - Nimble (3.1.0)
-  - Quick (0.9.0)
+  - Quick (0.9.1)
 
 DEPENDENCIES:
   - Button (= 4.3.0-beta1)
@@ -11,6 +11,6 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Button: 16db639eca7efb5833a86e0cb99f68b180222978
   Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
-  Quick: 332eb1da73125a2106dd637424c803f2ae97e4a9
+  Quick: a5221fc21788b6aeda934805e68b061839bc3165
 
 COCOAPODS: 0.39.0
