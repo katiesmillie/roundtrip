@@ -13,6 +13,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DcS-kh-VnL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="uNG-vS-KUd" kind="relationship" relationship="rootViewController" id="uuN-y3-dIB"/>
@@ -30,6 +31,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oqL-iH-Dgo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="ffe-N7-Yyt" kind="relationship" relationship="rootViewController" id="J9E-sq-QXk"/>
@@ -48,11 +50,11 @@
                         <viewControllerLayoutGuide type="bottom" id="dtw-7K-5Y1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xrg-AT-RKY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5q-Mn-tLo">
-                                <rect key="frame" x="0.0" y="64" width="600" height="140"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                 <color key="backgroundColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
@@ -60,7 +62,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="nkM-t4-bem"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="60"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="60"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -69,37 +71,37 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total trips" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au0-s9-RkT">
-                                <rect key="frame" x="37" y="174" width="68" height="22"/>
+                                <rect key="frame" x="37" y="110" width="68" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RF3-y0-Qnk">
-                                <rect key="frame" x="20" y="174" width="9" height="22"/>
+                                <rect key="frame" x="20" y="110" width="9" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdb-X4-aMY">
-                                <rect key="frame" x="0.0" y="204" width="600" height="347"/>
+                                <rect key="frame" x="0.0" y="140" width="600" height="347"/>
                                 <connections>
                                     <segue destination="fou-dF-ADn" kind="embed" id="k6K-oW-Kpo"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbW-ud-pkh">
-                                <rect key="frame" x="426" y="174" width="9" height="22"/>
+                                <rect key="frame" x="426" y="110" width="9" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trips in last 30 days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkQ-KH-Fhn">
-                                <rect key="frame" x="443" y="174" width="137" height="22"/>
+                                <rect key="frame" x="443" y="110" width="137" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="RF3-y0-Qnk" firstAttribute="leading" secondItem="Xrg-AT-RKY" secondAttribute="leadingMargin" id="2Ke-2F-mHs"/>
                             <constraint firstItem="b5q-Mn-tLo" firstAttribute="leading" secondItem="RF3-y0-Qnk" secondAttribute="trailing" id="6C3-PS-8B0"/>
@@ -129,6 +131,7 @@
                     <navigationItem key="navigationItem" id="wHw-tv-EUD">
                         <nil key="title"/>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="counterButton" destination="b5q-Mn-tLo" id="Wbz-IP-Hsc"/>
                         <outlet property="counterLabel" destination="RF3-y0-Qnk" id="EiV-aY-UbI"/>
@@ -254,7 +257,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" pagingEnabled="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-8T-UDr">
                                 <rect key="frame" x="20" y="72" width="560" height="456"/>
-                                <color key="backgroundColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Fare Calculator
@@ -384,7 +387,7 @@ Icons by icons8.com</string>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="E0m-8T-UDr" firstAttribute="top" secondItem="Df3-1h-Bs3" secondAttribute="bottom" constant="8" symbolic="YES" id="3bc-dO-f6w"/>
                             <constraint firstItem="E0m-8T-UDr" firstAttribute="leading" secondItem="0a5-Mt-4nS" secondAttribute="leadingMargin" id="lN3-ei-k0j"/>
@@ -408,6 +411,7 @@ Icons by icons8.com</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="hJr-kn-mrn" kind="relationship" relationship="viewControllers" id="xH3-4j-uxX"/>
@@ -443,19 +447,19 @@ Icons by icons8.com</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="137" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zWq-iM-b7F">
-                                <rect key="frame" x="20" y="206" width="560" height="342"/>
+                                <rect key="frame" x="0.0" y="206" width="600" height="370"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Refill Cell" id="NqV-QE-UZf">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="137"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NqV-QE-UZf" id="yZ3-Wb-1ev">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="136"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XV9-h0-Vqe" userLabel="SuggestedRefillView" customClass="SuggestedRefillView" customModule="SubwayCalc" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="8" width="560" height="112"/>
+                                                    <rect key="frame" x="0.0" y="8" width="600" height="112"/>
                                                     <connections>
                                                         <outlet property="amountToAddLabel" destination="WQh-26-AUP" id="Dao-4r-seh"/>
                                                         <outlet property="bonusPercentLabel" destination="uvE-Zn-XMh" id="Jmf-E5-fgm"/>
@@ -464,7 +468,7 @@ Icons by icons8.com</string>
                                                     </connections>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-1N-Akp">
-                                                    <rect key="frame" x="146" y="16" width="268" height="112"/>
+                                                    <rect key="frame" x="166" y="16" width="268" height="112"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1oY-9Z-eyG">
                                                             <rect key="frame" x="0.0" y="0.0" width="148" height="112"/>
@@ -557,17 +561,17 @@ Icons by icons8.com</string>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="gmY-h4-c1i" secondAttribute="centerX" id="28y-e1-TgQ"/>
                             <constraint firstItem="zWq-iM-b7F" firstAttribute="top" secondItem="TPe-NX-3VF" secondAttribute="bottom" constant="142" id="2bY-Na-OKU"/>
-                            <constraint firstItem="chl-Wg-agK" firstAttribute="top" secondItem="zWq-iM-b7F" secondAttribute="bottom" constant="8" symbolic="YES" id="6gY-Il-WFj"/>
+                            <constraint firstItem="chl-Wg-agK" firstAttribute="top" secondItem="zWq-iM-b7F" secondAttribute="bottom" constant="-20" id="6gY-Il-WFj"/>
                             <constraint firstItem="zWq-iM-b7F" firstAttribute="height" secondItem="yf7-SV-QiE" secondAttribute="height" id="99u-ho-YCH"/>
                             <constraint firstItem="gmY-h4-c1i" firstAttribute="leading" secondItem="yf7-SV-QiE" secondAttribute="leadingMargin" constant="-16" id="9yy-K7-mUb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gmY-h4-c1i" secondAttribute="trailing" constant="-16" id="Odv-ZS-RCZ"/>
                             <constraint firstItem="gmY-h4-c1i" firstAttribute="top" secondItem="TPe-NX-3VF" secondAttribute="bottom" id="aaF-jS-j6Z"/>
-                            <constraint firstItem="zWq-iM-b7F" firstAttribute="leading" secondItem="yf7-SV-QiE" secondAttribute="leadingMargin" id="bD5-nK-DtP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zWq-iM-b7F" secondAttribute="trailing" id="wHy-2Y-EcT"/>
+                            <constraint firstItem="zWq-iM-b7F" firstAttribute="leading" secondItem="yf7-SV-QiE" secondAttribute="leadingMargin" constant="-20" id="bD5-nK-DtP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zWq-iM-b7F" secondAttribute="trailing" constant="-20" id="wHy-2Y-EcT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -576,7 +580,6 @@ Icons by icons8.com</string>
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="KSn-R1-joc"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cardAmountLabel" destination="gmY-h4-c1i" id="KqE-WN-s4R"/>
@@ -584,6 +587,13 @@ Icons by icons8.com</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkM-iQ-HUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationBar contentMode="scaleToFill" id="pok-6y-npC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Title" id="9EQ-hI-0hE"/>
+                    </items>
+                </navigationBar>
             </objects>
             <point key="canvasLocation" x="62" y="1050"/>
         </scene>
@@ -618,65 +628,67 @@ Icons by icons8.com</string>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzH-0q-xN4" userLabel="background">
                                 <rect key="frame" x="4" y="64" width="592" height="139"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPI-MM-HXb">
                                 <rect key="frame" x="233" y="79" width="21" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saved with a monthly pass" lineBreakMode="wordWrap" baselineAdjustment="none" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-Vk-dIh">
                                 <rect key="frame" x="297" y="144" width="167" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="times per month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="rov-en-eTa">
                                 <rect key="frame" x="262" y="94" width="105" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFW-jG-vNT">
                                 <rect key="frame" x="375" y="79" width="205" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dTL-Uz-KGS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gw-HF-Pyh">
                                 <rect key="frame" x="20" y="79" width="205" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dka-AC-i3c"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lL-QN-afS">
                                 <rect key="frame" x="20" y="129" width="109" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="emz-Aw-Q40"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egA-mg-HCd">
                                 <rect key="frame" x="472" y="129" width="108" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="G28-dj-wWC"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MqU-uj-W6V">
-                                <rect key="frame" x="4" y="203" width="592" height="348"/>
+                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MqU-uj-W6V">
+                                <rect key="frame" x="0.0" y="203" width="600" height="348"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6d6-9p-9CY" userLabel="inside View">
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6d6-9p-9CY" userLabel="inside View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="405"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For my typical commute, I ride the train:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="lTo-zB-cjo">
                                                 <rect key="frame" x="159" y="30" width="283" height="22"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwI-mw-ZVa">
@@ -688,8 +700,8 @@ Icons by icons8.com</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="51"/>
                                                 <state key="normal" title="－">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="decrememntDay:" destination="ffe-N7-Yyt" eventType="touchUpInside" id="rmb-9G-kqZ"/>
@@ -698,7 +710,6 @@ Icons by icons8.com</string>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yhM-Ft-taf">
                                                 <rect key="frame" x="288" y="67" width="25" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="36"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -706,7 +717,6 @@ Icons by icons8.com</string>
                                                 <rect key="frame" x="255" y="112" width="90" height="20"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eal-py-3fW">
@@ -718,8 +728,8 @@ Icons by icons8.com</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="51"/>
                                                 <state key="normal" title="+">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="incrementDay:" destination="ffe-N7-Yyt" eventType="touchUpInside" id="4XH-xZ-lT1"/>
@@ -734,8 +744,8 @@ Icons by icons8.com</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="51"/>
                                                 <state key="normal" title="+">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="incrementWeek:" destination="ffe-N7-Yyt" eventType="touchUpInside" id="8lz-np-1MK"/>
@@ -744,7 +754,6 @@ Icons by icons8.com</string>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3bq-DK-rY8">
                                                 <rect key="frame" x="288" y="151" width="25" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="36"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -752,7 +761,6 @@ Icons by icons8.com</string>
                                                 <rect key="frame" x="250" y="193" width="101" height="20"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZC-HD-dJO">
@@ -764,8 +772,8 @@ Icons by icons8.com</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="51"/>
                                                 <state key="normal" title="+">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="incrementMonth:" destination="ffe-N7-Yyt" eventType="touchUpInside" id="OWy-Wg-9GJ"/>
@@ -780,8 +788,8 @@ Icons by icons8.com</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="51"/>
                                                 <state key="normal" title="－">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="decrememntMonth:" destination="ffe-N7-Yyt" eventType="touchUpInside" id="LFc-eH-14Q"/>
@@ -791,13 +799,11 @@ Icons by icons8.com</string>
                                                 <rect key="frame" x="246" y="325" width="109" height="20"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="u7I-eJ-3Hm">
                                                 <rect key="frame" x="288" y="280" width="25" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="36"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -810,8 +816,8 @@ Icons by icons8.com</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="51"/>
                                                 <state key="normal" title="－">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="decrememntWeek:" destination="ffe-N7-Yyt" eventType="touchUpInside" id="B45-os-bak"/>
@@ -821,11 +827,10 @@ Icons by icons8.com</string>
                                                 <rect key="frame" x="178" y="243" width="244" height="22"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="yhM-Ft-taf" firstAttribute="top" secondItem="eal-py-3fW" secondAttribute="top" constant="15" id="01R-BE-Uce"/>
                                             <constraint firstItem="eal-py-3fW" firstAttribute="centerY" secondItem="yhM-Ft-taf" secondAttribute="centerY" id="2Ot-KE-iPH"/>
@@ -878,7 +883,7 @@ Icons by icons8.com</string>
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="6d6-9p-9CY" firstAttribute="leading" secondItem="MqU-uj-W6V" secondAttribute="leading" id="CG8-qu-zyd"/>
                                     <constraint firstItem="6d6-9p-9CY" firstAttribute="top" secondItem="MqU-uj-W6V" secondAttribute="top" id="Lbx-qt-o5l"/>
@@ -890,9 +895,11 @@ Icons by icons8.com</string>
                                 <rect key="frame" x="137" y="129" width="152" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="36"/>
+                                <color key="textColor" red="1" green="0.94829277690000002" blue="0.93025506179999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rov-en-eTa" firstAttribute="centerY" secondItem="LPI-MM-HXb" secondAttribute="centerY" id="4Um-Yn-pcL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jzH-0q-xN4" secondAttribute="trailing" constant="-16" id="D62-uh-cPX"/>
@@ -916,11 +923,11 @@ Icons by icons8.com</string>
                             <constraint firstItem="6gw-HF-Pyh" firstAttribute="top" secondItem="VAA-66-p3c" secondAttribute="bottom" constant="15" id="fis-CC-49y"/>
                             <constraint firstItem="rov-en-eTa" firstAttribute="centerY" secondItem="ZFW-jG-vNT" secondAttribute="centerY" id="gQs-UJ-wKo"/>
                             <constraint firstItem="ZFW-jG-vNT" firstAttribute="leading" secondItem="rov-en-eTa" secondAttribute="trailing" constant="8" symbolic="YES" id="hKe-jl-9pj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MqU-uj-W6V" secondAttribute="trailing" constant="-16" id="iMS-8C-2kl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MqU-uj-W6V" secondAttribute="trailing" constant="-20" id="iMS-8C-2kl"/>
                             <constraint firstItem="6gw-HF-Pyh" firstAttribute="leading" secondItem="6wB-qM-aI5" secondAttribute="leadingMargin" id="ige-kP-aZi"/>
                             <constraint firstItem="ZFW-jG-vNT" firstAttribute="trailing" secondItem="6wB-qM-aI5" secondAttribute="trailingMargin" id="lXh-4z-4w9"/>
                             <constraint firstItem="H3V-Jp-XLF" firstAttribute="top" secondItem="MqU-uj-W6V" secondAttribute="bottom" id="mYq-M8-OaW"/>
-                            <constraint firstItem="MqU-uj-W6V" firstAttribute="leading" secondItem="6wB-qM-aI5" secondAttribute="leadingMargin" constant="-16" id="upY-I3-h1A"/>
+                            <constraint firstItem="MqU-uj-W6V" firstAttribute="leading" secondItem="6wB-qM-aI5" secondAttribute="leadingMargin" constant="-20" id="upY-I3-h1A"/>
                             <constraint firstItem="wdC-U9-rQX" firstAttribute="leading" secondItem="1lL-QN-afS" secondAttribute="trailing" constant="8" symbolic="YES" id="vuX-kr-Sza"/>
                             <constraint firstItem="6gw-HF-Pyh" firstAttribute="width" secondItem="ZFW-jG-vNT" secondAttribute="width" id="z3V-Xj-qb4"/>
                         </constraints>
@@ -928,6 +935,7 @@ Icons by icons8.com</string>
                     <tabBarItem key="tabBarItem" title="Item" id="YLd-Qy-pf7"/>
                     <navigationItem key="navigationItem" title="Ride Estimator" id="2gg-uA-IYQ"/>
                     <connections>
+                        <outlet property="estimatedBackground" destination="jzH-0q-xN4" id="jI4-xu-eob"/>
                         <outlet property="estimatedRidesLabel" destination="LPI-MM-HXb" id="rlI-ma-Yui"/>
                         <outlet property="estimatorView" destination="6d6-9p-9CY" id="UuR-RL-rvn"/>
                         <outlet property="monthlyPassDiffLabel" destination="wdC-U9-rQX" id="MAp-WH-KZX"/>
