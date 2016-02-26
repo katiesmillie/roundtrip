@@ -10,6 +10,7 @@ import UIKit
 
 class RideEstimatorViewController: UIViewController {
 
+    @IBOutlet weak var estimatedBackground: UIView?
     @IBOutlet weak var perDayLabel: UITextField?
     @IBOutlet weak var perWeekLabel: UITextField?
     @IBOutlet weak var perMonthLabel: UITextField?
@@ -68,7 +69,8 @@ class RideEstimatorViewController: UIViewController {
     }
     
     func setRides() {
-        let estimatedRidesDouble = (Double(perDay*perWeek)*4.2)+(Double(perMonth))
+        let avgWeeksPerMonth = 4.2
+        let estimatedRidesDouble = (Double(perDay*perWeek) * avgWeeksPerMonth) + (Double(perMonth))
         estimatedRides = Int(estimatedRidesDouble)
         guard let estimatedRides = estimatedRides else { return }
         estimatedRidesLabel?.text = String(stringInterpolationSegment: estimatedRides)
@@ -78,18 +80,18 @@ class RideEstimatorViewController: UIViewController {
     
     func setMonthlyPass() {
         guard let estimatedRides = estimatedRides else { return }
-        let avgWeekendDays = 2.48
+        let effectiveSubwayFare = 2.48
         let monthlyPassFare = 116.50
         
-        var monthlyPassDifference = Double(estimatedRides) * avgWeekendDays - monthlyPassFare
+        var monthlyPassDifference = Double(estimatedRides) * effectiveSubwayFare - monthlyPassFare
         
         if monthlyPassDifference > 0 {
             monthlyPassString = "saved with a monthly pass"
-            monthlyPassDiffLabel?.textColor = UIColor.mtaBlueFlip()
+            estimatedBackground?.backgroundColor = UIColor.mtaBlueFlip()
         } else {
             monthlyPassDifference *= -1
             monthlyPassString = "wasted with a monthly pass"
-            monthlyPassDiffLabel?.textColor = UIColor.mtaBlueSwap()
+            estimatedBackground?.backgroundColor = UIColor.mtaBlueSwap()
         }
         monthlyPassStringLabel?.text = monthlyPassString
         monthlyPassDiffLabel?.text = String(format: "$ %.2f", monthlyPassDifference)
