@@ -28,6 +28,11 @@ import CoreData
         return NSDate()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Trip Log"
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
         fetchNumberTrips()
