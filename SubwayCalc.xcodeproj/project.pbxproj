@@ -25,8 +25,8 @@
 		2DE8F4401B5275A100D50B0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43F1B5275A100D50B0C /* Images.xcassets */; };
 		2DE8F4431B5275A100D50B0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F4411B5275A100D50B0C /* LaunchScreen.xib */; };
 		2DE8F44F1B5275A100D50B0C /* SubwayCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F44E1B5275A100D50B0C /* SubwayCalcTests.swift */; };
-		2DE8F4591B52794A00D50B0C /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */; };
 		2DE8F45B1B528E0D00D50B0C /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */; };
+		2DEBEDAA1C70127400EBB9DE /* Plus.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEBEDA91C70127400EBB9DE /* Plus.xib */; };
 		2DFEDCC51B553BCB00EAB43C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */; };
 		73DDC3D13DB415461604A2FF /* Pods_SubwayCalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E018F5461FA7675A93A4B7 /* Pods_SubwayCalcTests.framework */; };
 		EB50B9C719143226A52CD1D2 /* Pods_SubwayCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F07BB93FA2E24EF433F060 /* Pods_SubwayCalc.framework */; };
@@ -67,8 +67,8 @@
 		2DE8F4481B5275A100D50B0C /* SubwayCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubwayCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8F44D1B5275A100D50B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8F44E1B5275A100D50B0C /* SubwayCalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayCalcTests.swift; sourceTree = "<group>"; };
-		2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		2DEBEDA91C70127400EBB9DE /* Plus.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Plus.xib; sourceTree = "<group>"; };
 		2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		4E6DCBBFE4D183C61E897E80 /* Pods-SubwayCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalc/Pods-SubwayCalc.release.xcconfig"; sourceTree = "<group>"; };
 		5C85DE116D792ACF8EC49597 /* Pods-SubwayCalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +114,6 @@
 				2D6707651B6D3C0A004CB7E4 /* TripLog.swift */,
 				2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */,
 				2D2259411BB21C34009792D8 /* CardRefillModel.swift */,
-				2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -183,6 +182,7 @@
 			children = (
 				2DE8F43F1B5275A100D50B0C /* Images.xcassets */,
 				2DE8F4411B5275A100D50B0C /* LaunchScreen.xib */,
+				2DEBEDA91C70127400EBB9DE /* Plus.xib */,
 				2DE8F4371B5275A100D50B0C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -310,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DE8F43E1B5275A100D50B0C /* Main.storyboard in Resources */,
+				2DEBEDAA1C70127400EBB9DE /* Plus.xib in Resources */,
 				2DE8F4431B5275A100D50B0C /* LaunchScreen.xib in Resources */,
 				2DE8F4401B5275A100D50B0C /* Images.xcassets in Resources */,
 			);
@@ -427,7 +428,6 @@
 				2DBCBA7C1BB8598500C3E71A /* SuggestedRefillView.swift in Sources */,
 				2D2259421BB21C34009792D8 /* CardRefillModel.swift in Sources */,
 				2D6707681B6D403A004CB7E4 /* TripLogTableViewController.swift in Sources */,
-				2DE8F4591B52794A00D50B0C /* CalculatorModel.swift in Sources */,
 				2D6707661B6D3C0A004CB7E4 /* TripLog.swift in Sources */,
 				2D5592811B626DB300AC9659 /* CounterModel.xcdatamodeld in Sources */,
 				2D4D1EEC1B61245D0016A51D /* CounterViewController.swift in Sources */,

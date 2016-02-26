@@ -32,7 +32,6 @@ import CoreData
         super.viewWillAppear(animated);
         fetchNumberTrips()
         fetchTripsInThirtyDayPeriod()
-        counterButton?.backgroundColor = UIColor.raspberry()
     }
   
 

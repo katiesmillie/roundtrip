@@ -18,25 +18,20 @@ extension UIColor {
         return UIColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
     }
     
-    public class func indigo() -> UIColor {
-        return UIColor.rgb(red: 32, green: 33, blue: 59)
+    public class func mtaBlue() -> UIColor {
+        return UIColor.rgb(red: 11, green: 87, blue: 166)
     }
     
-    public class func peach() -> UIColor {
-        return UIColor.rgb(red: 225, green: 46, blue: 52)
+    public class func mtaYellow() -> UIColor {
+        return UIColor.rgb(red: 250, green: 202, blue: 35)
     }
     
-    public class func raspberry() -> UIColor {
-        return UIColor.rgb(red: 125, green: 38, blue: 57)
+    public class func mtaBlueSwap() -> UIColor {
+        return UIColor.rgb(red: 166, green: 11, blue: 87)
     }
     
-    public class func grape() -> UIColor {
-        return UIColor.rgb(red: 65, green: 38, blue: 58)
+    public class func mtaBlueFlip() -> UIColor {
+        return UIColor.rgb(red: 87, green: 166, blue: 11)
     }
     
-    public class func bluegreen() -> UIColor {
-        return UIColor.rgb(red: 36, green: 197, blue: 180)
-    }
-
-
 }

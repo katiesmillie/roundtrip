@@ -22,11 +22,17 @@ class EditDateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        stylePicker()
+    }
+    
+    private func stylePicker() {
         myDatePicker?.datePickerMode = UIDatePickerMode.Date
         myDatePicker?.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         guard let tripDate = tripDate else { return }
         myDatePicker?.date = tripDate
         myDatePicker?.maximumDate = NSDate()
+        myDatePicker?.setValue(UIColor.whiteColor(), forKey: "textColor")
+        myDatePicker?.performSelector("setHighlightsToday:", withObject: UIColor.whiteColor())
     }
     
     func datePickerChanged(myDatePicker: UIDatePicker) {

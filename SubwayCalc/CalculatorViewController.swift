@@ -12,12 +12,16 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var inputtedCardValue: UITextField?
     
+    @IBOutlet weak var inputField: UITextField?
     var cardValue = 0.0
     var currentString = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         inputtedCardValue?.delegate = self
+        self.view.backgroundColor = UIColor.mtaBlueSwap()
+        guard let inputField = inputField else { return }
+        inputField.layer.cornerRadius = inputField.layer.frame.height / 2
     }
     
 

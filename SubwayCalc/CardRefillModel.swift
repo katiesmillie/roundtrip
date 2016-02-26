@@ -10,12 +10,12 @@ import Foundation
 
 class CardRefillModel {
     
-    public let subwayFare = 2.75
-    public let bonusDivisor = 1.11
-    public let bonusMultiplier = 0.11
-    public let minFareForBonus = 5.50
-    public let centIncrement = 5.0
-    public let naivePercent = 100.0
+    internal let subwayFare = 2.75
+    internal let bonusDivisor = 1.11
+    internal let bonusMultiplier = 0.11
+    internal let minFareForBonus = 5.50
+    internal let centIncrement = 5.0
+    internal let naivePercent = 100.0
     
     let initialAmountOnCard: Double
     let numberOfRides: Int

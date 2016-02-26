@@ -78,15 +78,18 @@ class RideEstimatorViewController: UIViewController {
     
     func setMonthlyPass() {
         guard let estimatedRides = estimatedRides else { return }
-        var monthlyPassDifference = Double(estimatedRides)*2.48 - 116.50
+        let avgWeekendDays = 2.48
+        let monthlyPassFare = 116.50
+        
+        var monthlyPassDifference = Double(estimatedRides) * avgWeekendDays - monthlyPassFare
         
         if monthlyPassDifference > 0 {
             monthlyPassString = "saved with a monthly pass"
-            monthlyPassDiffLabel?.textColor = UIColor.bluegreen()
+            monthlyPassDiffLabel?.textColor = UIColor.mtaBlueFlip()
         } else {
             monthlyPassDifference *= -1
             monthlyPassString = "wasted with a monthly pass"
-            monthlyPassDiffLabel?.textColor = UIColor.raspberry()
+            monthlyPassDiffLabel?.textColor = UIColor.mtaBlueSwap()
         }
         monthlyPassStringLabel?.text = monthlyPassString
         monthlyPassDiffLabel?.text = String(format: "$ %.2f", monthlyPassDifference)
