@@ -10,4 +10,6 @@ import Foundation
 
 class RideEstimatorModel {
     
+    //TODO: Move ride estimator logic here
+    
 }
