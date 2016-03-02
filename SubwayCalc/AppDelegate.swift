@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Button
+import Mixpanel
 
 
 @UIApplicationMain
@@ -16,15 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Button.sharedButton().configureWithApplicationId("app-7fee30f162112810", deeplinkHandler: { (myURL) -> Void in
             self.parseURL(myURL)
             },
             completion: { (error) -> Void in
-                
         })
         
+        Mixpanel.sharedInstanceWithToken(mixpanelToken)
+        MixpanelHelper.people()
         return true
     }
     
@@ -37,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Button.sharedButton().handleURL(userActivity.webpageURL)
         return true
     }
-    
     
     // MARK: - Core Data stack
     

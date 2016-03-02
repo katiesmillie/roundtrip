@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Mixpanel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Nimble.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,17 +32,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5E738885E115F97D07ECE3FA609C0A17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>65D86550C5573496C1EEB4D236FA624E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>847ACC59A951DF45617990A29E029BB0</key>
+		<key>8D8235958A976CCB57E6F7C86BCB001E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D8235958A976CCB57E6F7C86BCB001E</key>
+		<key>F67B8F5222F0860E09FED08C99485984</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -18,6 +18,8 @@
 		2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */; };
 		2DA358491B84EC1C00BED823 /* RideEstimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */; };
 		2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */; };
+		2DB453AF1C80C77F006B40D5 /* MixpanelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB453AE1C80C77F006B40D5 /* MixpanelHelper.swift */; };
+		2DB453B21C866E38006B40D5 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB453B11C866E38006B40D5 /* CircleButton.swift */; };
 		2DBCBA7C1BB8598500C3E71A /* SuggestedRefillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */; };
 		2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4381B5275A100D50B0C /* AppDelegate.swift */; };
 		2DE8F43B1B5275A100D50B0C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */; };
@@ -56,6 +58,8 @@
 		2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDateViewController.swift; sourceTree = "<group>"; };
 		2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideEstimatorViewController.swift; sourceTree = "<group>"; };
 		2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideEstimatorModel.swift; sourceTree = "<group>"; };
+		2DB453AE1C80C77F006B40D5 /* MixpanelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixpanelHelper.swift; sourceTree = "<group>"; };
+		2DB453B11C866E38006B40D5 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestedRefillView.swift; sourceTree = "<group>"; };
 		2DE8F4331B5275A100D50B0C /* SubwayCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8F4371B5275A100D50B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,10 +137,19 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		2DB453B01C80C798006B40D5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2DB453AE1C80C77F006B40D5 /* MixpanelHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		2DBCBA7D1BB8599300C3E71A /* Custom VIews */ = {
 			isa = PBXGroup;
 			children = (
 				2D20011A1C6FFFDA008CB39B /* MoneyButton.swift */,
+				2DB453B11C866E38006B40D5 /* CircleButton.swift */,
 				2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */,
 			);
 			name = "Custom VIews";
@@ -170,6 +183,7 @@
 				2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */,
 				2DE8F4381B5275A100D50B0C /* AppDelegate.swift */,
 				2D2259441BB21C64009792D8 /* Controllers */,
+				2DB453B01C80C798006B40D5 /* Helpers */,
 				2DBCBA7D1BB8599300C3E71A /* Custom VIews */,
 				2D2259431BB21C44009792D8 /* Models */,
 				2DE8F4361B5275A100D50B0C /* Supporting Files */,
@@ -425,6 +439,7 @@
 			files = (
 				2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */,
 				2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */,
+				2DB453B21C866E38006B40D5 /* CircleButton.swift in Sources */,
 				2DBCBA7C1BB8598500C3E71A /* SuggestedRefillView.swift in Sources */,
 				2D2259421BB21C34009792D8 /* CardRefillModel.swift in Sources */,
 				2D6707681B6D403A004CB7E4 /* TripLogTableViewController.swift in Sources */,
@@ -436,6 +451,7 @@
 				2DE8F43B1B5275A100D50B0C /* CalculatorViewController.swift in Sources */,
 				2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */,
 				2DFEDCC51B553BCB00EAB43C /* AboutViewController.swift in Sources */,
+				2DB453AF1C80C77F006B40D5 /* MixpanelHelper.swift in Sources */,
 				2D20011D1C7000FC008CB39B /* UIColorExtension.swift in Sources */,
 				2DE8F45B1B528E0D00D50B0C /* ResultsViewController.swift in Sources */,
 			);

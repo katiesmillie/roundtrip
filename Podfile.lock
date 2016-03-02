@@ -1,15 +1,20 @@
 PODS:
   - Button (4.3.0-beta1)
+  - Mixpanel (2.9.4):
+    - Mixpanel/Mixpanel (= 2.9.4)
+  - Mixpanel/Mixpanel (2.9.4)
   - Nimble (3.1.0)
   - Quick (0.9.1)
 
 DEPENDENCIES:
   - Button (= 4.3.0-beta1)
+  - Mixpanel
   - Nimble
   - Quick
 
 SPEC CHECKSUMS:
   Button: 16db639eca7efb5833a86e0cb99f68b180222978
+  Mixpanel: 80d2ca9bb38ae91c1044d738e80fe448377ac89f
   Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
   Quick: a5221fc21788b6aeda934805e68b061839bc3165
 
