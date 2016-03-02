@@ -17,6 +17,7 @@ import CoreData
     @IBOutlet weak var counterButton: UIButton?
     
     var managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+    var fetchedResults: [TripLog]?
   
     var totalTrips = 0
     
@@ -36,36 +37,40 @@ import CoreData
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
-        fetchNumberTrips()
-        fetchTripsInThirtyDayPeriod()
+        fetchResults()
     }
     
 
     @IBAction func logTrip(sender: UIButton) {
         logNewTrip()
         MixpanelHelper.track("Log trip", properties: nil)
-        fetchNumberTrips()
-        fetchTripsInThirtyDayPeriod()
+        fetchResults()
     }
     
-    func fetchNumberTrips () {
+    func fetchResults () {
         let fetchRequest = NSFetchRequest(entityName:"TripLog")
-        guard let fetchedResults = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as? [TripLog] else { return }
-        
+        fetchedResults = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as? [TripLog]
+        getNumberTrips()
+        getTripsInThirtyDayPeriod()
+    }
+    
+    func getNumberTrips() {
+        guard let fetchedResults = fetchedResults else { return }
         totalTrips = Int(fetchedResults.count)
         counterLabel?.text = "\(Int(totalTrips))"
     }
     
-    func logNewTrip () {
+
+    func logNewTrip() {
         let newEntity = NSEntityDescription.insertNewObjectForEntityForName("TripLog", inManagedObjectContext: self.managedObjectContext) as! TripLog
         let date = NSDate()
         newEntity.dateTime = date
         newEntity.name = "Log"
     }
     
-    func fetchTripsInThirtyDayPeriod () {
-        let fetchRequest = NSFetchRequest(entityName:"TripLog")
-        let fetchedResults = (try! self.managedObjectContext.executeFetchRequest(fetchRequest)) as! [TripLog]
+    func getTripsInThirtyDayPeriod() {
+        guard let fetchedResults = fetchedResults else { return }
+
         var filteredResults = Array<TripLog>()
         for result in fetchedResults {
             if result.dateTime.compare(startDate) == NSComparisonResult.OrderedDescending && result.dateTime.compare(endDate) == NSComparisonResult.OrderedAscending {
@@ -77,8 +82,7 @@ import CoreData
     }
     
     @IBAction func unwindToStats(sender: UIStoryboardSegue) {
-        fetchNumberTrips()
-        fetchTripsInThirtyDayPeriod()
+        fetchResults()
     }
     
 }
