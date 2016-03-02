@@ -98,7 +98,7 @@ class RideEstimatorViewController: UIViewController {
     }
 
     @IBAction func incrementDay(sender: UIButton) {
-        if perDay < 10 {
+        if perDay < 9 {
             perDay += 1
         }  else {
             perDay = 0
@@ -108,7 +108,7 @@ class RideEstimatorViewController: UIViewController {
     
     @IBAction func decrememntDay(sender: UIButton) {
         if perDay == 0 {
-            perDay = 10
+            perDay = 9
         } else {
             perDay -= 1
         }
