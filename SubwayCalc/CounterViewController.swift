@@ -32,16 +32,18 @@ import CoreData
         super.viewDidLoad()
         title = "Trip Log"
     }
+
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
         fetchNumberTrips()
         fetchTripsInThirtyDayPeriod()
     }
-  
+    
 
     @IBAction func logTrip(sender: UIButton) {
         logNewTrip()
+        MixpanelHelper.track("Log trip", properties: nil)
         fetchNumberTrips()
         fetchTripsInThirtyDayPeriod()
     }

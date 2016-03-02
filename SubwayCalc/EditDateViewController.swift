@@ -31,8 +31,9 @@ class EditDateViewController: UIViewController {
         guard let tripDate = tripDate else { return }
         myDatePicker?.date = tripDate
         myDatePicker?.maximumDate = NSDate()
-        myDatePicker?.setValue(UIColor.whiteColor(), forKey: "textColor")
-        myDatePicker?.performSelector("setHighlightsToday:", withObject: UIColor.whiteColor())
+        myDatePicker?.backgroundColor  = UIColor.whiteColor()
+//        myDatePicker?.setValue(UIColor.whiteColor(), forKey: "textColor")
+//        myDatePicker?.performSelector("setHighlightsToday:", withObject: UIColor.whiteColor())
     }
     
     func datePickerChanged(myDatePicker: UIDatePicker) {
@@ -42,6 +43,7 @@ class EditDateViewController: UIViewController {
     @IBAction func didSelectNewDate(sender: UIButton) {
         guard let myDatePicker = myDatePicker else { return }
         datePickerChanged(myDatePicker)
+        MixpanelHelper.track("Edit trip date", properties: nil)
         delegate?.didSelectNewDate(self, myDatePicker: myDatePicker)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
