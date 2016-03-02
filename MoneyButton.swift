@@ -12,8 +12,8 @@ class MoneyButton: UIButton {
     
     var bottomBorder: UIView?
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         styleButton()
     }
     

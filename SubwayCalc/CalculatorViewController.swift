@@ -19,14 +19,18 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         inputtedCardValue?.delegate = self
-        self.view.backgroundColor = UIColor.mtaBlueSwap()
-        guard let inputField = inputField else { return }
-        inputField.layer.cornerRadius = inputField.layer.frame.height / 2
+        styleView()
     }
     
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         self.view.endEditing(true)
+    }
+    
+    func styleView() {
+        self.view.backgroundColor = UIColor.mtaBlueSwap()
+        guard let inputField = inputField else { return }
+        inputField.layer.cornerRadius = inputField.layer.frame.height / 2
     }
     
     func cardValueAlert() {
@@ -48,7 +52,16 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
                 
             if cardValue > 40.0 || cardValue < 0.0 {
                 cardValueAlert()
+                MixpanelHelper.track(
+                    "Card value alert",
+                    properties: ["Amount": cardValue]
+                )            } else {
+                MixpanelHelper.track(
+                    "Calcuate fare",
+                    properties: ["Amount": cardValue]
+                )
             }
+            
             guard let rvc = segue.destinationViewController as? ResultsViewController else { return }
             rvc.amountOnCard = cardValue
         }
