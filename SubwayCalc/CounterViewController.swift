@@ -22,7 +22,11 @@ import CoreData
     var totalTrips = 0
     
     var startDate: NSDate {
-        return NSDate().dateByAddingTimeInterval(-60*60*24*30)
+        let today = NSDate()
+        let secondsPerDay = 60 * 60 * 24
+        let secondsInThirtyDays = secondsPerDay * 30
+        // Subtract 30 days from today
+        return today.dateByAddingTimeInterval(-Double(secondsInThirtyDays))
     }
     
     var endDate: NSDate {
