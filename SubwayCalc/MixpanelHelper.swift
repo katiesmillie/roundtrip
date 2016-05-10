@@ -16,11 +16,14 @@ public struct MixpanelHelper {
     
     static func track(event: String, properties: [String: AnyObject]?) {
         let mixpanel = Mixpanel.sharedInstanceWithToken(mixpanelToken)
-        mixpanel.track(event)
+        mixpanel.track(
+            event,
+            properties: properties
+        )
     }
     
+    // TODO: Can only use people profiles with registered users
     static func people() {
-        
         let mixpanel = Mixpanel.sharedInstanceWithToken(mixpanelToken)
         
         let dateNow = NSDate()
@@ -31,7 +34,7 @@ public struct MixpanelHelper {
         
         print("Date time \(dateString)")
         
-        mixpanel.people.set([
+        mixpanel.people.setOnce([
             "$created": dateString,
             ])
     }

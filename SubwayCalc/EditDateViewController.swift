@@ -27,7 +27,7 @@ class EditDateViewController: UIViewController {
     
     private func stylePicker() {
         myDatePicker?.datePickerMode = UIDatePickerMode.Date
-        myDatePicker?.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        myDatePicker?.addTarget(self, action: #selector(datePickerChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
         guard let tripDate = tripDate else { return }
         myDatePicker?.date = tripDate
         myDatePicker?.maximumDate = NSDate()

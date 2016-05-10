@@ -1,6 +1,4 @@
- //
 //  AppDelegate.swift
-//  test
 //
 //  Created by Katie Smillie on 7/24/15.
 //  Copyright (c) 2015 Katie Smillie. All rights reserved.
@@ -24,8 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             completion: { (error) -> Void in
         })
         
+        let window = self.window ?? UIWindow(frame: UIScreen.mainScreen().bounds)
+        installRootViewController(window)
+        window.makeKeyAndVisible()
+        self.window = window
+        
         Mixpanel.sharedInstanceWithToken(mixpanelToken)
-        MixpanelHelper.people()
         return true
     }
     
@@ -38,6 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Button.sharedButton().handleURL(userActivity.webpageURL)
         return true
     }
+    
+    func installRootViewController(window: UIWindow) {
+        let root = RootViewController()
+        window.rootViewController = root
+    }
+    
     
     // MARK: - Core Data stack
     

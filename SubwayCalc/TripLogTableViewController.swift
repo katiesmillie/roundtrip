@@ -63,10 +63,11 @@ class TripLogTableViewController: UITableViewController, NSFetchedResultsControl
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) 
+        let cell = tableView.dequeueReusableCellWithIdentifier("TripCell", forIndexPath: indexPath)
         let trip = fetchedResultsController.objectAtIndexPath(indexPath) as! TripLog
         let dateString = NSDateFormatter.localizedStringFromDate(trip.dateTime, dateStyle: .LongStyle, timeStyle: .NoStyle)
         cell.textLabel?.text = dateString
+        cell.textLabel?.textColor = UIColor.mtaBlueSwap()
 
         return cell
     }
@@ -153,6 +154,10 @@ class TripLogTableViewController: UITableViewController, NSFetchedResultsControl
         self.performSegueWithIdentifier("Unwind Segue", sender: self)
     }
     
+    @IBAction func close(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+
+    }
 }
 
 

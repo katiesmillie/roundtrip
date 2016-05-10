@@ -29,10 +29,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RWDropdownMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5E738885E115F97D07ECE3FA609C0A17</key>
+		<key>08785FF2B2660528B90954DC8EF7A851</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>311A5D3909F403F49CC711017547FAE5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>40FF1C77152F384080A1A02E90A36DA9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,12 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D8235958A976CCB57E6F7C86BCB001E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F67B8F5222F0860E09FED08C99485984</key>
+		<key>B5F312ABB371123942048FA3C80AB971</key>
 		<dict>
 			<key>primary</key>
 			<true/>

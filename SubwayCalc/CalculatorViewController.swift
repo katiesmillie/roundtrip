@@ -55,7 +55,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
                 MixpanelHelper.track(
                     "Card value alert",
                     properties: ["Amount": cardValue]
-                )            } else {
+                )
+            } else {
                 MixpanelHelper.track(
                     "Calcuate fare",
                     properties: ["Amount": cardValue]

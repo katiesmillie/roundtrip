@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D20011B1C6FFFDA008CB39B /* MoneyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D20011A1C6FFFDA008CB39B /* MoneyButton.swift */; };
 		2D20011D1C7000FC008CB39B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D20011C1C7000FC008CB39B /* UIColorExtension.swift */; };
 		2D2259401BB21B0A009792D8 /* CardRefillSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22593F1BB21B0A009792D8 /* CardRefillSpec.swift */; };
 		2D2259421BB21C34009792D8 /* CardRefillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2259411BB21C34009792D8 /* CardRefillModel.swift */; };
+		2D2CDF3E1CA9A966008779E8 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2CDF3D1CA9A966008779E8 /* MenuTableViewController.swift */; };
+		2D2CDF401CA9DF89008779E8 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2CDF3F1CA9DF89008779E8 /* MenuTableViewCell.swift */; };
 		2D4D1EEC1B61245D0016A51D /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */; };
 		2D5592811B626DB300AC9659 /* CounterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */; };
+		2D59C1B41CD7E61700BAB726 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D59C1B31CD7E61700BAB726 /* RootViewController.swift */; };
+		2D59C1B61CD7EE1500BAB726 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D59C1B51CD7EE1500BAB726 /* Calculator.storyboard */; };
 		2D6707661B6D3C0A004CB7E4 /* TripLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6707651B6D3C0A004CB7E4 /* TripLog.swift */; };
 		2D6707681B6D403A004CB7E4 /* TripLogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6707671B6D403A004CB7E4 /* TripLogTableViewController.swift */; };
 		2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */; };
@@ -20,15 +23,18 @@
 		2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */; };
 		2DB453AF1C80C77F006B40D5 /* MixpanelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB453AE1C80C77F006B40D5 /* MixpanelHelper.swift */; };
 		2DB453B21C866E38006B40D5 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB453B11C866E38006B40D5 /* CircleButton.swift */; };
+		2DB453B41C8678BE006B40D5 /* StatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB453B31C8678BE006B40D5 /* StatsTableViewController.swift */; };
+		2DB453B61C867DE8006B40D5 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB453B51C867DE8006B40D5 /* NSDateExtension.swift */; };
 		2DBCBA7C1BB8598500C3E71A /* SuggestedRefillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */; };
 		2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4381B5275A100D50B0C /* AppDelegate.swift */; };
 		2DE8F43B1B5275A100D50B0C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */; };
-		2DE8F43E1B5275A100D50B0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43C1B5275A100D50B0C /* Main.storyboard */; };
 		2DE8F4401B5275A100D50B0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43F1B5275A100D50B0C /* Images.xcassets */; };
 		2DE8F4431B5275A100D50B0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F4411B5275A100D50B0C /* LaunchScreen.xib */; };
 		2DE8F44F1B5275A100D50B0C /* SubwayCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F44E1B5275A100D50B0C /* SubwayCalcTests.swift */; };
 		2DE8F45B1B528E0D00D50B0C /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */; };
 		2DEBEDAA1C70127400EBB9DE /* Plus.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEBEDA91C70127400EBB9DE /* Plus.xib */; };
+		2DED2E981C9DB9E500698808 /* MoneyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DED2E971C9DB9E500698808 /* MoneyButton.swift */; };
+		2DED2E9B1C9DB9FE00698808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DED2E991C9DB9FE00698808 /* Main.storyboard */; };
 		2DFEDCC51B553BCB00EAB43C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */; };
 		73DDC3D13DB415461604A2FF /* Pods_SubwayCalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E018F5461FA7675A93A4B7 /* Pods_SubwayCalcTests.framework */; };
 		EB50B9C719143226A52CD1D2 /* Pods_SubwayCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F07BB93FA2E24EF433F060 /* Pods_SubwayCalc.framework */; };
@@ -46,13 +52,16 @@
 
 /* Begin PBXFileReference section */
 		02830DEBD82CE79B31CEE796 /* Pods-SubwayCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalc/Pods-SubwayCalc.debug.xcconfig"; sourceTree = "<group>"; };
-		2D20011A1C6FFFDA008CB39B /* MoneyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyButton.swift; path = ../MoneyButton.swift; sourceTree = "<group>"; };
 		2D20011C1C7000FC008CB39B /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		2D22593F1BB21B0A009792D8 /* CardRefillSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRefillSpec.swift; sourceTree = "<group>"; };
 		2D2259411BB21C34009792D8 /* CardRefillModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRefillModel.swift; sourceTree = "<group>"; };
+		2D2CDF3D1CA9A966008779E8 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		2D2CDF3F1CA9DF89008779E8 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		2D4583D91C5BDAAC00EE787A /* SubwayCalc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SubwayCalc.entitlements; sourceTree = "<group>"; };
 		2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CounterViewController.swift; path = SubwayCalc/CounterViewController.swift; sourceTree = SOURCE_ROOT; };
 		2D5592801B626DB300AC9659 /* CounterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterModel.xcdatamodel; sourceTree = "<group>"; };
+		2D59C1B31CD7E61700BAB726 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		2D59C1B51CD7EE1500BAB726 /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
 		2D6707651B6D3C0A004CB7E4 /* TripLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripLog.swift; sourceTree = "<group>"; };
 		2D6707671B6D403A004CB7E4 /* TripLogTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripLogTableViewController.swift; sourceTree = "<group>"; };
 		2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDateViewController.swift; sourceTree = "<group>"; };
@@ -60,12 +69,13 @@
 		2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideEstimatorModel.swift; sourceTree = "<group>"; };
 		2DB453AE1C80C77F006B40D5 /* MixpanelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixpanelHelper.swift; sourceTree = "<group>"; };
 		2DB453B11C866E38006B40D5 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		2DB453B31C8678BE006B40D5 /* StatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
+		2DB453B51C867DE8006B40D5 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestedRefillView.swift; sourceTree = "<group>"; };
 		2DE8F4331B5275A100D50B0C /* SubwayCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8F4371B5275A100D50B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8F4381B5275A100D50B0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
-		2DE8F43D1B5275A100D50B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DE8F43F1B5275A100D50B0C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2DE8F4421B5275A100D50B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2DE8F4481B5275A100D50B0C /* SubwayCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubwayCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +83,8 @@
 		2DE8F44E1B5275A100D50B0C /* SubwayCalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayCalcTests.swift; sourceTree = "<group>"; };
 		2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2DEBEDA91C70127400EBB9DE /* Plus.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Plus.xib; sourceTree = "<group>"; };
+		2DED2E971C9DB9E500698808 /* MoneyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyButton.swift; sourceTree = "<group>"; };
+		2DED2E9A1C9DB9FE00698808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		4E6DCBBFE4D183C61E897E80 /* Pods-SubwayCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalc/Pods-SubwayCalc.release.xcconfig"; sourceTree = "<group>"; };
 		5C85DE116D792ACF8EC49597 /* Pods-SubwayCalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayCalcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,7 +137,10 @@
 		2D2259441BB21C64009792D8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2D59C1B31CD7E61700BAB726 /* RootViewController.swift */,
 				2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */,
+				2D2CDF3D1CA9A966008779E8 /* MenuTableViewController.swift */,
+				2DB453B31C8678BE006B40D5 /* StatsTableViewController.swift */,
 				2DE8F45A1B528E0D00D50B0C /* ResultsViewController.swift */,
 				2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */,
 				2D4D1EEB1B61245D0016A51D /* CounterViewController.swift */,
@@ -133,6 +148,7 @@
 				2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */,
 				2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */,
 				2D20011C1C7000FC008CB39B /* UIColorExtension.swift */,
+				2DB453B51C867DE8006B40D5 /* NSDateExtension.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -148,7 +164,8 @@
 		2DBCBA7D1BB8599300C3E71A /* Custom VIews */ = {
 			isa = PBXGroup;
 			children = (
-				2D20011A1C6FFFDA008CB39B /* MoneyButton.swift */,
+				2D2CDF3F1CA9DF89008779E8 /* MenuTableViewCell.swift */,
+				2DED2E971C9DB9E500698808 /* MoneyButton.swift */,
 				2DB453B11C866E38006B40D5 /* CircleButton.swift */,
 				2DBCBA7B1BB8598500C3E71A /* SuggestedRefillView.swift */,
 			);
@@ -179,9 +196,10 @@
 			isa = PBXGroup;
 			children = (
 				2D4583D91C5BDAAC00EE787A /* SubwayCalc.entitlements */,
-				2DE8F43C1B5275A100D50B0C /* Main.storyboard */,
 				2D55927F1B626DB300AC9659 /* CounterModel.xcdatamodeld */,
 				2DE8F4381B5275A100D50B0C /* AppDelegate.swift */,
+				2DED2E991C9DB9FE00698808 /* Main.storyboard */,
+				2D59C1B51CD7EE1500BAB726 /* Calculator.storyboard */,
 				2D2259441BB21C64009792D8 /* Controllers */,
 				2DB453B01C80C798006B40D5 /* Helpers */,
 				2DBCBA7D1BB8599300C3E71A /* Custom VIews */,
@@ -323,10 +341,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DE8F43E1B5275A100D50B0C /* Main.storyboard in Resources */,
 				2DEBEDAA1C70127400EBB9DE /* Plus.xib in Resources */,
+				2D59C1B61CD7EE1500BAB726 /* Calculator.storyboard in Resources */,
 				2DE8F4431B5275A100D50B0C /* LaunchScreen.xib in Resources */,
 				2DE8F4401B5275A100D50B0C /* Images.xcassets in Resources */,
+				2DED2E9B1C9DB9FE00698808 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,17 +456,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DED2E981C9DB9E500698808 /* MoneyButton.swift in Sources */,
 				2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */,
+				2D2CDF401CA9DF89008779E8 /* MenuTableViewCell.swift in Sources */,
+				2DB453B61C867DE8006B40D5 /* NSDateExtension.swift in Sources */,
 				2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */,
 				2DB453B21C866E38006B40D5 /* CircleButton.swift in Sources */,
 				2DBCBA7C1BB8598500C3E71A /* SuggestedRefillView.swift in Sources */,
 				2D2259421BB21C34009792D8 /* CardRefillModel.swift in Sources */,
 				2D6707681B6D403A004CB7E4 /* TripLogTableViewController.swift in Sources */,
 				2D6707661B6D3C0A004CB7E4 /* TripLog.swift in Sources */,
+				2DB453B41C8678BE006B40D5 /* StatsTableViewController.swift in Sources */,
 				2D5592811B626DB300AC9659 /* CounterModel.xcdatamodeld in Sources */,
 				2D4D1EEC1B61245D0016A51D /* CounterViewController.swift in Sources */,
+				2D2CDF3E1CA9A966008779E8 /* MenuTableViewController.swift in Sources */,
+				2D59C1B41CD7E61700BAB726 /* RootViewController.swift in Sources */,
 				2DA358491B84EC1C00BED823 /* RideEstimatorViewController.swift in Sources */,
-				2D20011B1C6FFFDA008CB39B /* MoneyButton.swift in Sources */,
 				2DE8F43B1B5275A100D50B0C /* CalculatorViewController.swift in Sources */,
 				2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */,
 				2DFEDCC51B553BCB00EAB43C /* AboutViewController.swift in Sources */,
@@ -477,20 +501,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2DE8F43C1B5275A100D50B0C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2DE8F43D1B5275A100D50B0C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2DE8F4411B5275A100D50B0C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2DE8F4421B5275A100D50B0C /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		2DED2E991C9DB9FE00698808 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DED2E9A1C9DB9FE00698808 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -17,7 +17,7 @@ class CircleButton: UIButton {
     
     func styleButton() {
         layer.cornerRadius = CGRectGetHeight(bounds) / 2
-        self.backgroundColor = UIColor.mtaBlueFlip()
+
     }
 
 }
