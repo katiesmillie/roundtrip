@@ -19,6 +19,11 @@ class MenuTableViewController: UITableViewController {
     
     let rows: [MenuRow] = [.TripLogger, .FareCalculator, .Estimator, .About]
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Round Trip"
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -37,7 +42,7 @@ class MenuTableViewController: UITableViewController {
         switch row(indexPath) {
         case .TripLogger:
             let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell") as! MenuTableViewCell
-            cell.menuItemLabel?.text = "Trip Logger"
+            cell.menuItemLabel?.text = "Trip Counter"
             return cell
         case .FareCalculator:
             let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell") as! MenuTableViewCell

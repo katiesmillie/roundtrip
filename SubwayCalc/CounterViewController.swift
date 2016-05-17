@@ -35,7 +35,7 @@ import CoreData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Round Trip"
+        title = "Trip Counter"
     }
 
     
