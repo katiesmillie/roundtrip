@@ -136,7 +136,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="tWP-XK-Bre">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="U6m-Hg-y8h">
+                        <barButtonItem key="rightBarButtonItem" id="U6m-Hg-y8h">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FKo-GG-lJF">
                                 <rect key="frame" x="540" y="6" width="40" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

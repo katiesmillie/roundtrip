@@ -313,7 +313,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="ktQ-xR-YuU"/>
                     <navigationItem key="navigationItem" title="Ride Estimator" id="Q4a-Nk-HFQ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="bKV-GT-97c">
+                        <barButtonItem key="rightBarButtonItem" id="bKV-GT-97c">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Bn-DN-dz6">
                                 <rect key="frame" x="530" y="7" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

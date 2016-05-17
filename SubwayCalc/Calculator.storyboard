@@ -117,7 +117,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="0mc-Z3-omp"/>
                     <navigationItem key="navigationItem" title="Fare Calculator" id="3bH-eY-A7H">
                         <barButtonItem key="backBarButtonItem" title="Back" style="done" id="65n-xt-Qaw"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="GDa-fC-whF">
+                        <barButtonItem key="rightBarButtonItem" id="GDa-fC-whF">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eYH-cn-zeh">
                                 <rect key="frame" x="530" y="7" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

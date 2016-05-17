@@ -135,7 +135,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fOr-0R-avU">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ssl-Rt-QYq">
+                        <barButtonItem key="rightBarButtonItem" id="Ssl-Rt-QYq">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YHb-oC-3S8">
                                 <rect key="frame" x="530" y="7" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
