@@ -22,13 +22,15 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         styleView()
     }
     
+    @IBAction func tappedMenu(sender: UIButton) {
+        rootViewController()?.showMenu()
+    }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         self.view.endEditing(true)
     }
     
     func styleView() {
-        self.view.backgroundColor = UIColor.mtaBlueSwap()
         guard let inputField = inputField else { return }
         inputField.layer.cornerRadius = inputField.layer.frame.height / 2
     }
@@ -45,7 +47,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "Results View" {
+        if segue.identifier == "ResultsView" {
             guard let inputtedCardValue = inputtedCardValue?.text else { return }
             guard let formatedCardValue = NSNumberFormatter().numberFromString(inputtedCardValue) else { return }
             cardValue = Double(formatedCardValue)
@@ -63,8 +65,12 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
                 )
             }
             
-            guard let rvc = segue.destinationViewController as? ResultsViewController else { return }
-            rvc.amountOnCard = cardValue
+            if let navController = segue.destinationViewController as? UINavigationController {
+                guard let resultsViewController = navController.viewControllers.first as? ResultsViewController else { return }
+                resultsViewController.amountOnCard = cardValue
+            }
+            
+            
         }
     }
     

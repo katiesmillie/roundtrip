@@ -36,7 +36,7 @@ class StatsTableViewController: UITableViewController {
         // Get the first record
         let sortedResults = fetchedResults.sort { $0.dateTime < $1.dateTime }
         let firstResult = sortedResults.first
-        let firstResultDate = firstResult?.dateTime
+        _ = firstResult?.dateTime
         
     }
     

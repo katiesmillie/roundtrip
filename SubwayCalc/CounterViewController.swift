@@ -35,7 +35,7 @@ import CoreData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Trip Log"
+        title = "Round Trip"
     }
 
     
@@ -64,7 +64,6 @@ import CoreData
         counterLabel?.text = "\(Int(totalTrips))"
     }
     
-
     func logNewTrip() {
         let newEntity = NSEntityDescription.insertNewObjectForEntityForName("TripLog", inManagedObjectContext: self.managedObjectContext) as! TripLog
         let date = NSDate()
@@ -87,6 +86,14 @@ import CoreData
     
     @IBAction func unwindToStats(sender: UIStoryboardSegue) {
         fetchResults()
+    }
+    
+    @IBAction func tappedMenu(sender: UIButton) {
+        rootViewController()?.showMenu()
+    }
+ 
+    @IBAction func showTripLog(sender: UIButton) {
+        rootViewController()?.showTripLog()
     }
     
 }

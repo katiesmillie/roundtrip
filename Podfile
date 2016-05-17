@@ -5,7 +5,7 @@ use_frameworks!
 target 'SubwayCalc' do
     pod 'Button', '4.3.0-beta1'
     pod 'Mixpanel'
-    pod 'RWDropdownMenu'
+    pod 'BTNavigationDropdownMenu'
 
 end
 

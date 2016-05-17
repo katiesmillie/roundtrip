@@ -22,7 +22,6 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         title = "Suggested Amounts"
         guard let amountOnCard = amountOnCard else { return }
         cardAmountLabel?.text = String(format: "$ %.2f MetroCard", amountOnCard)
-//        cardAmountLabel?.backgroundColor = UIColor.mtaYellowFlip()
         findValidRefills()
     }
     
@@ -58,5 +57,8 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
 
+    @IBAction func close(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
 }

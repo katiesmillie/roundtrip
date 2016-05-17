@@ -150,6 +150,9 @@ class RideEstimatorViewController: UIViewController {
          setRides()
     }
 
+    @IBAction func tappedMenu(sender: UIButton) {
+        rootViewController()?.showMenu()
+    }
 }
 
 

@@ -14,4 +14,8 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func done(sender: UIButton) {
+        rootViewController()?.showMenu()
+    }
+    
 }

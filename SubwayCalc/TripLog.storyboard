@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFd-Wg-LhB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="jDd-eC-rvA">
+            <objects>
+                <navigationController id="eFd-Wg-LhB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nvy-c0-4ne">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oNS-xq-uC4" kind="relationship" relationship="rootViewController" id="0xh-Ds-4lV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zuH-oK-TgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2802" y="1228"/>
+        </scene>
+        <!--Trip Log-->
+        <scene sceneID="U8A-lJ-iGO">
+            <objects>
+                <tableViewController id="oNS-xq-uC4" customClass="TripLogTableViewController" customModule="SubwayCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nef-fN-hcV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripCell" id="MeC-JT-OZB">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MeC-JT-OZB" id="V8g-0C-2d3">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rBz-r4-r8v" kind="presentation" identifier="Edit Date" id="bmb-KX-pHN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oNS-xq-uC4" id="THw-TM-zun"/>
+                            <outlet property="delegate" destination="oNS-xq-uC4" id="O5F-NW-Kjp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Trip Log" id="Cy7-kg-mOS">
+                        <barButtonItem key="rightBarButtonItem" title="close" id="Zn2-dD-jE0">
+                            <color key="tintColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="close:" destination="oNS-xq-uC4" id="qmQ-Xs-rTv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="e2y-G5-kZR" kind="unwind" identifier="Unwind Segue" unwindAction="unwindToStats:" id="TXV-8h-UaY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BW8-KM-rra" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="e2y-G5-kZR" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-2122" y="1228"/>
+        </scene>
+        <!--Edit Date View Controller-->
+        <scene sceneID="xLX-rp-WW9">
+            <objects>
+                <viewController id="rBz-r4-r8v" customClass="EditDateViewController" customModule="SubwayCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="koP-uO-3Pm"/>
+                        <viewControllerLayoutGuide type="bottom" id="kfK-TB-fql"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TDh-FD-921">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit the date of your train ride" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpW-Mt-urv">
+                                <rect key="frame" x="170" y="60" width="260" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ue7-sl-gfD">
+                                <rect key="frame" x="0.0" y="105" width="600" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="pXG-Tq-E84"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="460650403.67822099">
+                                    <!--2015-08-07 14:26:43 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
+                                    <!--2015-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmP-0B-hee" customClass="MoneyButton" customModule="SubwayCalc" customModuleProvider="target">
+                                <rect key="frame" x="200" y="341" width="200" height="60"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.65098039220000004" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="UoL-U4-Rr2"/>
+                                    <constraint firstAttribute="height" constant="60" id="qI2-I5-IjB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Set new date">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didSelectNewDate:" destination="rBz-r4-r8v" eventType="touchUpInside" id="6Hd-kG-eDO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ue7-sl-gfD" firstAttribute="top" secondItem="CpW-Mt-urv" secondAttribute="bottom" constant="20" id="2hV-YP-mGT"/>
+                            <constraint firstItem="qmP-0B-hee" firstAttribute="top" secondItem="Ue7-sl-gfD" secondAttribute="bottom" constant="20" id="FMS-TV-UfY"/>
+                            <constraint firstAttribute="centerX" secondItem="CpW-Mt-urv" secondAttribute="centerX" id="aIW-mb-aar"/>
+                            <constraint firstAttribute="centerX" secondItem="qmP-0B-hee" secondAttribute="centerX" id="kTN-dp-3na"/>
+                            <constraint firstItem="CpW-Mt-urv" firstAttribute="top" secondItem="koP-uO-3Pm" secondAttribute="bottom" constant="40" id="vUb-iF-mAW"/>
+                            <constraint firstAttribute="centerX" secondItem="Ue7-sl-gfD" secondAttribute="centerX" id="wxh-6O-9ry"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="Ue7-sl-gfD" id="5Du-CN-tKO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3r-2j-g17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1444" y="1228"/>
+        </scene>
+    </scenes>
+</document>

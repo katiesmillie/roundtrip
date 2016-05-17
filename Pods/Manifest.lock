@@ -1,24 +1,24 @@
 PODS:
+  - BTNavigationDropdownMenu (0.3)
   - Button (4.3.0-beta1)
   - Mixpanel (2.9.9):
     - Mixpanel/Mixpanel (= 2.9.9)
   - Mixpanel/Mixpanel (2.9.9)
   - Nimble (4.0.1)
   - Quick (0.9.2)
-  - RWDropdownMenu (1.0.3)
 
 DEPENDENCIES:
+  - BTNavigationDropdownMenu
   - Button (= 4.3.0-beta1)
   - Mixpanel
   - Nimble
   - Quick
-  - RWDropdownMenu
 
 SPEC CHECKSUMS:
+  BTNavigationDropdownMenu: c36d20785253699046fdd295698c24b1d1c18f53
   Button: 16db639eca7efb5833a86e0cb99f68b180222978
   Mixpanel: 818d1940c2d9402453b349545022a86968097f57
   Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
-  RWDropdownMenu: c7fda4b7adf4f3f63a46d96359c2f490a7713795
 
 COCOAPODS: 0.39.0

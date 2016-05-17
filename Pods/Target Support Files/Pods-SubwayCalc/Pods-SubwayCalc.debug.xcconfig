@@ -1,8 +1,10 @@
+EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Button"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Button"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/Mixpanel.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/RWDropdownMenu.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Button"
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "AdSupport" -framework "Button" -framework "Mixpanel" -framework "RWDropdownMenu"
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/BTNavigationDropdownMenu.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Mixpanel.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Button"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "AdSupport" -framework "BTNavigationDropdownMenu" -framework "Button" -framework "Mixpanel"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-SubwayCalc
 PODS_ROOT = ${SRCROOT}/Pods

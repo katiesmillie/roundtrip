@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SubwayCalc/StatsTableViewController.swift"
-            timestampString = "478575411.972487"
+            filePath = "Pods/Nimble/Nimble/Adapters/NimbleXCTestHandler.swift"
+            timestampString = "480817746.74229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "avgTripsPerThirtydays()"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "assert(_:message:location:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/Nimble/Nimble/Adapters/NimbleXCTestHandler.swift"
-            timestampString = "480817746.74229"
+            filePath = "SubwayCalc/CounterViewController.swift"
+            timestampString = "485208198.722574"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "9"
-            endingLineNumber = "9"
-            landmarkName = "assert(_:message:location:)"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "unwindToStats(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

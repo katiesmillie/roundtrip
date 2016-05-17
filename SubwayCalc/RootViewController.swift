@@ -37,32 +37,48 @@ class RootViewController: UIViewController {
     
     internal func showMainUI() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyboard.instantiateInitialViewController() as? CounterViewController {
-            embedViewController(vc)
+        if let navController = storyboard.instantiateInitialViewController() as? UINavigationController {
+            embedViewController(navController)
             dismissModalIfNeeded()
+        }
+    }
+    
+    internal func showMenu() {
+        let storyboard = UIStoryboard(name: "Menu", bundle: nil)
+        if let navController = storyboard.instantiateInitialViewController() as? UINavigationController {
+            navController.modalPresentationStyle = .OverCurrentContext
+            presentViewController(navController, animated: true, completion: nil)
+        }
+    }
+    
+    internal func showTripLog() {
+        let storyboard = UIStoryboard(name: "TripLog", bundle: nil)
+        if let navController = storyboard.instantiateInitialViewController() as? UINavigationController {
+            navController.modalPresentationStyle = .OverCurrentContext
+            presentViewController(navController, animated: true, completion: nil)
         }
     }
     
     internal func showCalculator() {
         let storyboard = UIStoryboard(name: "Calculator", bundle: nil)
-        if let vc = storyboard.instantiateViewControllerWithIdentifier("Calculator") as? CalculatorViewController {
-            embedViewController(vc)
+        if let navController = storyboard.instantiateInitialViewController() as? UINavigationController {
+            embedViewController(navController)
             dismissModalIfNeeded()
         }
     }
     
     internal func showEstimator() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyboard.instantiateInitialViewController() as? RideEstimatorViewController {
-            embedViewController(vc)
+        let storyboard = UIStoryboard(name: "Estimator", bundle: nil)
+        if let navController = storyboard.instantiateInitialViewController() as? UINavigationController {
+            embedViewController(navController)
             dismissModalIfNeeded()
         }
     }
     
     internal func showAbout() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyboard.instantiateInitialViewController() as? AboutViewController {
-            embedViewController(vc)
+        let storyboard = UIStoryboard(name: "About", bundle: nil)
+        if let navController = storyboard.instantiateInitialViewController() as? UINavigationController {
+            embedViewController(navController)
             dismissModalIfNeeded()
         }
     }
@@ -76,7 +92,6 @@ class RootViewController: UIViewController {
     }
     
 }
-
 
 extension UIViewController {
     
