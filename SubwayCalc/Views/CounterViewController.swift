@@ -93,6 +93,7 @@ import CoreData
     }
  
     @IBAction func showTripLog(sender: UIButton) {
+        MixpanelHelper.track("View log", properties: ["Total trips" : totalTrips])
         rootViewController()?.showTripLog()
     }
     

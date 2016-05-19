@@ -103,7 +103,8 @@ class RideEstimatorViewController: UIViewController {
         }  else {
             perDay = 0
         }
-         setRides()
+        MixpanelHelper.track("Changed estimator", properties: nil)
+        setRides()
     }
     
     @IBAction func decrememntDay(sender: UIButton) {
@@ -112,7 +113,8 @@ class RideEstimatorViewController: UIViewController {
         } else {
             perDay -= 1
         }
-         setRides()
+        MixpanelHelper.track("Changed estimator", properties: nil)
+        setRides()
     }
     
     @IBAction func incrementWeek(sender: UIButton) {
@@ -121,7 +123,8 @@ class RideEstimatorViewController: UIViewController {
         }  else {
             perWeek = 0
         }
-         setRides()
+        MixpanelHelper.track("Changed estimator", properties: nil)
+        setRides()
     }
     
     @IBAction func decrememntWeek(sender: UIButton) {
@@ -130,7 +133,8 @@ class RideEstimatorViewController: UIViewController {
         } else {
             perWeek -= 1
         }
-         setRides()
+        MixpanelHelper.track("Changed estimator", properties: nil)
+        setRides()
     }
     @IBAction func incrementMonth(sender: UIButton) {
         if perMonth < 40 {

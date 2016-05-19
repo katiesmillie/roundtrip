@@ -25,13 +25,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SubwayCalc/CounterViewController.swift"
-            timestampString = "485208198.722574"
+            filePath = "Pods/BTNavigationDropdownMenu/Source/BTNavigationDropdownMenu.swift"
+            timestampString = "485355119.308978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "unwindToStats(_:)"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "init(navigationController:title:items:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/BTNavigationDropdownMenu/Source/BTNavigationDropdownMenu.swift"
+            timestampString = "485355127.140271"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "init(navigationController:title:items:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
