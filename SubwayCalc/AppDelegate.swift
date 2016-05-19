@@ -7,7 +7,6 @@
 import UIKit
 import CoreData
 import Button
-import Mixpanel
 
 
 @UIApplicationMain
@@ -27,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.makeKeyAndVisible()
         self.window = window
         
-        Mixpanel.sharedInstanceWithToken(mixpanelToken)
+        MixpanelHelper.setup()
         return true
     }
     
