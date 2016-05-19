@@ -11,8 +11,12 @@ import Mixpanel
 
 public let mixpanelToken = "1720546449118785aaf2b7e159264e73"
 
-
 public struct MixpanelHelper {
+    
+    static func setup() {
+        Mixpanel.sharedInstanceWithToken(mixpanelToken)
+        MixpanelHelper.people()
+    }
     
     static func track(event: String, properties: [String: AnyObject]?) {
         let mixpanel = Mixpanel.sharedInstanceWithToken(mixpanelToken)
@@ -32,8 +36,7 @@ public struct MixpanelHelper {
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
         let dateString = formatter.stringFromDate(dateNow)
         
-        print("Date time \(dateString)")
-        
+        mixpanel.identify(dateString)
         mixpanel.people.setOnce([
             "$created": dateString,
             ])
