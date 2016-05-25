@@ -35,8 +35,8 @@ public struct MixpanelHelper {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
         let dateString = formatter.stringFromDate(dateNow)
+    
         
-        mixpanel.identify(dateString)
         mixpanel.people.setOnce([
             "$created": dateString,
             ])
