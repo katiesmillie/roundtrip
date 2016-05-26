@@ -21,7 +21,7 @@ public let items: [MenuItem] = [.TripLogger, .FareCalculator, .Estimator, .About
 
 public struct Menu {
     
-    static func setupMenu(navController: UINavigationController, index: Int) -> BTNavigationDropdownMenu {
+    static func setupMenu(navController: UINavigationController, index: Int, viewController: UIViewController) -> BTNavigationDropdownMenu {
         let items = ["Trip Counter", "Fare Calculator", "Ride Estimator", "About"]
         
         navController.navigationBar.translucent = false
@@ -40,7 +40,16 @@ public struct Menu {
         menuView.animationDuration = 0.35
         menuView.maskBackgroundColor = UIColor.blackColor()
         menuView.maskBackgroundOpacity = 0.3
+        
+        menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
+            switch getMenuItem(indexPath) {
+            case .TripLogger: viewController.rootViewController()?.showMainUI()
+            case .FareCalculator: viewController.rootViewController()?.showCalculator()
+            case .Estimator: viewController.rootViewController()?.showEstimator()
+            case .About: viewController.rootViewController()?.showAbout()
+            }
 
+        }
         return menuView
     }
     
@@ -48,13 +57,6 @@ public struct Menu {
         return items[indexPath]
     }
     
-    static func showItemAtIndexPath(viewController: UIViewController, indexPath: Int) {
-        switch getMenuItem(indexPath) {
-            case .TripLogger: viewController.rootViewController()?.showMainUI()
-            case .FareCalculator: viewController.rootViewController()?.showCalculator()
-            case .Estimator: viewController.rootViewController()?.showEstimator()
-            case .About: viewController.rootViewController()?.showAbout()
-        }
-    }
+
     
 }

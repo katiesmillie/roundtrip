@@ -48,11 +48,7 @@ public enum MenuRow {
     
     func setupMenu() {
         guard let navController = self.navigationController else { return }
-        let menuView = Menu.setupMenu(navController, index: 0)
-        
-        menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
-            Menu.showItemAtIndexPath(self, indexPath: indexPath)
-        }
+        let menuView = Menu.setupMenu(navController, index: 0, viewController: self)
         self.navigationItem.titleView = menuView
     }
     

@@ -17,11 +17,7 @@ class AboutViewController: UIViewController {
     
     func setupMenu() {
         guard let navController = self.navigationController else { return }
-        let menuView = Menu.setupMenu(navController, index: 3)
-        
-        menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
-            Menu.showItemAtIndexPath(self, indexPath: indexPath)
-        }
+        let menuView = Menu.setupMenu(navController, index: 3, viewController: self)
         self.navigationItem.titleView = menuView
     }
     
