@@ -9,7 +9,9 @@
 import UIKit
 
 class RideEstimatorViewController: UIViewController {
-
+   
+    @IBOutlet weak var scrollView: UIScrollView?
+    @IBOutlet weak var estimatorView: UIView?
     @IBOutlet weak var estimatedBackground: UIView?
     @IBOutlet weak var perDayLabel: UITextField?
     @IBOutlet weak var perWeekLabel: UITextField?
@@ -18,6 +20,10 @@ class RideEstimatorViewController: UIViewController {
     @IBOutlet weak var monthlyPassStringLabel: UILabel?
     @IBOutlet weak var monthlyPassDiffLabel: UILabel?
     
+    var estimatedRides: Int?
+    var monthlyPassString: String?
+    
+
     var perDay: Int {
         get {
             guard let perDayLabelText = perDayLabel?.text else { return 0 }
@@ -49,11 +55,7 @@ class RideEstimatorViewController: UIViewController {
         }
     }
     
-    var estimatedRides: Int?
-    var monthlyPassString: String?
-    
-    @IBOutlet weak var scrollView: UIScrollView?
-    @IBOutlet weak var estimatorView: UIView?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,17 @@ class RideEstimatorViewController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = true
 
         setRides()
+        setupMenu()
+    }
+    
+    func setupMenu() {
+        guard let navController = self.navigationController else { return }
+        let menuView = Menu.setupMenu(navController, index: 2)
+        
+        menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
+            Menu.showItemAtIndexPath(self, indexPath: indexPath)
+        }
+        self.navigationItem.titleView = menuView
     }
     
     func setRides() {

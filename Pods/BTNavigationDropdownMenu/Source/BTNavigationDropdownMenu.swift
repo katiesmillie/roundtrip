@@ -240,7 +240,8 @@ public class BTNavigationDropdownMenu: UIView {
         self.menuArrow = UIImageView(image: self.configuration.arrowImage)
         self.menuButton.addSubview(self.menuArrow)
         
-        let window = UIApplication.sharedApplication().keyWindow!
+        guard let window = UIApplication.sharedApplication().windows.first else { return }
+//        let window = UIApplication.sharedApplication().keyWindow!
         let menuWrapperBounds = window.bounds
         
         // Set up DropdownMenu
@@ -556,7 +557,8 @@ class BTTableViewCell: UITableViewCell {
         self.configuration = configuration
         
         // Setup cell
-        cellContentFrame = CGRectMake(0, 0, (UIApplication.sharedApplication().keyWindow?.frame.width)!, self.configuration.cellHeight)
+        guard let window = UIApplication.sharedApplication().windows.first else { return }
+        cellContentFrame = CGRectMake(0, 0, window.frame.width, self.configuration.cellHeight)
         self.contentView.backgroundColor = self.configuration.cellBackgroundColor
         self.selectionStyle = UITableViewCellSelectionStyle.None
         self.textLabel!.textColor = self.configuration.cellTextLabelColor

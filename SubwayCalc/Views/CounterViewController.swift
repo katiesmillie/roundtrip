@@ -9,6 +9,13 @@
 import UIKit
 import CoreData
 
+public enum MenuRow {
+    case TripLogger
+    case FareCalculator
+    case Estimator
+    case About
+}
+
 
  class CounterViewController: UIViewController {
     
@@ -35,9 +42,19 @@ import CoreData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Trip Counter"
+        setupMenu()
     }
 
+    
+    func setupMenu() {
+        guard let navController = self.navigationController else { return }
+        let menuView = Menu.setupMenu(navController, index: 0)
+        
+        menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
+            Menu.showItemAtIndexPath(self, indexPath: indexPath)
+        }
+        self.navigationItem.titleView = menuView
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);

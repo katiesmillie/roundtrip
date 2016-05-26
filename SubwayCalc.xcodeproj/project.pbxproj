@@ -12,15 +12,12 @@
 		2D779F271CEDE30500B3E8BB /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D779F201CEDE30500B3E8BB /* About.storyboard */; };
 		2D779F281CEDE30500B3E8BB /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D779F211CEDE30500B3E8BB /* Calculator.storyboard */; };
 		2D779F291CEDE30500B3E8BB /* Estimator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D779F221CEDE30500B3E8BB /* Estimator.storyboard */; };
-		2D779F2A1CEDE30500B3E8BB /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D779F231CEDE30500B3E8BB /* Menu.storyboard */; };
-		2D779F2B1CEDE30500B3E8BB /* Plus.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D779F241CEDE30500B3E8BB /* Plus.xib */; };
 		2D779F2C1CEDE30500B3E8BB /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D779F251CEDE30500B3E8BB /* Stats.storyboard */; };
 		2D779F2D1CEDE30500B3E8BB /* TripLog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D779F261CEDE30500B3E8BB /* TripLog.storyboard */; };
 		2D779F381CEDE32000B3E8BB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F2E1CEDE32000B3E8BB /* AboutViewController.swift */; };
 		2D779F391CEDE32000B3E8BB /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F2F1CEDE32000B3E8BB /* CalculatorViewController.swift */; };
 		2D779F3A1CEDE32000B3E8BB /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F301CEDE32000B3E8BB /* CounterViewController.swift */; };
 		2D779F3B1CEDE32000B3E8BB /* EditDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F311CEDE32000B3E8BB /* EditDateViewController.swift */; };
-		2D779F3C1CEDE32000B3E8BB /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F321CEDE32000B3E8BB /* MenuTableViewController.swift */; };
 		2D779F3D1CEDE32000B3E8BB /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F331CEDE32000B3E8BB /* ResultsViewController.swift */; };
 		2D779F3E1CEDE32000B3E8BB /* RideEstimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F341CEDE32000B3E8BB /* RideEstimatorViewController.swift */; };
 		2D779F3F1CEDE32000B3E8BB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F351CEDE32000B3E8BB /* RootViewController.swift */; };
@@ -35,6 +32,7 @@
 		2D779F4F1CEDE35500B3E8BB /* SuggestedRefillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F4B1CEDE35500B3E8BB /* SuggestedRefillView.swift */; };
 		2D779F531CEDE4F200B3E8BB /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F511CEDE4F200B3E8BB /* NSDateExtension.swift */; };
 		2D779F541CEDE4F200B3E8BB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F521CEDE4F200B3E8BB /* UIColorExtension.swift */; };
+		2D779F581CEE0AF300B3E8BB /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D779F571CEE0AF300B3E8BB /* Menu.swift */; };
 		2DB453AF1C80C77F006B40D5 /* MixpanelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB453AE1C80C77F006B40D5 /* MixpanelHelper.swift */; };
 		2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4381B5275A100D50B0C /* AppDelegate.swift */; };
 		2DE8F4401B5275A100D50B0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43F1B5275A100D50B0C /* Images.xcassets */; };
@@ -63,15 +61,12 @@
 		2D779F201CEDE30500B3E8BB /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = About.storyboard; path = SubwayCalc/Storyboards/About.storyboard; sourceTree = "<group>"; };
 		2D779F211CEDE30500B3E8BB /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Calculator.storyboard; path = SubwayCalc/Storyboards/Calculator.storyboard; sourceTree = "<group>"; };
 		2D779F221CEDE30500B3E8BB /* Estimator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Estimator.storyboard; path = SubwayCalc/Storyboards/Estimator.storyboard; sourceTree = "<group>"; };
-		2D779F231CEDE30500B3E8BB /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Menu.storyboard; path = SubwayCalc/Storyboards/Menu.storyboard; sourceTree = "<group>"; };
-		2D779F241CEDE30500B3E8BB /* Plus.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Plus.xib; path = SubwayCalc/Storyboards/Plus.xib; sourceTree = "<group>"; };
 		2D779F251CEDE30500B3E8BB /* Stats.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Stats.storyboard; path = SubwayCalc/Storyboards/Stats.storyboard; sourceTree = "<group>"; };
 		2D779F261CEDE30500B3E8BB /* TripLog.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TripLog.storyboard; path = SubwayCalc/Storyboards/TripLog.storyboard; sourceTree = "<group>"; };
 		2D779F2E1CEDE32000B3E8BB /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = Views/AboutViewController.swift; sourceTree = "<group>"; };
 		2D779F2F1CEDE32000B3E8BB /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculatorViewController.swift; path = Views/CalculatorViewController.swift; sourceTree = "<group>"; };
 		2D779F301CEDE32000B3E8BB /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CounterViewController.swift; path = Views/CounterViewController.swift; sourceTree = "<group>"; };
 		2D779F311CEDE32000B3E8BB /* EditDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditDateViewController.swift; path = Views/EditDateViewController.swift; sourceTree = "<group>"; };
-		2D779F321CEDE32000B3E8BB /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Views/MenuTableViewController.swift; sourceTree = "<group>"; };
 		2D779F331CEDE32000B3E8BB /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = Views/ResultsViewController.swift; sourceTree = "<group>"; };
 		2D779F341CEDE32000B3E8BB /* RideEstimatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RideEstimatorViewController.swift; path = Views/RideEstimatorViewController.swift; sourceTree = "<group>"; };
 		2D779F351CEDE32000B3E8BB /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = Views/RootViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +81,7 @@
 		2D779F4B1CEDE35500B3E8BB /* SuggestedRefillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestedRefillView.swift; path = Views/SuggestedRefillView.swift; sourceTree = "<group>"; };
 		2D779F511CEDE4F200B3E8BB /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDateExtension.swift; path = Extension/NSDateExtension.swift; sourceTree = "<group>"; };
 		2D779F521CEDE4F200B3E8BB /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Extension/UIColorExtension.swift; sourceTree = "<group>"; };
+		2D779F571CEE0AF300B3E8BB /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		2DB453AE1C80C77F006B40D5 /* MixpanelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixpanelHelper.swift; sourceTree = "<group>"; };
 		2DE8F4331B5275A100D50B0C /* SubwayCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8F4371B5275A100D50B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,8 +137,6 @@
 				2D779F201CEDE30500B3E8BB /* About.storyboard */,
 				2D779F211CEDE30500B3E8BB /* Calculator.storyboard */,
 				2D779F221CEDE30500B3E8BB /* Estimator.storyboard */,
-				2D779F231CEDE30500B3E8BB /* Menu.storyboard */,
-				2D779F241CEDE30500B3E8BB /* Plus.xib */,
 				2D779F251CEDE30500B3E8BB /* Stats.storyboard */,
 				2D779F261CEDE30500B3E8BB /* TripLog.storyboard */,
 			);
@@ -168,7 +162,6 @@
 				2D779F2F1CEDE32000B3E8BB /* CalculatorViewController.swift */,
 				2D779F301CEDE32000B3E8BB /* CounterViewController.swift */,
 				2D779F311CEDE32000B3E8BB /* EditDateViewController.swift */,
-				2D779F321CEDE32000B3E8BB /* MenuTableViewController.swift */,
 				2D779F331CEDE32000B3E8BB /* ResultsViewController.swift */,
 				2D779F341CEDE32000B3E8BB /* RideEstimatorViewController.swift */,
 				2D779F361CEDE32000B3E8BB /* StatsTableViewController.swift */,
@@ -189,6 +182,7 @@
 		2DB453B01C80C798006B40D5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2D779F571CEE0AF300B3E8BB /* Menu.swift */,
 				2DB453AE1C80C77F006B40D5 /* MixpanelHelper.swift */,
 			);
 			name = Helpers;
@@ -373,10 +367,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D779F2B1CEDE30500B3E8BB /* Plus.xib in Resources */,
 				2DE8F4431B5275A100D50B0C /* LaunchScreen.xib in Resources */,
 				2D779F2C1CEDE30500B3E8BB /* Stats.storyboard in Resources */,
-				2D779F2A1CEDE30500B3E8BB /* Menu.storyboard in Resources */,
 				2DE8F4401B5275A100D50B0C /* Images.xcassets in Resources */,
 				2D779F291CEDE30500B3E8BB /* Estimator.storyboard in Resources */,
 				2DED2E9B1C9DB9FE00698808 /* Main.storyboard in Resources */,
@@ -498,7 +490,7 @@
 				2D779F3A1CEDE32000B3E8BB /* CounterViewController.swift in Sources */,
 				2D779F3D1CEDE32000B3E8BB /* ResultsViewController.swift in Sources */,
 				2D779F411CEDE32000B3E8BB /* TripLogTableViewController.swift in Sources */,
-				2D779F3C1CEDE32000B3E8BB /* MenuTableViewController.swift in Sources */,
+				2D779F581CEE0AF300B3E8BB /* Menu.swift in Sources */,
 				2D779F401CEDE32000B3E8BB /* StatsTableViewController.swift in Sources */,
 				2D779F4D1CEDE35500B3E8BB /* MenuTableViewCell.swift in Sources */,
 				2D779F471CEDE33700B3E8BB /* TripLog.swift in Sources */,

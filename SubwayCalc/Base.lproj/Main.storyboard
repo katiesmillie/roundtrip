@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kFX-By-Bzf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kFX-By-Bzf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -40,34 +40,34 @@
                                         <rect key="frame" x="200" y="446" width="200" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="f5q-Jq-bgh">
-                                                <rect key="frame" x="25" y="0.0" width="151" height="40"/>
+                                                <rect key="frame" x="15" y="0.0" width="170" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbW-ud-pkh">
-                                                        <rect key="frame" x="0.0" y="9" width="9" height="22"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                        <rect key="frame" x="0.0" y="8" width="11" height="25"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trips in last 30 days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkQ-KH-Fhn">
-                                                        <rect key="frame" x="14" y="9" width="137" height="22"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                        <rect key="frame" x="16" y="8" width="154" height="25"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-JK-Lq5">
-                                                <rect key="frame" x="60" y="40" width="81" height="40"/>
+                                                <rect key="frame" x="54" y="40" width="92" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RF3-y0-Qnk">
-                                                        <rect key="frame" x="0.0" y="9" width="9" height="22"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                        <rect key="frame" x="0.0" y="8" width="11" height="25"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total trips" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au0-s9-RkT">
-                                                        <rect key="frame" x="13" y="9" width="68" height="22"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                        <rect key="frame" x="15" y="8" width="77" height="25"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -81,7 +81,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5q-Mn-tLo" customClass="CircleButton" customModule="SubwayCalc" customModuleProvider="target">
-                                        <rect key="frame" x="150" y="118" width="300" height="300"/>
+                                        <rect key="frame" x="150" y="80" width="300" height="300"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" image="YES"/>
@@ -107,7 +107,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1a-2B-ooc" userLabel="Trip Log">
-                                        <rect key="frame" x="0.0" y="418" width="600" height="118"/>
+                                        <rect key="frame" x="0.0" y="380" width="600" height="156"/>
                                         <connections>
                                             <action selector="showTripLog:" destination="u9h-50-pwX" eventType="touchUpInside" id="Mfs-cp-neF"/>
                                         </connections>
@@ -119,10 +119,10 @@
                                     <constraint firstAttribute="trailing" secondItem="o1a-2B-ooc" secondAttribute="trailing" id="Deq-MX-93n"/>
                                     <constraint firstItem="b5q-Mn-tLo" firstAttribute="centerX" secondItem="Fko-Q9-m83" secondAttribute="centerX" id="OgB-ml-4ix"/>
                                     <constraint firstItem="uQz-tM-mio" firstAttribute="centerX" secondItem="Fko-Q9-m83" secondAttribute="centerX" id="Yuc-hD-qDs"/>
+                                    <constraint firstItem="b5q-Mn-tLo" firstAttribute="top" secondItem="Fko-Q9-m83" secondAttribute="top" constant="80" id="ZLY-jF-gNl"/>
                                     <constraint firstAttribute="bottom" secondItem="o1a-2B-ooc" secondAttribute="bottom" id="hq5-ly-XOc"/>
                                     <constraint firstAttribute="bottom" secondItem="uQz-tM-mio" secondAttribute="bottom" constant="10" id="jAP-Or-LMY"/>
                                     <constraint firstItem="o1a-2B-ooc" firstAttribute="centerX" secondItem="Fko-Q9-m83" secondAttribute="centerX" id="jGC-le-ah6"/>
-                                    <constraint firstItem="b5q-Mn-tLo" firstAttribute="centerY" secondItem="Fko-Q9-m83" secondAttribute="centerY" id="y2p-9k-wKY"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -134,21 +134,7 @@
                             <constraint firstItem="dtw-7K-5Y1" firstAttribute="top" secondItem="Fko-Q9-m83" secondAttribute="bottom" id="Sef-QB-RXe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fOr-0R-avU">
-                        <barButtonItem key="rightBarButtonItem" id="Ssl-Rt-QYq">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YHb-oC-3S8">
-                                <rect key="frame" x="530" y="7" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedMenu:" destination="u9h-50-pwX" eventType="touchUpInside" id="aBg-Vr-Sny"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="fOr-0R-avU"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="counterButton" destination="b5q-Mn-tLo" id="Wbz-IP-Hsc"/>

@@ -30,6 +30,10 @@ extension UIColor {
         return UIColor.rgb(red: 166, green: 11, blue: 87)
     }
     
+    public class func mtaBlueSwapAlpha() -> UIColor {
+        return UIColor.rgba(red: 166, green: 11, blue: 87, alpha: 0.5)
+    }
+    
     public class func mtaBlueFlip() -> UIColor {
         return UIColor.rgb(red: 87, green: 166, blue: 11)
     }
