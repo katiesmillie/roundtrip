@@ -33,26 +33,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKO-53-3pN">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKO-53-3pN">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwC-4h-6Yy">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="536"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log your trips and see stats on how often you ride." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-tj-Q29">
-                                                <rect key="frame" x="20" y="39" width="520" height="24"/>
+                                                <rect key="frame" x="10" y="49" width="540" height="24"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfy-Vz-YYw">
-                                                <rect key="frame" x="248" y="10" width="64" height="24"/>
+                                                <rect key="frame" x="248" y="20" width="64" height="24"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LS-eb-Ttc">
-                                                <rect key="frame" x="221" y="202" width="118" height="24"/>
+                                                <rect key="frame" x="221" y="212" width="118" height="24"/>
                                                 <string key="text">Fare Calculator
 </string>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
@@ -60,27 +60,27 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1n-ao-lSj">
-                                                <rect key="frame" x="20" y="231" width="520" height="70"/>
+                                                <rect key="frame" x="10" y="241" width="540" height="70"/>
                                                 <string key="text">Calculate how much to add to your MetroCard so that you aren't left with unused change. Takes into account MTA's 11% bonus over $5.50 and only adding in 5 cent increments.</string>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say hello @katiesmillie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omb-U2-HO4">
-                                                <rect key="frame" x="193" y="321" width="174" height="24"/>
+                                                <rect key="frame" x="193" y="331" width="174" height="24"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRg-5m-F3Q">
-                                                <rect key="frame" x="20" y="112" width="520" height="70"/>
+                                                <rect key="frame" x="10" y="122" width="540" height="70"/>
                                                 <string key="text">Estimate your monthly rides to see if you would save money with a 30-day unlimited card (compared to rides at $2.48, the effective cost with 11% bonus).</string>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride Estimator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ0-6V-Vgj">
-                                                <rect key="frame" x="223" y="83" width="114" height="24"/>
+                                                <rect key="frame" x="223" y="93" width="114" height="24"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -89,23 +89,23 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="X1n-ao-lSj" firstAttribute="top" secondItem="6LS-eb-Ttc" secondAttribute="bottom" constant="5" id="D6Q-hP-KU1"/>
-                                            <constraint firstAttribute="trailing" secondItem="cRg-5m-F3Q" secondAttribute="trailing" constant="20" id="Dc2-xE-61F"/>
-                                            <constraint firstItem="a4h-tj-Q29" firstAttribute="leading" secondItem="uwC-4h-6Yy" secondAttribute="leading" constant="20" id="J6b-31-NY1"/>
+                                            <constraint firstAttribute="trailing" secondItem="cRg-5m-F3Q" secondAttribute="trailing" constant="10" id="Dc2-xE-61F"/>
+                                            <constraint firstItem="a4h-tj-Q29" firstAttribute="leading" secondItem="uwC-4h-6Yy" secondAttribute="leading" constant="10" id="J6b-31-NY1"/>
                                             <constraint firstItem="omb-U2-HO4" firstAttribute="top" secondItem="X1n-ao-lSj" secondAttribute="bottom" constant="20" id="Ra8-dG-QP5"/>
                                             <constraint firstItem="X1n-ao-lSj" firstAttribute="centerX" secondItem="uwC-4h-6Yy" secondAttribute="centerX" id="TvX-aJ-Swe"/>
                                             <constraint firstItem="6LS-eb-Ttc" firstAttribute="top" secondItem="cRg-5m-F3Q" secondAttribute="bottom" constant="20" id="UGZ-9v-t7P"/>
-                                            <constraint firstAttribute="trailing" secondItem="a4h-tj-Q29" secondAttribute="trailing" constant="20" id="Uup-bH-fmR"/>
+                                            <constraint firstAttribute="trailing" secondItem="a4h-tj-Q29" secondAttribute="trailing" constant="10" id="Uup-bH-fmR"/>
                                             <constraint firstItem="fZ0-6V-Vgj" firstAttribute="centerX" secondItem="uwC-4h-6Yy" secondAttribute="centerX" id="ZU4-Jl-iw5"/>
                                             <constraint firstItem="cRg-5m-F3Q" firstAttribute="top" secondItem="fZ0-6V-Vgj" secondAttribute="bottom" constant="5" id="Zyu-eW-YIG"/>
-                                            <constraint firstItem="wfy-Vz-YYw" firstAttribute="top" secondItem="uwC-4h-6Yy" secondAttribute="top" constant="10" id="b2S-LW-1Dj"/>
+                                            <constraint firstItem="wfy-Vz-YYw" firstAttribute="top" secondItem="uwC-4h-6Yy" secondAttribute="top" constant="20" id="b2S-LW-1Dj"/>
                                             <constraint firstItem="omb-U2-HO4" firstAttribute="centerX" secondItem="uwC-4h-6Yy" secondAttribute="centerX" id="cEj-ZY-Ir6"/>
-                                            <constraint firstItem="X1n-ao-lSj" firstAttribute="leading" secondItem="uwC-4h-6Yy" secondAttribute="leading" constant="20" id="d3A-61-jBX"/>
+                                            <constraint firstItem="X1n-ao-lSj" firstAttribute="leading" secondItem="uwC-4h-6Yy" secondAttribute="leading" constant="10" id="d3A-61-jBX"/>
                                             <constraint firstItem="fZ0-6V-Vgj" firstAttribute="top" secondItem="a4h-tj-Q29" secondAttribute="bottom" constant="20" id="dSk-hw-XSv"/>
                                             <constraint firstItem="6LS-eb-Ttc" firstAttribute="centerX" secondItem="uwC-4h-6Yy" secondAttribute="centerX" id="hfo-Ms-UCD"/>
-                                            <constraint firstAttribute="trailing" secondItem="X1n-ao-lSj" secondAttribute="trailing" constant="20" id="l4E-n3-hvU"/>
+                                            <constraint firstAttribute="trailing" secondItem="X1n-ao-lSj" secondAttribute="trailing" constant="10" id="l4E-n3-hvU"/>
                                             <constraint firstItem="a4h-tj-Q29" firstAttribute="top" secondItem="wfy-Vz-YYw" secondAttribute="bottom" constant="5" id="qVX-HL-kWC"/>
                                             <constraint firstItem="wfy-Vz-YYw" firstAttribute="centerX" secondItem="uwC-4h-6Yy" secondAttribute="centerX" id="uOy-Bh-LEq"/>
-                                            <constraint firstItem="cRg-5m-F3Q" firstAttribute="leading" secondItem="uwC-4h-6Yy" secondAttribute="leading" constant="20" id="wge-xZ-GjC"/>
+                                            <constraint firstItem="cRg-5m-F3Q" firstAttribute="leading" secondItem="uwC-4h-6Yy" secondAttribute="leading" constant="10" id="wge-xZ-GjC"/>
                                             <constraint firstItem="a4h-tj-Q29" firstAttribute="centerX" secondItem="uwC-4h-6Yy" secondAttribute="centerX" id="xgD-7u-4oR"/>
                                         </constraints>
                                     </view>
@@ -120,20 +120,14 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.65098039220000004" green="0.043137254899999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jKO-53-3pN" firstAttribute="top" secondItem="GzN-6m-iXQ" secondAttribute="bottom" id="Kx9-dd-th6"/>
                             <constraint firstItem="jKO-53-3pN" firstAttribute="leading" secondItem="9CF-Ba-u4U" secondAttribute="leadingMargin" id="RUb-Im-X8s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jKO-53-3pN" secondAttribute="trailing" id="RXl-6J-hub"/>
-                            <constraint firstItem="9K6-kK-80R" firstAttribute="top" secondItem="jKO-53-3pN" secondAttribute="bottom" id="pa3-De-plo"/>
                             <constraint firstItem="jKO-53-3pN" firstAttribute="centerX" secondItem="9CF-Ba-u4U" secondAttribute="centerX" id="r50-WO-UK7"/>
                             <constraint firstItem="jKO-53-3pN" firstAttribute="bottom" secondItem="9K6-kK-80R" secondAttribute="top" id="tuT-06-I1e"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="pa3-De-plo"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="tWP-XK-Bre"/>
                 </viewController>
