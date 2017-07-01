@@ -61,12 +61,11 @@ class RideEstimatorViewController: UIViewController {
         let estimatedRidesDouble = (Double(perDay*perWeek)*4.2)+(Double(perMonth))
         estimatedRides = Int(estimatedRidesDouble)
         estimatedRidesLabel?.text = String(describing: estimatedRides)
-        
         setMonthlyPass()
     }
     
     func setMonthlyPass() {
-        let monthlyPassDifference = Double(estimatedRides)*2.48 - 116.50
+        let monthlyPassDifference = Double(estimatedRides)*2.62 - 116.50
         
         if monthlyPassDifference > 0 {
             monthlyPassString = "saved with a monthly pass"

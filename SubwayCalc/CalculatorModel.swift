@@ -19,13 +19,13 @@ class CalculatorModel {
 
     func calcAmountToAdd(_ rides: Double) -> Double {
         let valueNeeded = rides * subwayFare
-        return (valueNeeded - cardValue) / 1.11
+        return (valueNeeded - cardValue) / 1.05
     }
     
     func calcAmountNeededFromAmountToAdd(_ amountsToAdd: [Double]) -> [Double] {
         var amountsNeeded = [Double]()
         for amountToAdd in amountsToAdd {
-            let amountNeeded = (amountToAdd * 1.11) + cardValue
+            let amountNeeded = (amountToAdd * 1.05) + cardValue
             amountsNeeded.append(amountNeeded)
         }
         return amountsNeeded
@@ -34,7 +34,7 @@ class CalculatorModel {
     func calcBonus(_ amountsToAdd: [Double]) -> [Double] {
         var bonusPcts = [Double]()
         for amountToAdd in amountsToAdd {
-            let bonusPct =  amountToAdd * 0.11
+            let bonusPct =  amountToAdd * 0.05
             bonusPcts.append(bonusPct)
         }
         return bonusPcts
@@ -43,7 +43,7 @@ class CalculatorModel {
     func calcNumberRides (_ amountsToAdd: [Double]) -> [Double]{
         var numberRides = [Double]()
         for amountToAdd in amountsToAdd {
-            let ride = round(((amountToAdd * 1.11) + cardValue) / subwayFare)
+            let ride = round(((amountToAdd * 1.05) + cardValue) / subwayFare)
             
             numberRides.append(ride)
         }
