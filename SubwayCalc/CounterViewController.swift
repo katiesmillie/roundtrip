@@ -44,6 +44,7 @@ import CoreData
         logNewTrip()
         fetchNumberTrips()
         fetchTripsInThirtyDayPeriod()
+        MixpanelHelper().track("Log trip")
     }
     
     func fetchNumberTrips () {

@@ -58,6 +58,7 @@ class RideEstimatorViewController: UIViewController {
     }
     
     func setRides() {
+        MixpanelHelper().track("Changed ride estimator")
         let estimatedRidesDouble = (Double(perDay*perWeek)*4.2)+(Double(perMonth))
         estimatedRides = Int(estimatedRidesDouble)
         estimatedRidesLabel?.text = String(estimatedRides)

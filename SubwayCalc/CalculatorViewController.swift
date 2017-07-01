@@ -40,7 +40,17 @@ class CalculatorViewController: UIViewController {
                 
                 if cardValue > 40.0 || cardValue < 0.0 {
                     cardValueAlert()
+                    MixpanelHelper().track(
+                        "Card alert show",
+                        properties: ["Amount": cardValue]
+                    )
+                } else {
+                    MixpanelHelper().track(
+                        "Calcuate fare",
+                        properties: ["Amount": cardValue]
+                    )
                 }
+
                 
                 
             } else {

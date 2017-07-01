@@ -34,7 +34,7 @@ class EditDateViewController: UIViewController {
     
     @IBAction func didSelectNewDate(_ sender: UIButton) {
         datePickerChanged(myDatePicker!)
-        
+        MixpanelHelper().track("Editted date")        
         if let delegate = delegate {
             delegate.didSelectNewDate(self, myDatePicker: myDatePicker!)
         }

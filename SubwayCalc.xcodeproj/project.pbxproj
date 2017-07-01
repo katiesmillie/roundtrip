@@ -15,6 +15,7 @@
 		2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */; };
 		2DA358491B84EC1C00BED823 /* RideEstimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */; };
 		2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */; };
+		2DDA14821F085FCD0065F3E1 /* MixpanelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDA14811F085FCD0065F3E1 /* MixpanelHelper.swift */; };
 		2DE8F4391B5275A100D50B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4381B5275A100D50B0C /* AppDelegate.swift */; };
 		2DE8F43B1B5275A100D50B0C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */; };
 		2DE8F43E1B5275A100D50B0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F43C1B5275A100D50B0C /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		2D80108E1B74F74A001FD8D1 /* EditDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDateViewController.swift; sourceTree = "<group>"; };
 		2DA358481B84EC1C00BED823 /* RideEstimatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideEstimatorViewController.swift; sourceTree = "<group>"; };
 		2DA3584E1B85138E00BED823 /* RideEstimatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideEstimatorModel.swift; sourceTree = "<group>"; };
+		2DDA14811F085FCD0065F3E1 /* MixpanelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixpanelHelper.swift; sourceTree = "<group>"; };
 		2DE8F4331B5275A100D50B0C /* SubwayCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8F4371B5275A100D50B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8F4381B5275A100D50B0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				2DE8F43A1B5275A100D50B0C /* CalculatorViewController.swift */,
 				2DE8F4581B52794A00D50B0C /* CalculatorModel.swift */,
 				2DFEDCC41B553BCB00EAB43C /* AboutViewController.swift */,
+				2DDA14811F085FCD0065F3E1 /* MixpanelHelper.swift */,
 				2DE8F43F1B5275A100D50B0C /* Images.xcassets */,
 				2DE8F4411B5275A100D50B0C /* LaunchScreen.xib */,
 				2DE8F4361B5275A100D50B0C /* Supporting Files */,
@@ -379,6 +382,7 @@
 			files = (
 				2DA3584F1B85138E00BED823 /* RideEstimatorModel.swift in Sources */,
 				2D80108F1B74F74A001FD8D1 /* EditDateViewController.swift in Sources */,
+				2DDA14821F085FCD0065F3E1 /* MixpanelHelper.swift in Sources */,
 				2D6707681B6D403A004CB7E4 /* TripLogTableViewController.swift in Sources */,
 				2DE8F4591B52794A00D50B0C /* CalculatorModel.swift in Sources */,
 				2D6707661B6D3C0A004CB7E4 /* TripLog.swift in Sources */,
