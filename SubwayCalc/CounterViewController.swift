@@ -12,8 +12,8 @@ import CoreData
 
  class CounterViewController: UIViewController {
     
-    @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var thirtyDayLabel: UILabel!
+    @IBOutlet weak var counterLabel: UILabel?
+    @IBOutlet weak var thirtyDayLabel: UILabel?
     
     var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext!
   
@@ -50,7 +50,7 @@ import CoreData
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"TripLog")
         let fetchedResults = try? self.managedObjectContext.fetch(fetchRequest) as! [TripLog]
         totalTrips = Int((fetchedResults?.count)!)
-        counterLabel.text = "\(Int(totalTrips))"
+        counterLabel?.text = "\(Int(totalTrips))"
     }
     
     func logNewTrip () {
@@ -81,7 +81,7 @@ import CoreData
             }
         }
         let tripsInThirtyDays = filteredResults.count
-        thirtyDayLabel.text = String(tripsInThirtyDays)
+        thirtyDayLabel?.text = String(tripsInThirtyDays)
     }
     
     @IBAction func unwindToStats(_ sender: UIStoryboardSegue) {

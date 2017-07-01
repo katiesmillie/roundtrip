@@ -18,5 +18,4 @@ class TripLog: NSManagedObject {
     @NSManaged var day: Int
     @NSManaged var year: Int
 
-
 }

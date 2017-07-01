@@ -9,36 +9,36 @@
 import UIKit
 
 class RideEstimatorViewController: UIViewController {
-
-    @IBOutlet weak var perDayLabel: UITextField!
-    @IBOutlet weak var perWeekLabel: UITextField!
-    @IBOutlet weak var perMonthLabel: UITextField!
-    @IBOutlet weak var estimatedRidesLabel: UILabel!
-    @IBOutlet weak var monthlyPassStringLabel: UILabel!
-    @IBOutlet weak var monthlyPassDiffLabel: UILabel!
+    
+    @IBOutlet weak var perDayLabel: UITextField?
+    @IBOutlet weak var perWeekLabel: UITextField?
+    @IBOutlet weak var perMonthLabel: UITextField?
+    @IBOutlet weak var estimatedRidesLabel: UILabel?
+    @IBOutlet weak var monthlyPassStringLabel: UILabel?
+    @IBOutlet weak var monthlyPassDiffLabel: UILabel?
     
     var perDay: Int {
         get {
-            return Int(NumberFormatter().number(from: perDayLabel.text!)!)
+            return Int(perDayLabel!.text!)!
         }
         set {
-            perDayLabel.text = String(newValue)
+            perDayLabel?.text = String(describing: newValue)
         }
     }
     var perWeek: Int {
         get {
-            return Int(NumberFormatter().number(from: perWeekLabel.text!)!)
+            return Int(perWeekLabel!.text!)!
         }
         set {
-            perWeekLabel.text = String(newValue)
+            perWeekLabel?.text = String(describing: newValue)
         }
     }
     var perMonth: Int {
         get {
-            return Int(NumberFormatter().number(from: perMonthLabel.text!)!)
+            return Int(perMonthLabel!.text!)!
         }
         set {
-            perMonthLabel.text = String(newValue)
+            perMonthLabel?.text = String(describing: newValue)
         }
     }
     
@@ -50,44 +50,42 @@ class RideEstimatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         scrollView.contentSize = estimatorView.bounds.size
         scrollView.addSubview(estimatorView)
         view.addSubview(scrollView)
-        self.automaticallyAdjustsScrollViewInsets = true
-
+        automaticallyAdjustsScrollViewInsets = true
         setRides()
     }
     
     func setRides() {
         let estimatedRidesDouble = (Double(perDay*perWeek)*4.2)+(Double(perMonth))
         estimatedRides = Int(estimatedRidesDouble)
-        estimatedRidesLabel.text = String(stringInterpolationSegment: estimatedRides)
+        estimatedRidesLabel?.text = String(describing: estimatedRides)
         
         setMonthlyPass()
     }
     
-        func setMonthlyPass() {
+    func setMonthlyPass() {
         let monthlyPassDifference = Double(estimatedRides)*2.48 - 116.50
         
         if monthlyPassDifference > 0 {
             monthlyPassString = "saved with a monthly pass"
-            monthlyPassDiffLabel.textColor = UIColor.green
+            monthlyPassDiffLabel?.textColor = UIColor.green
         } else {
             monthlyPassString = "wasted with a monthly pass"
-            monthlyPassDiffLabel.textColor = UIColor.red
+            monthlyPassDiffLabel?.textColor = UIColor.red
         }
-        monthlyPassStringLabel.text = monthlyPassString
-        monthlyPassDiffLabel.text = String(format: "$ %.2f", monthlyPassDifference)
+        monthlyPassStringLabel?.text = monthlyPassString
+        monthlyPassDiffLabel?.text = String(format: "$ %.2f", monthlyPassDifference)
     }
-
+    
     @IBAction func incrementDay(_ sender: UIButton) {
         if perDay < 10 {
             perDay += 1
         }  else {
             perDay = 0
         }
-         setRides()
+        setRides()
     }
     
     @IBAction func decrememntDay(_ sender: UIButton) {
@@ -96,7 +94,7 @@ class RideEstimatorViewController: UIViewController {
         } else {
             perDay -= 1
         }
-         setRides()
+        setRides()
     }
     
     @IBAction func incrementWeek(_ sender: UIButton) {
@@ -105,7 +103,7 @@ class RideEstimatorViewController: UIViewController {
         }  else {
             perWeek = 0
         }
-         setRides()
+        setRides()
     }
     
     @IBAction func decrememntWeek(_ sender: UIButton) {
@@ -114,7 +112,7 @@ class RideEstimatorViewController: UIViewController {
         } else {
             perWeek -= 1
         }
-         setRides()
+        setRides()
     }
     @IBAction func incrementMonth(_ sender: UIButton) {
         if perMonth < 40 {
@@ -122,7 +120,7 @@ class RideEstimatorViewController: UIViewController {
         }  else {
             perMonth = 0
         }
-         setRides()
+        setRides()
     }
     
     @IBAction func decrememntMonth(_ sender: UIButton) {
@@ -131,9 +129,9 @@ class RideEstimatorViewController: UIViewController {
         } else {
             perMonth -= 1
         }
-         setRides()
+        setRides()
     }
-
+    
 }
 
 

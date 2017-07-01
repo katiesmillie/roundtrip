@@ -14,18 +14,18 @@ protocol EditDateViewControllerDelegate {
 }
 
 class EditDateViewController: UIViewController {
-
-    @IBOutlet weak var myDatePicker: UIDatePicker!
-
+    
+    @IBOutlet weak var myDatePicker: UIDatePicker?
+    
     var delegate: EditDateViewControllerDelegate?
-    var tripDate: Date!
+    var tripDate: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myDatePicker.datePickerMode = UIDatePickerMode.date
-        myDatePicker.addTarget(self, action: #selector(EditDateViewController.datePickerChanged(_:)), for: UIControlEvents.valueChanged)
-        myDatePicker.date = tripDate
-        myDatePicker.maximumDate = Date()
+        myDatePicker?.datePickerMode = UIDatePickerMode.date
+        myDatePicker?.addTarget(self, action: #selector(datePickerChanged(_:)), for: .valueChanged)
+        myDatePicker?.date = tripDate!
+        myDatePicker?.maximumDate = Date()
     }
     
     func datePickerChanged(_ myDatePicker: UIDatePicker) {
@@ -33,12 +33,12 @@ class EditDateViewController: UIViewController {
     }
     
     @IBAction func didSelectNewDate(_ sender: UIButton) {
-        datePickerChanged(myDatePicker)
+        datePickerChanged(myDatePicker!)
         
-        if let delegate = self.delegate {
-            delegate.didSelectNewDate(self, myDatePicker: myDatePicker)
+        if let delegate = delegate {
+            delegate.didSelectNewDate(self, myDatePicker: myDatePicker!)
         }
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
 }
