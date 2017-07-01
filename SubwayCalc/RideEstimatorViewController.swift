@@ -60,7 +60,7 @@ class RideEstimatorViewController: UIViewController {
     func setRides() {
         let estimatedRidesDouble = (Double(perDay*perWeek)*4.2)+(Double(perMonth))
         estimatedRides = Int(estimatedRidesDouble)
-        estimatedRidesLabel?.text = String(describing: estimatedRides)
+        estimatedRidesLabel?.text = String(estimatedRides)
         setMonthlyPass()
     }
     
