@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Mixpanel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SubwayCalc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -16,17 +21,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>60AB2F293E05B3B04A8B589FF9C0D3CD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8BECCBCD228AF5BA44FAE7D2D2934B35</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
