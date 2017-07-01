@@ -15,16 +15,16 @@ import CoreData
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var thirtyDayLabel: UILabel!
     
-    var managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+    var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext!
   
     var totalTrips = 0
     
-    var startDate: NSDate! {
-        return endDate.dateByAddingTimeInterval(-60*60*24*30)
+    var startDate: Date! {
+        return endDate.addingTimeInterval(-60*60*24*30)
     }
     
-    var endDate: NSDate! {
-        return NSDate()
+    var endDate: Date! {
+        return Date()
     }
         
     override func viewDidLoad() {
@@ -33,29 +33,29 @@ import CoreData
         fetchTripsInThirtyDayPeriod()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         fetchNumberTrips()
         fetchTripsInThirtyDayPeriod()
     }
   
 
-    @IBAction func logTrip(sender: UIButton) {
+    @IBAction func logTrip(_ sender: UIButton) {
         logNewTrip()
         fetchNumberTrips()
         fetchTripsInThirtyDayPeriod()
     }
     
     func fetchNumberTrips () {
-        let fetchRequest = NSFetchRequest(entityName:"TripLog")
-        let fetchedResults = self.managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [TripLog]
-        totalTrips = Int(fetchedResults.count)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"TripLog")
+        let fetchedResults = try? self.managedObjectContext.fetch(fetchRequest) as! [TripLog]
+        totalTrips = Int((fetchedResults?.count)!)
         counterLabel.text = "\(Int(totalTrips))"
     }
     
     func logNewTrip () {
-        let newEntity = NSEntityDescription.insertNewObjectForEntityForName("TripLog", inManagedObjectContext: self.managedObjectContext) as! TripLog
-        let date = NSDate()
+        let newEntity = NSEntityDescription.insertNewObject(forEntityName: "TripLog", into: self.managedObjectContext) as! TripLog
+        let date = Date()
         newEntity.dateTime = date
         newEntity.name = "Log"
         
@@ -68,15 +68,15 @@ import CoreData
 //        newEntity.month = components.month
 //        newEntity.day = components.day
         
-        self.managedObjectContext.save(nil)
+        try? self.managedObjectContext.save()
     }
     
     func fetchTripsInThirtyDayPeriod () {
-        let fetchRequest = NSFetchRequest(entityName:"TripLog")
-        let fetchedResults = self.managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [TripLog]
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"TripLog")
+        let fetchedResults = try? self.managedObjectContext.fetch(fetchRequest) as! [TripLog]
         var filteredResults = Array<TripLog>()
-        for result in fetchedResults {
-            if result.dateTime.compare(startDate) == NSComparisonResult.OrderedDescending && result.dateTime.compare(endDate) == NSComparisonResult.OrderedAscending {
+        for result in fetchedResults! {
+            if result.dateTime.compare(startDate) == ComparisonResult.orderedDescending && result.dateTime.compare(endDate) == ComparisonResult.orderedAscending {
                 filteredResults.append(result)
             }
         }
@@ -84,7 +84,7 @@ import CoreData
         thirtyDayLabel.text = String(tripsInThirtyDays)
     }
     
-    @IBAction func unwindToStats(sender: UIStoryboardSegue) {
+    @IBAction func unwindToStats(_ sender: UIStoryboardSegue) {
         fetchNumberTrips()
         fetchTripsInThirtyDayPeriod()
     }

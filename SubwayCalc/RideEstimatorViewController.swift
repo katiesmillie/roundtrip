@@ -19,7 +19,7 @@ class RideEstimatorViewController: UIViewController {
     
     var perDay: Int {
         get {
-            return Int(NSNumberFormatter().numberFromString(perDayLabel.text)!)
+            return Int(NumberFormatter().number(from: perDayLabel.text!)!)
         }
         set {
             perDayLabel.text = String(newValue)
@@ -27,7 +27,7 @@ class RideEstimatorViewController: UIViewController {
     }
     var perWeek: Int {
         get {
-            return Int(NSNumberFormatter().numberFromString(perWeekLabel.text)!)
+            return Int(NumberFormatter().number(from: perWeekLabel.text!)!)
         }
         set {
             perWeekLabel.text = String(newValue)
@@ -35,7 +35,7 @@ class RideEstimatorViewController: UIViewController {
     }
     var perMonth: Int {
         get {
-            return Int(NSNumberFormatter().numberFromString(perMonthLabel.text)!)
+            return Int(NumberFormatter().number(from: perMonthLabel.text!)!)
         }
         set {
             perMonthLabel.text = String(newValue)
@@ -72,16 +72,16 @@ class RideEstimatorViewController: UIViewController {
         
         if monthlyPassDifference > 0 {
             monthlyPassString = "saved with a monthly pass"
-            monthlyPassDiffLabel.textColor = UIColor.greenColor()
+            monthlyPassDiffLabel.textColor = UIColor.green
         } else {
             monthlyPassString = "wasted with a monthly pass"
-            monthlyPassDiffLabel.textColor = UIColor.redColor()
+            monthlyPassDiffLabel.textColor = UIColor.red
         }
         monthlyPassStringLabel.text = monthlyPassString
         monthlyPassDiffLabel.text = String(format: "$ %.2f", monthlyPassDifference)
     }
 
-    @IBAction func incrementDay(sender: UIButton) {
+    @IBAction func incrementDay(_ sender: UIButton) {
         if perDay < 10 {
             perDay += 1
         }  else {
@@ -90,7 +90,7 @@ class RideEstimatorViewController: UIViewController {
          setRides()
     }
     
-    @IBAction func decrememntDay(sender: UIButton) {
+    @IBAction func decrememntDay(_ sender: UIButton) {
         if perDay == 0 {
             perDay = 10
         } else {
@@ -99,7 +99,7 @@ class RideEstimatorViewController: UIViewController {
          setRides()
     }
     
-    @IBAction func incrementWeek(sender: UIButton) {
+    @IBAction func incrementWeek(_ sender: UIButton) {
         if perWeek < 7 {
             perWeek += 1
         }  else {
@@ -108,7 +108,7 @@ class RideEstimatorViewController: UIViewController {
          setRides()
     }
     
-    @IBAction func decrememntWeek(sender: UIButton) {
+    @IBAction func decrememntWeek(_ sender: UIButton) {
         if perWeek == 0 {
             perWeek = 7
         } else {
@@ -116,7 +116,7 @@ class RideEstimatorViewController: UIViewController {
         }
          setRides()
     }
-    @IBAction func incrementMonth(sender: UIButton) {
+    @IBAction func incrementMonth(_ sender: UIButton) {
         if perMonth < 40 {
             perMonth += 1
         }  else {
@@ -125,7 +125,7 @@ class RideEstimatorViewController: UIViewController {
          setRides()
     }
     
-    @IBAction func decrememntMonth(sender: UIButton) {
+    @IBAction func decrememntMonth(_ sender: UIButton) {
         if perMonth == 0 {
             perMonth = 40
         } else {

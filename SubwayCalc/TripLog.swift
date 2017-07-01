@@ -11,7 +11,7 @@ import CoreData
 
 class TripLog: NSManagedObject {
     
-    @NSManaged var dateTime: NSDate
+    @NSManaged var dateTime: Date
     @NSManaged var subwayLine: String
     @NSManaged var name: String
     @NSManaged var month: Int

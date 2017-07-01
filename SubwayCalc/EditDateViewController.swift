@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 protocol EditDateViewControllerDelegate {
-    func didSelectNewDate(controller: EditDateViewController, myDatePicker: UIDatePicker)
+    func didSelectNewDate(_ controller: EditDateViewController, myDatePicker: UIDatePicker)
 }
 
 class EditDateViewController: UIViewController {
@@ -18,27 +18,27 @@ class EditDateViewController: UIViewController {
     @IBOutlet weak var myDatePicker: UIDatePicker!
 
     var delegate: EditDateViewControllerDelegate?
-    var tripDate: NSDate!
+    var tripDate: Date!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myDatePicker.datePickerMode = UIDatePickerMode.Date
-        myDatePicker.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        myDatePicker.datePickerMode = UIDatePickerMode.date
+        myDatePicker.addTarget(self, action: #selector(EditDateViewController.datePickerChanged(_:)), for: UIControlEvents.valueChanged)
         myDatePicker.date = tripDate
-        myDatePicker.maximumDate = NSDate()
+        myDatePicker.maximumDate = Date()
     }
     
-    func datePickerChanged(myDatePicker: UIDatePicker) {
+    func datePickerChanged(_ myDatePicker: UIDatePicker) {
         tripDate = myDatePicker.date
     }
     
-    @IBAction func didSelectNewDate(sender: UIButton) {
+    @IBAction func didSelectNewDate(_ sender: UIButton) {
         datePickerChanged(myDatePicker)
         
         if let delegate = self.delegate {
             delegate.didSelectNewDate(self, myDatePicker: myDatePicker)
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

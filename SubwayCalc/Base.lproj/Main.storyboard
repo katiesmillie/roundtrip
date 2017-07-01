@@ -84,7 +84,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdb-X4-aMY">
                                 <rect key="frame" x="0.0" y="204" width="600" height="347"/>
                                 <connections>
-                                    <segue destination="fou-dF-ADn" kind="embed" identifier="" id="SlT-Gt-V16"/>
+                                    <segue destination="fou-dF-ADn" kind="embed" id="k6K-oW-Kpo"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbW-ud-pkh">
@@ -170,7 +170,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6iN-8d-0wL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="M4D-xs-TUy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="80" y="1591.5"/>
+            <point key="canvasLocation" x="101" y="1591.5"/>
         </scene>
         <!--Edit Date View Controller-->
         <scene sceneID="QY4-lU-YrH">
@@ -237,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ce-x9-rwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80" y="2164"/>
+            <point key="canvasLocation" x="101" y="2189"/>
         </scene>
         <!--About-->
         <scene sceneID="iAT-bv-jNW">
@@ -1060,10 +1060,10 @@ Icons by icons8.com</string>
                                             <mask key="constraints">
                                                 <exclude reference="4Py-OH-jWg"/>
                                                 <exclude reference="Lrt-pJ-dX6"/>
+                                                <exclude reference="Z8u-Xd-uHE"/>
                                                 <exclude reference="9fF-LV-pjO"/>
                                                 <exclude reference="CJJ-IR-lyg"/>
                                                 <exclude reference="Pb2-op-eFu"/>
-                                                <exclude reference="Z8u-Xd-uHE"/>
                                                 <exclude reference="2Ot-KE-iPH"/>
                                             </mask>
                                         </variation>

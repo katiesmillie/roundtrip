@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BB3DC0BEFD68580A4F4B56B944922E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		0C73AC748978D757289924F57B70F94C /* Pods-SubwayCalc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A2263E1F2CC5BDD34560F2850ADB87 /* Pods-SubwayCalc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1A621CA94A392F187AD86411DFEB055 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		CA0078268E42C0CA05A2A8F595B76E58 /* Pods-SubwayCalcTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 939EC68612B5132DB7156F0D07643B23 /* Pods-SubwayCalcTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCE5EA75D7CA7848047FBE081E64B2B8 /* Pods-SubwayCalc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C35A65B5204C16B0E9C4F2E6865FDE /* Pods-SubwayCalc-dummy.m */; };
+		E1717E937863CC5A69C5BCB29148AAB6 /* Pods-SubwayCalcTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E4C1677E340CE93ECEDE27E86A8E7 /* Pods-SubwayCalcTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19A2263E1F2CC5BDD34560F2850ADB87 /* Pods-SubwayCalc-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SubwayCalc-umbrella.h"; sourceTree = "<group>"; };
+		234044C33741B25D7B1F5CEBF4797563 /* Pods-SubwayCalc-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SubwayCalc-acknowledgements.markdown"; sourceTree = "<group>"; };
+		359E8CD99472A0CD778E27348825F4EE /* Pods-SubwayCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SubwayCalc.debug.xcconfig"; sourceTree = "<group>"; };
+		4C795E871AC4D21ECD40292E94005E4A /* Pods-SubwayCalc-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SubwayCalc-resources.sh"; sourceTree = "<group>"; };
+		650B89B19CF1AF540B5BDC47DA27CCDA /* Pods_SubwayCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SubwayCalc.framework; path = "Pods-SubwayCalc.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6F3E4C1677E340CE93ECEDE27E86A8E7 /* Pods-SubwayCalcTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SubwayCalcTests-dummy.m"; sourceTree = "<group>"; };
+		760749B53AF4A0409EBD8AC8C1391BBC /* Pods-SubwayCalcTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SubwayCalcTests.modulemap"; sourceTree = "<group>"; };
+		7620AB955807FBDD9C4C8F91031E7870 /* Pods-SubwayCalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SubwayCalcTests.release.xcconfig"; sourceTree = "<group>"; };
+		7EFBFAF336226110E88B60C9C9A490FF /* Pods-SubwayCalcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SubwayCalcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7FBB9A5A826A05F4D884CB6C68ECFC4A /* Pods-SubwayCalcTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SubwayCalcTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		82C293E3B2D85B7995B98319F894A10D /* Pods-SubwayCalcTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SubwayCalcTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8A9B774C88461B29569614E12951CBE4 /* Pods-SubwayCalc-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SubwayCalc-frameworks.sh"; sourceTree = "<group>"; };
+		91638B355B5BCE956A292349CFB898B5 /* Pods_SubwayCalcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SubwayCalcTests.framework; path = "Pods-SubwayCalcTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		939EC68612B5132DB7156F0D07643B23 /* Pods-SubwayCalcTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SubwayCalcTests-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		947C094FB5137B752D56FEB1EE9EF892 /* Pods-SubwayCalcTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SubwayCalcTests-frameworks.sh"; sourceTree = "<group>"; };
+		99EC8DADCB1BBADE1286CCCCB4087FCD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C009CFB72928ED3B4A1D75B1DDEDC07F /* Pods-SubwayCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SubwayCalc.release.xcconfig"; sourceTree = "<group>"; };
+		C330A25C639747BF789C2E1301B6A5A4 /* Pods-SubwayCalc.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SubwayCalc.modulemap"; sourceTree = "<group>"; };
+		CFCCBF4728E63F8A4946084EFACDC433 /* Pods-SubwayCalcTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SubwayCalcTests-resources.sh"; sourceTree = "<group>"; };
+		D2CE204E18E0B16F53DF6A121336B8D1 /* Pods-SubwayCalc-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SubwayCalc-acknowledgements.plist"; sourceTree = "<group>"; };
+		D3C35A65B5204C16B0E9C4F2E6865FDE /* Pods-SubwayCalc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SubwayCalc-dummy.m"; sourceTree = "<group>"; };
+		DAB398E3B100CC63A91711C7CF6AB83C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC335F461F6FACC89BDFEB083242C419 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BB3DC0BEFD68580A4F4B56B944922E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E299F51AEA7C51C47EA2AAB3120D1962 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1A621CA94A392F187AD86411DFEB055 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A13FEE0BD89F9DB14846632DF362C4A /* Pods-SubwayCalc */ = {
+			isa = PBXGroup;
+			children = (
+				DAB398E3B100CC63A91711C7CF6AB83C /* Info.plist */,
+				C330A25C639747BF789C2E1301B6A5A4 /* Pods-SubwayCalc.modulemap */,
+				234044C33741B25D7B1F5CEBF4797563 /* Pods-SubwayCalc-acknowledgements.markdown */,
+				D2CE204E18E0B16F53DF6A121336B8D1 /* Pods-SubwayCalc-acknowledgements.plist */,
+				D3C35A65B5204C16B0E9C4F2E6865FDE /* Pods-SubwayCalc-dummy.m */,
+				8A9B774C88461B29569614E12951CBE4 /* Pods-SubwayCalc-frameworks.sh */,
+				4C795E871AC4D21ECD40292E94005E4A /* Pods-SubwayCalc-resources.sh */,
+				19A2263E1F2CC5BDD34560F2850ADB87 /* Pods-SubwayCalc-umbrella.h */,
+				359E8CD99472A0CD778E27348825F4EE /* Pods-SubwayCalc.debug.xcconfig */,
+				C009CFB72928ED3B4A1D75B1DDEDC07F /* Pods-SubwayCalc.release.xcconfig */,
+			);
+			name = "Pods-SubwayCalc";
+			path = "Target Support Files/Pods-SubwayCalc";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				81C1AAFEF0F6835E631EF3FBC8567B07 /* Products */,
+				8A13B505A3B1D4F063909189E12200FB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		81C1AAFEF0F6835E631EF3FBC8567B07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				650B89B19CF1AF540B5BDC47DA27CCDA /* Pods_SubwayCalc.framework */,
+				91638B355B5BCE956A292349CFB898B5 /* Pods_SubwayCalcTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A13B505A3B1D4F063909189E12200FB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A13FEE0BD89F9DB14846632DF362C4A /* Pods-SubwayCalc */,
+				C42C793B1DBDBB97886B41D2157A55B9 /* Pods-SubwayCalcTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C42C793B1DBDBB97886B41D2157A55B9 /* Pods-SubwayCalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				99EC8DADCB1BBADE1286CCCCB4087FCD /* Info.plist */,
+				760749B53AF4A0409EBD8AC8C1391BBC /* Pods-SubwayCalcTests.modulemap */,
+				82C293E3B2D85B7995B98319F894A10D /* Pods-SubwayCalcTests-acknowledgements.markdown */,
+				7FBB9A5A826A05F4D884CB6C68ECFC4A /* Pods-SubwayCalcTests-acknowledgements.plist */,
+				6F3E4C1677E340CE93ECEDE27E86A8E7 /* Pods-SubwayCalcTests-dummy.m */,
+				947C094FB5137B752D56FEB1EE9EF892 /* Pods-SubwayCalcTests-frameworks.sh */,
+				CFCCBF4728E63F8A4946084EFACDC433 /* Pods-SubwayCalcTests-resources.sh */,
+				939EC68612B5132DB7156F0D07643B23 /* Pods-SubwayCalcTests-umbrella.h */,
+				7EFBFAF336226110E88B60C9C9A490FF /* Pods-SubwayCalcTests.debug.xcconfig */,
+				7620AB955807FBDD9C4C8F91031E7870 /* Pods-SubwayCalcTests.release.xcconfig */,
+			);
+			name = "Pods-SubwayCalcTests";
+			path = "Target Support Files/Pods-SubwayCalcTests";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		519EABC4567D92789CC6EEBAFE15FEB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0078268E42C0CA05A2A8F595B76E58 /* Pods-SubwayCalcTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692CAF87DEFF8B97C597FDF04A0B2BD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C73AC748978D757289924F57B70F94C /* Pods-SubwayCalc-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		60AB2F293E05B3B04A8B589FF9C0D3CD /* Pods-SubwayCalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2C8B95D9B8BF2E7374C6DBF4B913010 /* Build configuration list for PBXNativeTarget "Pods-SubwayCalcTests" */;
+			buildPhases = (
+				AA00547CEBA8F32757B1432654B2D116 /* Sources */,
+				E299F51AEA7C51C47EA2AAB3120D1962 /* Frameworks */,
+				519EABC4567D92789CC6EEBAFE15FEB4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SubwayCalcTests";
+			productName = "Pods-SubwayCalcTests";
+			productReference = 91638B355B5BCE956A292349CFB898B5 /* Pods_SubwayCalcTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8BECCBCD228AF5BA44FAE7D2D2934B35 /* Pods-SubwayCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EF1DD59FF850F3525C2352649531F6C /* Build configuration list for PBXNativeTarget "Pods-SubwayCalc" */;
+			buildPhases = (
+				6E49A51D6B8A37D4370FF6D13464F5D6 /* Sources */,
+				AC335F461F6FACC89BDFEB083242C419 /* Frameworks */,
+				692CAF87DEFF8B97C597FDF04A0B2BD0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SubwayCalc";
+			productName = "Pods-SubwayCalc";
+			productReference = 650B89B19CF1AF540B5BDC47DA27CCDA /* Pods_SubwayCalc.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 81C1AAFEF0F6835E631EF3FBC8567B07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BECCBCD228AF5BA44FAE7D2D2934B35 /* Pods-SubwayCalc */,
+				60AB2F293E05B3B04A8B589FF9C0D3CD /* Pods-SubwayCalcTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E49A51D6B8A37D4370FF6D13464F5D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCE5EA75D7CA7848047FBE081E64B2B8 /* Pods-SubwayCalc-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA00547CEBA8F32757B1432654B2D116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1717E937863CC5A69C5BCB29148AAB6 /* Pods-SubwayCalcTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		643C76AA582046977B7877822ED7A258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9839895379F48E545947A7FBB8BF1526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C009CFB72928ED3B4A1D75B1DDEDC07F /* Pods-SubwayCalc.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SubwayCalc/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SubwayCalc/Pods-SubwayCalc.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SubwayCalc;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9AACAEA180A349888399D19E19181EB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7620AB955807FBDD9C4C8F91031E7870 /* Pods-SubwayCalcTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SubwayCalcTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SubwayCalcTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B2550949A8AAB7DDB55356CAE8CE3465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EFBFAF336226110E88B60C9C9A490FF /* Pods-SubwayCalcTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SubwayCalcTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SubwayCalcTests/Pods-SubwayCalcTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SubwayCalcTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C03B8870130C98D1B02B59D003687524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7980402C47FA1E19E06DFE72C5D8A29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 359E8CD99472A0CD778E27348825F4EE /* Pods-SubwayCalc.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SubwayCalc/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SubwayCalc/Pods-SubwayCalc.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SubwayCalc;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643C76AA582046977B7877822ED7A258 /* Debug */,
+				C03B8870130C98D1B02B59D003687524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EF1DD59FF850F3525C2352649531F6C /* Build configuration list for PBXNativeTarget "Pods-SubwayCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7980402C47FA1E19E06DFE72C5D8A29 /* Debug */,
+				9839895379F48E545947A7FBB8BF1526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2C8B95D9B8BF2E7374C6DBF4B913010 /* Build configuration list for PBXNativeTarget "Pods-SubwayCalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2550949A8AAB7DDB55356CAE8CE3465 /* Debug */,
+				9AACAEA180A349888399D19E19181EB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
