@@ -14,14 +14,17 @@ struct MixpanelHelper {
     
     func setup() {
         Mixpanel.initialize(token: mixpanelToken)
-        people()
+        identify()
     }
     
     func track(_ event: String, properties: Properties? = nil) {
         Mixpanel.mainInstance().track(event: event, properties: properties)
     }
     
-    func people() {
+    func identify() {
+        guard let distinctId = UIDevice.current.identifierForVendor?.description else { return }
+        Mixpanel.mainInstance().identify(distinctId: distinctId)
+        
         let dateNow = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
